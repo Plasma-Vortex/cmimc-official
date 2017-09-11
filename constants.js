@@ -6,19 +6,19 @@
 
 module.exports = {
   subjects: {
-    ALGEBRA: 'algebra',
-    COMBINATORICS: 'combinatorics',
-    COMPUTER_SCIENCE: 'computer_science',
-    GEOMETRY: 'geometry',
-    NUMBER_THEORY: 'number_theory'
+    algebra: 'Algebra',
+    combinatorics: 'Combinatorics',
+    computer_science: 'Computer Science',
+    geometry: 'Geometry',
+    number_theory: 'Number Theory'
   },
   tshirts: {
-    XS: 'xs',
-    S: 's',
-    M: 'm',
-    L: 'l',
-    XL: 'xl', 
-    XXL: 'xxl'
+    xs: 'XS',
+    s: 'S',
+    m: 'M',
+    l: 'L',
+    xl: 'XL', 
+    xxl: 'XXL'
   }
 };
 

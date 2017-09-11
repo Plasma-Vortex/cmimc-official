@@ -1,4 +1,5 @@
 import { requestStatuses } from "./types";
+import auth from "../auth";
 
 export const payload = {
   success: (state = {}) => ({
@@ -34,3 +35,13 @@ export function APIAction({ type, url, opts, formatData }) {
     );
   }
 }
+
+export function authAPIAction({ type, url, opts, formatData }) {
+  let action = { type };
+  return dispatch => {
+    if (!auth.isLoggedIn()) 
+      dispatch(Object.assign(action, payload.error("User is not logged in.")));
+    else return APIAction({ type, url, opts, formatData })(dispatch);
+  }
+}
+

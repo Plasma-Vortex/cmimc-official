@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt'),
       Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
-  name: { type: String, required: true },
+  team_name: { type: String, required: true },
   chaperone_name: { type: String, required: true },
   chaperone_email: { type: String, required: true },
   chaperone_number: { type: String, required: true },
