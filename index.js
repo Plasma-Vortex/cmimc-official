@@ -32,16 +32,12 @@ mongoose.connect(process.env.DB_URL, {
 });
 
 /* route endpoints */
-const authRouter = require('./routes/auth');
-      /*userRouter = require('./routes/users'),
-      contestRouter = require('./routes/contests'),
-      compRouter = require('./routes/competitions'),
-      probRouter = require('./routes/problems');*/
+const authRouter = require('./routes/auth'),
+      userRouter = require('./routes/users'),
+      teamRouter = require('./routes/teams');
 app.use('/', authRouter);
-/*app.use('/api/users', userRouter);
-app.use('/api/contests', contestRouter);
-app.use('/api/competitions', compRouter);
-app.use('/api/problems', probRouter);*/
+app.use('/api/users', userRouter);
+app.use('/api/teams', teamRouter);
 
 /* serve home page */
 app.get('/*', (req, res) => {

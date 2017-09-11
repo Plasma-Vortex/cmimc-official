@@ -8,9 +8,13 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, { type, payload }) {
   switch (type) {
-    case AUTH_USER:
     case UNAUTH_USER:
       return { ...state, authenticated: payload };
+    case AUTH_USER:
+      return { 
+        ...state, 
+        authenticated: Object.assign({}, state.authenticated, payload) 
+      };
     default:
       return state;
   }

@@ -16,7 +16,7 @@ router.post('/signup', (req, res) => {
         const user = Object.assign(new User(), { email, password });
         user.save(err => {
           if (err) {
-            handler(false, 'Database failed to save user.', 503)(req, res);
+            handler(false, 'Failed to save user.', 503)(req, res);
           } else {
             handler(true, 'User signed up successfully.', 200, {
               token: auth.signJWT(email, user._id)
