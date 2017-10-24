@@ -1,5 +1,5 @@
-import { AUTH_USER, UNAUTH_USER } from "./types";
-import { APIAction, payload } from "./utilities";
+import { AUTH_USER, UNAUTH_USER, CHANGE_PASS } from "./types";
+import { authAPIAction, APIAction, payload } from "./utilities";
 
 export function logout() {
   return dispatch => {
@@ -13,7 +13,7 @@ export function login({ email, password, history }) {
   return APIAction({
     type: AUTH_USER,
     url: "/login",
-    opts: { 
+    opts: {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" }
@@ -32,7 +32,7 @@ export function signup({ email, password, history }) {
   return APIAction({
     type: AUTH_USER,
     url: "/signup",
-    opts: { 
+    opts: {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" }
@@ -43,6 +43,24 @@ export function signup({ email, password, history }) {
         history.push("/account");
       }
       return ({ success, message, content: true });
+    }
+  });
+}
+
+export function changePassword({ oldPassword, newPassword }) {
+  return authAPIAction({
+    type: CHANGE_PASS,
+    url: "/password",
+    opts: {
+      method: "post",
+      body: JSON.stringify({ oldPassword, newPassword }),
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json"
+        }
+    },
+    formatData: ({ success, message }) => {
+      return ({ success, message });
     }
   });
 }

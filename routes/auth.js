@@ -8,7 +8,7 @@ router.post('/signup', (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
     handler(false, 'Please fill out all fields.', 400)(req, res);
-  } else { 
+  } else {
     User.findOne({ email }, (err, user) => {
       if (err) handler(false, 'Failed to find email.', 503)(req, res);
       else if (user) handler(false, 'Email exists already.', 400)(req, res);
@@ -43,7 +43,7 @@ router.post('/login', (req, res) => {
           if (err) {
             handler(false, 'Database failed to authenticate.', 503)(req, res);
           } else {
-            return result.authenticated ? 
+            return result.authenticated ?
               handler(true, 'User authenticated.', 200, {
                 token: auth.signJWT(user.email, user._id, user.admin)
               })(req, res) :
@@ -56,24 +56,24 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/password', auth.verifyJWT, (req, res) => {
-  const { currPass, newPass } = req.body;
-  console.log(currPass, newPass);
-  req.user.checkPassword(currPass, (err, result) => {
+  const { oldPassword, newPassword } = req.body;
+  console.log(oldPassword, newPassword);
+  req.user.checkPassword(oldPassword, (err, result) => {
     if (err) {
       handler(false, 'Database failed to authenticate.', 503)(req, res);
     } else if (result.authenticated) {
-      req.user.password = newPass;
+      req.user.password = newPassword;
       req.user.save(err => {
-        if (err) 
+        if (err)
           handler(false, 'Database failed to save new password.', 503)(req, res);
         else {
           handler(true, 'Successfully updated password.', 200, {
             token: auth.signJWT(req.user.email, req.user._id, req.user.admin)
           })(req, res);
         }
-      }); 
+      });
     } else {
-      handler(false, 'Failed to authenticate user.', 401)(req, res);
+      handler(false, 'Incorrect password.', 401)(req, res);
     }
   });
 });

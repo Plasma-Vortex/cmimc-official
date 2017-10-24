@@ -19,4 +19,16 @@ router.get('/', auth.verifyJWT, (req, res) => {
   });
 });
 
+router.post('/password', auth.verifyJWT, (req, res) => {
+  req.user.checkPassword(req.body.oldPassword, (err, result) => {
+    if (result.authenticated) {
+      req.user.password = req.body.newPassword;
+      req.user.save(err => {
+        if (err) handler(false, 'Failed to save password.', 503)(req, res);
+        else handler(true, 'Successfully updated password.', 200)(req, res);
+      });
+    } else handler(false, 'Incorrect password.', 401)(req, res);
+  });
+});
+
 module.exports = router;

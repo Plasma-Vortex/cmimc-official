@@ -21,7 +21,7 @@ const requireAuth = Component => {
   const mapStateToProps = state => ({
     auth: state.auth.authenticated.content
   });
-  
+
   return connect(mapStateToProps)(AuthComponent);
 }
 
@@ -32,6 +32,7 @@ const Routes = () => (
     <Route exact path="/archive" component={ inContainer(Pages.Archive) } />
     <Route exact path="/staff" component={ inContainer(Pages.Staff) } />
     <Route exact path="/account" component={ inContainer(requireAuth(Pages.Account)) } />
+    <Route exact path="/password" component={ inContainer(requireAuth(Pages.Password)) } />
     <Route exact path="/login" component={ Pages.Login } />
     <Route exact path="/faq" component={ inContainer(Pages.Faq) } />
     <Route exact path="/privacy" component={ inContainer(Pages.Privacy) } />
