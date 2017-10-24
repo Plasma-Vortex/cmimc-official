@@ -1,6 +1,10 @@
 {
   "news" : [
     {
+      "date": "October 30, 2017",
+      "message": "Due to technical difficulties, the registration deadline has been extended to Sunday, November 5th."
+    },
+    {
       "date" : "August 9, 2017",
       "message" : "We released our new website!"
     }
