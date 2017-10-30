@@ -19,7 +19,7 @@ class StudentInput extends React.Component {
   }
 
   componentDidUpdate() {
-    if (this.props.value) this.state.value = this.props.value; 
+    if (this.props.value) this.state.value = this.props.value;
   }
 
   onFieldChange = field => {
@@ -36,49 +36,49 @@ class StudentInput extends React.Component {
     return (
       <Row>
         <Col s={12}>
-          <h6>Student {idx+1}<a className="grey-text text-darken-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
+          <h6>Student {idx+1}<a className="grey-text text-lighten-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
         </Col>
-        <Input 
-          l={6} s={12} type="text" label="Name" 
+        <Input
+          l={6} s={12} type="text" label="Name"
           onChange={ this.onFieldChange("name") }
           defaultValue={ value.name } />
-        <Input 
-          l={6} s={12} validate type="email" label="Email" 
-          onChange={ this.onFieldChange("email") } 
+        <Input
+          l={6} s={12} validate type="email" label="Email"
+          onChange={ this.onFieldChange("email") }
           defaultValue={ value.email } />
-        <Input 
-          l={3} s={6} type="select" label="Subject 1" 
-          onChange={ this.onFieldChange("subject1") } 
+        <Input
+          l={3} s={6} type="select" label="Subject 1"
+          onChange={ this.onFieldChange("subject1") }
           defaultValue={ value.subject1 } >
           <option value="">Subject 1</option>
           {
             Object.keys(subjects).map((subject, idx) => (
-              <option 
-                disabled={ subject === value.subject2 } 
+              <option
+                disabled={ subject === value.subject2 }
                 value={subject} key={idx}>{subjects[subject]}</option>
             ))
           }
         </Input>
-        <Input 
-          l={3} s={6} type="select" label="Subject 2" 
-          onChange={ this.onFieldChange("subject2") } 
+        <Input
+          l={3} s={6} type="select" label="Subject 2"
+          onChange={ this.onFieldChange("subject2") }
           defaultValue={ value.subject2 }>
           <option value="">Subject 2</option>
           {
             Object.keys(subjects).map((subject, idx) => (
-              <option 
+              <option
                 disabled={ subject === value.subject1 }
                 value={subject} key={idx}>{subjects[subject]}</option>
             ))
           }
         </Input>
-        <Input 
-          l={3} s={6} type="number" label="Age" min={0} max={20} 
-          onChange={ this.onFieldChange("age") } 
+        <Input
+          l={3} s={6} type="number" label="Age" min={0} max={20}
+          onChange={ this.onFieldChange("age") }
           defaultValue={ value.age } />
         <Input
-          l={3} s={6} type="select" label="T-Shirt" 
-          onChange={ this.onFieldChange("tshirt") } 
+          l={3} s={6} type="select" label="T-Shirt"
+          onChange={ this.onFieldChange("tshirt") }
           defaultValue={ value.tshirt } >
           <option value="">T-Shirt</option>
           {
@@ -108,6 +108,7 @@ class TeamInput extends React.Component {
   }
 
   addStudent = () => {
+    return;
     if (!this.state.value.members) this.state.value.members = [];
     this.state.value.members.push({});
     this.forceUpdate();
@@ -116,6 +117,7 @@ class TeamInput extends React.Component {
   }
 
   removeStudent = idx => {
+    return;
     this.state.value.members = this.state.value.members.filter((member, i) => {
       return idx !== i;
     });
@@ -137,8 +139,8 @@ class TeamInput extends React.Component {
     return (
       <div>
         <Row>
-          <Input 
-            l={6} s={12} type="text" label="Team Name" 
+          <Input
+            l={6} s={12} type="text" label="Team Name"
             defaultValue={ this.state.value.team_name }
             onChange={ this.onFieldChange("team_name") }/>
           <Input l={6} s={12} type="text" label="Chaperone Name"
@@ -154,7 +156,7 @@ class TeamInput extends React.Component {
         {
           (!value.members || value.members.length === 0) ? <p>No members on this team.</p> : (
             value.members.map((member, idx) => (
-              <StudentInput 
+              <StudentInput
                 key={idx} idx={idx} value={ member }
                 onRemove={ () => { this.removeStudent(idx); } }
                 onChange={ this.onChangeStudent(idx) } />
@@ -166,7 +168,7 @@ class TeamInput extends React.Component {
             <a
               disabled={ this.state.value.members && this.state.value.members.length >= 6 }
               onClick={ this.addStudent }
-              className="waves-effect waves-light btn red darken-2">
+              className="waves-effect waves-light btn red darken-2 disabled">
               Add Student
             </a>
           </Col>

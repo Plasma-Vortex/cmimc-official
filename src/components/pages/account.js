@@ -14,8 +14,8 @@ const { SUCCESS, ERROR, PENDING, IDLE } = requestStatuses;
 const AddTeamModal = () => {
   return (
     <Modal
-      header="Add Team" 
-      trigger={<a className="waves-effect waves-light btn right red darken-2" >Add Team</a>}>
+      header="Add Team"
+      trigger={<a className="waves-effect waves-light btn right red darken-2 disabled" >Add Team</a>}>
       <TeamForm mode="add" />
     </Modal>
   );
@@ -23,7 +23,7 @@ const AddTeamModal = () => {
 
 const EditTeamModal = ({ team }) => {
   return (
-    <Modal 
+    <Modal
       header="Edit Team"
       trigger={<a className="waves-effect waves-light btn red darken-2"><i className="fa fa-pencil-square-o" aria-hidden="true" /> Edit</a>}>
       <TeamForm mode="edit" defaultValue={ team } />
@@ -32,8 +32,8 @@ const EditTeamModal = ({ team }) => {
 }
 
 const DeleteTeamModal = ({ team, teamDelete }) => (
-  <Modal 
-    trigger={<a className="waves-effect waves-light btn red darken-2"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
+  <Modal
+    trigger={<a className="waves-effect waves-light btn red darken-2 disabled"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
     actions={
               <div>
                 <Button flat modal="close" waves="light">Cancel</Button>
@@ -54,7 +54,7 @@ const TeamProfile = ({ registration_price, team, teamDelete }) => {
       <p>Chaperone: <b>{ team.chaperone_name }</b> - { team.chaperone_email } / { team.chaperone_number }</p>
       <p>Registration Fee: ${ team.members ? registration_price * team.members.length : 0 } - { team.paid ? <span className="green-text text-accent-3">Paid</span> : <span className="red-text text-accent-3">Unpaid</span> }</p>
       {
-        (!team.members || team.members.length === 0) ? 
+        (!team.members || team.members.length === 0) ?
           ( <p>No members on this team.</p> ) : (
           <table className="striped">
             <thead>
@@ -93,7 +93,7 @@ class Account extends React.Component {
   }
 
   render() {
-    const { 
+    const {
       infoData: { content: info },
       userData: { requestStatus, message, content: user },
       teamDelete
@@ -106,7 +106,7 @@ class Account extends React.Component {
         {
           (!user.teams || user.teams.length === 0) ? (<p>No teams on this account.</p>) : (
             user.teams.map((team, idx) => (
-              <TeamProfile 
+              <TeamProfile
                 key={idx} team={team} teamDelete={teamDelete}
                 registration_price={info.registration_price} />
             ))
