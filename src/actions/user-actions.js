@@ -1,6 +1,6 @@
-import { 
-  USER_GET, 
-  USER_TEAM_POST, 
+import {
+  USER_GET,
+  USER_TEAM_POST,
   USER_TEAM_PUT,
   USER_TEAM_DELETE
 } from "./types";
@@ -10,9 +10,9 @@ export function userGet() {
   return authAPIAction({
     type: USER_GET,
     url: "/api/users",
-    opts: { 
+    opts: {
       method: "get",
-      headers: { 
+      headers: {
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     },
@@ -24,11 +24,11 @@ export function teamPost(team) {
   return authAPIAction({
     type: USER_TEAM_POST,
     url: "/api/teams",
-    opts: { 
+    opts: {
       method: "post",
       body: JSON.stringify({ team }),
-      headers: { 
-        "Content-Type": "application/json", 
+      headers: {
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     },
@@ -38,13 +38,13 @@ export function teamPost(team) {
 
 export function teamPut(team) {
   return authAPIAction({
-    type: USER_TEAM_POST,
+    type: USER_TEAM_PUT,
     url: `/api/teams/${team._id}`,
-    opts: { 
+    opts: {
       method: "put",
       body: JSON.stringify({ team }),
-      headers: { 
-        "Content-Type": "application/json", 
+      headers: {
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     },
@@ -56,10 +56,10 @@ export function teamDelete(team) {
   return authAPIAction({
     type: USER_TEAM_DELETE,
     url: `/api/teams/${team._id}`,
-    opts: { 
+    opts: {
       method: "delete",
-      headers: { 
-        "Content-Type": "application/json", 
+      headers: {
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     },

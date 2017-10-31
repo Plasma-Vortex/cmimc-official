@@ -6,10 +6,10 @@ import { Field, reduxForm } from "redux-form";
 
 import { Spinner, Error } from "../utilities";
 import { teamPost, teamPut } from "../../actions";
-import { 
-  USER_TEAM_POST, 
-  USER_TEAM_PUT, 
-  requestStatuses 
+import {
+  USER_TEAM_POST,
+  USER_TEAM_PUT,
+  requestStatuses
 } from "../../actions/types";
 import { payload } from "../../actions/utilities";
 import { TeamInput } from "./utilities";
@@ -18,10 +18,10 @@ const { SUCCESS, ERROR, PENDING, IDLE } = requestStatuses;
 
 const verifyTeam = team => {
   if (!team) return "Team cannot be empty.";
-  const { 
+  const {
     team_name, chaperone_name, chaperone_email, chaperone_number, members
   } = team;
-  if (!team_name || !chaperone_name || !chaperone_email || 
+  if (!team_name || !chaperone_name || !chaperone_email ||
       !chaperone_number || !members)
     return "Please fill out all fields.";
   else {
@@ -37,21 +37,21 @@ const verifyTeam = team => {
 
 class TeamForm extends React.Component {
   onSubmit = ({ team }) => {
-    const { 
-            teamPost, 
-            teamPut, 
-            errorHandlerPost, 
+    const {
+            teamPost,
+            teamPut,
+            errorHandlerPost,
             errorHandlerPut,
-            mode 
+            mode
           } = this.props,
           message = verifyTeam(team);
     switch(mode) {
-      case "add": 
-        if (message) errorHandlerPost(message); 
+      case "add":
+        if (message) errorHandlerPost(message);
         else teamPost(team);
         break;
-      case "edit": 
-        if (message) errorHandlerPut(message); 
+      case "edit":
+        if (message) errorHandlerPut(message);
         else teamPut(team);
         break;
     }
@@ -63,8 +63,8 @@ class TeamForm extends React.Component {
   }
 
   render() {
-    const { 
-      handleSubmit, 
+    const {
+      handleSubmit,
       postTeamData: { requestStatus: statusPost, message: messagePost, content: userPost },
       putTeamData: { requestStatus: statusPut, message: messagePut, content: userPut },
       resetTeamPost,
@@ -104,7 +104,7 @@ TeamForm.propTypes = {
 
 const mapStateToProps = state => ({
         postTeamData: state.user.postTeam,
-        putTeamData: state.user.postTeam
+        putTeamData: state.user.putTeam
       }),
       mapDispatchToProps = dispatch => ({
         teamPost: team => { teamPost(team)(dispatch); },
@@ -123,6 +123,6 @@ const mapStateToProps = state => ({
         },
       });
 
-export default reduxForm({ 
+export default reduxForm({
   form: "team"
 })(connect(mapStateToProps, mapDispatchToProps)(TeamForm));
