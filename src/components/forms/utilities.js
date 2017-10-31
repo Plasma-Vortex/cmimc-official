@@ -36,7 +36,7 @@ class StudentInput extends React.Component {
     return (
       <Row>
         <Col s={12}>
-          <h6>Student {idx+1}<a className="grey-text text-lighten-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
+          <h6>Student {idx+1}<a className="grey-text text-darken-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
         </Col>
         <Input
           l={6} s={12} type="text" label="Name"
@@ -108,7 +108,6 @@ class TeamInput extends React.Component {
   }
 
   addStudent = () => {
-    return;
     if (!this.state.value.members) this.state.value.members = [];
     this.state.value.members.push({});
     this.forceUpdate();
@@ -117,7 +116,6 @@ class TeamInput extends React.Component {
   }
 
   removeStudent = idx => {
-    return;
     this.state.value.members = this.state.value.members.filter((member, i) => {
       return idx !== i;
     });
@@ -168,7 +166,7 @@ class TeamInput extends React.Component {
             <a
               disabled={ this.state.value.members && this.state.value.members.length >= 6 }
               onClick={ this.addStudent }
-              className="waves-effect waves-light btn red darken-2 disabled">
+              className="waves-effect waves-light btn red darken-2">
               Add Student
             </a>
           </Col>
