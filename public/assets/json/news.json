@@ -1,6 +1,10 @@
 {
   "news" : [
     {
+      "date": "November 6, 2017",
+      "message": "Registration is over! Please check your chaperone emails for payment info (if you did not specify a chaperone email, we will contact the account email). If you do not receive an email, please contact us at ctj@math.cmu.edu."
+    },
+    {
       "date": "October 30, 2017",
       "message": "Due to technical difficulties, the registration deadline has been extended to Sunday, November 5th."
     },

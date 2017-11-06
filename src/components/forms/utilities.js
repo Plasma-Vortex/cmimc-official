@@ -12,6 +12,8 @@ import { subjects, tshirts } from "../../../constants";
 
 const { ERROR } = requestStatuses;
 
+const REGISTRATION = false;
+
 class StudentInput extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +38,13 @@ class StudentInput extends React.Component {
     return (
       <Row>
         <Col s={12}>
-          <h6>Student {idx+1}<a className="grey-text text-darken-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
+          {
+            REGISTRATION ? (
+              <h6>Student {idx+1}<a className="grey-text text-darken-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
+            ) : (
+              <h6>Student {idx+1}<a className="grey-text text-lighten-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
+            )
+          }
         </Col>
         <Input
           l={6} s={12} type="text" label="Name"
@@ -108,6 +116,7 @@ class TeamInput extends React.Component {
   }
 
   addStudent = () => {
+    if (!REGISTRATION) return;
     if (!this.state.value.members) this.state.value.members = [];
     this.state.value.members.push({});
     this.forceUpdate();
@@ -116,6 +125,7 @@ class TeamInput extends React.Component {
   }
 
   removeStudent = idx => {
+    if (!REGISTRATION) return;
     this.state.value.members = this.state.value.members.filter((member, i) => {
       return idx !== i;
     });
@@ -164,7 +174,7 @@ class TeamInput extends React.Component {
         <Row>
           <Col s={6}>
             <a
-              disabled={ this.state.value.members && this.state.value.members.length >= 6 }
+              disabled={ !REGISTRATION || this.state.value.members && this.state.value.members.length >= 6 }
               onClick={ this.addStudent }
               className="waves-effect waves-light btn red darken-2">
               Add Student

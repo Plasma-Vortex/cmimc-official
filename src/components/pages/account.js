@@ -11,11 +11,13 @@ import { subjects, tshirts } from "../../../constants";
 
 const { SUCCESS, ERROR, PENDING, IDLE } = requestStatuses;
 
+const REGISTRATION = false;
+
 const AddTeamModal = () => {
   return (
     <Modal
       header="Add Team"
-      trigger={<a className="waves-effect waves-light btn right red darken-2" >Add Team</a>}>
+      trigger={<a disabled={!REGISTRATION} className="waves-effect waves-light btn right red darken-2" >Add Team</a>}>
       <TeamForm mode="add" />
     </Modal>
   );
@@ -33,7 +35,7 @@ const EditTeamModal = ({ team }) => {
 
 const DeleteTeamModal = ({ team, teamDelete }) => (
   <Modal
-    trigger={<a className="waves-effect waves-light btn red darken-2"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
+    trigger={<a disabled={!REGISTRATION} className="waves-effect waves-light btn red darken-2"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
     actions={
               <div>
                 <Button flat modal="close" waves="light">Cancel</Button>
