@@ -11,7 +11,7 @@ import { subjects, tshirts } from "../../../constants";
 
 const { SUCCESS, ERROR, PENDING, IDLE } = requestStatuses;
 
-const REGISTRATION = false;
+const REGISTRATION = true;
 
 const AddTeamModal = () => {
   return (

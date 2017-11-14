@@ -12,7 +12,7 @@ import { subjects, tshirts } from "../../../constants";
 
 const { ERROR } = requestStatuses;
 
-const REGISTRATION = false;
+const REGISTRATION = true;
 
 class StudentInput extends React.Component {
   constructor(props) {
