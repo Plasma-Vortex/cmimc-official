@@ -6,7 +6,7 @@ const User = require('../database/user'),
       Student = require('../database/student');
 
 router.get('/', auth.verifyJWT, (req, res) => {
-  User.findById(req.user._id, 'email teams')
+  User.findById(req.user._id, 'email teams registrationWhitelist')
   .populate('teams')
   .exec((err, user) => {
     if (err) handler(false, 'Failed to load user.', 503)(req, res);

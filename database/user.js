@@ -9,6 +9,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   salt: { type: String, required: true },
   teams: [ { type: Schema.Types.ObjectId, ref: 'Team', required: true } ],
+  registrationWhitelist: { type: Boolean, default: false },
   created: { type: Date, required: true },
   updated: { type: Date, required: true }
 });
@@ -28,7 +29,7 @@ userSchema.pre('validate', function(next) {
   const now = new Date();
   if (!user.created) user.created = now;
   user.updated = now;
-  
+
   if (!user.isModified('password')) return next();
 
   bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {

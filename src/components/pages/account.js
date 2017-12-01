@@ -100,16 +100,18 @@ class Account extends React.Component {
     } = this.props;
     if (!user) return <Spinner />;
     if (requestStatus === PENDING) return <Spinner />;
+    // allow for whitelisting users
+    const registrationIsOpen = info.registration_is_open || user.registrationWhitelist;
     return (
       <div>
-        <h4>Account<AddTeamModal registrationIsOpen={ info.registration_is_open } /></h4>
+        <h4>Account<AddTeamModal registrationIsOpen={ registrationIsOpen } /></h4>
         {
           (!user.teams || user.teams.length === 0) ? (<p>No teams on this account.</p>) : (
             user.teams.map((team, idx) => (
               <TeamProfile
-                key={idx} team={team} teamDelete={teamDelete}
-                registrationIsOpen={info.registration_is_open}
-                registration_price={info.registration_price} />
+                key={ idx } team={ team } teamDelete={ teamDelete }
+                registrationIsOpen={ registrationIsOpen }
+                registration_price={ info.registration_price } />
             ))
           )
         }
