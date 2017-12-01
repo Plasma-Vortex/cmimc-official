@@ -22,9 +22,9 @@ const Introduction = ({ infoData: { requestStatus, message, content: info } }) =
       <Row className="container">
         <Col l={6} s={12}>
           <h4 className="header">Welcome, mathletes!</h4>
-          <Blurb 
-            year={ info.year || "N/A" } 
-            date={ info.contest_date || "N/A" } />
+          <Blurb
+            year={ info.year || "N/A" }
+            date={ info.dates.contest_date || "N/A" } />
           <News />
         </Col>
         <Col offset="l1" l={5} s={12}>
@@ -34,7 +34,7 @@ const Introduction = ({ infoData: { requestStatus, message, content: info } }) =
           </Card>
         </Col>
       </Row>
-    </div> 
+    </div>
   );
 }
 

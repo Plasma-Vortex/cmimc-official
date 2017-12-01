@@ -12,8 +12,6 @@ import { subjects, tshirts } from "../../../constants";
 
 const { ERROR } = requestStatuses;
 
-const REGISTRATION = false;
-
 class StudentInput extends React.Component {
   constructor(props) {
     super(props);
@@ -34,12 +32,12 @@ class StudentInput extends React.Component {
   }
 
   render() {
-    const { idx, onRemove, value } = this.props;
+    const { idx, onRemove, value, registrationIsOpen } = this.props;
     return (
       <Row>
         <Col s={12}>
           {
-            REGISTRATION ? (
+            registrationIsOpen ? (
               <h6>Student {idx+1}<a className="grey-text text-darken-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
             ) : (
               <h6>Student {idx+1}<a className="grey-text text-lighten-2" onClick={ onRemove }><i className="fa fa-times right" aria-hidden="true" /></a></h6>
@@ -116,7 +114,7 @@ class TeamInput extends React.Component {
   }
 
   addStudent = () => {
-    if (!REGISTRATION) return;
+    if (!this.props.registrationIsOpen) return;
     if (!this.state.value.members) this.state.value.members = [];
     this.state.value.members.push({});
     this.forceUpdate();
@@ -125,7 +123,7 @@ class TeamInput extends React.Component {
   }
 
   removeStudent = idx => {
-    if (!REGISTRATION) return;
+    if (!this.props.registrationIsOpen) return;
     this.state.value.members = this.state.value.members.filter((member, i) => {
       return idx !== i;
     });
@@ -143,7 +141,8 @@ class TeamInput extends React.Component {
   }
 
   render() {
-    const { value } = this.state;
+    const { value } = this.state,
+          { registrationIsOpen } = this.props;
     return (
       <div>
         <Row>
@@ -165,6 +164,7 @@ class TeamInput extends React.Component {
           (!value.members || value.members.length === 0) ? <p>No members on this team.</p> : (
             value.members.map((member, idx) => (
               <StudentInput
+                registrationIsOpen={ registrationIsOpen }
                 key={idx} idx={idx} value={ member }
                 onRemove={ () => { this.removeStudent(idx); } }
                 onChange={ this.onChangeStudent(idx) } />
@@ -174,7 +174,7 @@ class TeamInput extends React.Component {
         <Row>
           <Col s={6}>
             <a
-              disabled={ !REGISTRATION || this.state.value.members && this.state.value.members.length >= 6 }
+              disabled={ !registrationIsOpen || this.state.value.members && this.state.value.members.length >= 6 }
               onClick={ this.addStudent }
               className="waves-effect waves-light btn red darken-2">
               Add Student

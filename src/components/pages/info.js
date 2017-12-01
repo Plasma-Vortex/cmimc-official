@@ -12,7 +12,7 @@ const Info = ({ infoData: { requestStatus, message, content: info } }) => {
   return !info ? <div /> : (
     <div>
       <h4>Information</h4>
-      <p>The Carnegie Mellon Informatics and Mathematics Competition (CMIMC) is an annual math and computer science competition held at <a href="http://www.cmu.edu/" target="_blank" className="red-text text-darken-2">Carnegie Mellon University</a> by CMU students. The CMIMC { info.year } will be held on { info.contest_date }. Contestants come in teams of 4-6 to participate in individual and team events. More information can be found in the <a href="docs/Official_Contest_Information.pdf" className="red-text text-darken-2" target="_self">Official Contest Information PDF</a> below. To stay updated, follow our <a href="https://www.facebook.com/CMIMC" target="_blank" className="red-text text-darken-2">Facebook page</a>.</p>
+      <p>The Carnegie Mellon Informatics and Mathematics Competition (CMIMC) is an annual math and computer science competition held at <a href="http://www.cmu.edu/" target="_blank" className="red-text text-darken-2">Carnegie Mellon University</a> by CMU students. The CMIMC { info.year } will be held on { info.dates.contest_date }. Contestants come in teams of 4-6 to participate in individual and team events. More information can be found in the <a href="docs/Official_Contest_Information.pdf" className="red-text text-darken-2" target="_self">Official Contest Information PDF</a> below. To stay updated, follow our <a href="https://www.facebook.com/CMIMC" target="_blank" className="red-text text-darken-2">Facebook page</a>.</p>
       <a href="docs/Official_Contest_Information.pdf" className="waves-effect waves-light btn red darken-2 contest-pdf" target="_self">Official Contest PDF</a>
       <h5>Important Dates</h5>
       <table className="info-table centered">
@@ -24,19 +24,19 @@ const Info = ({ infoData: { requestStatus, message, content: info } }) => {
         </thead>
         <tbody>
           <tr>
-            <td>{ info.registration_open }</td>
+            <td>{ info.dates.registration_open }</td>
             <td>Registration opens</td>
           </tr>
           <tr>
-            <td>{ info.registration_close }</td>
+            <td>{ info.dates.registration_close }</td>
             <td>Registration closes</td>
           </tr>
           <tr>
-            <td>{ info.payment_deadline }</td>
+            <td>{ info.dates.payment_deadline }</td>
             <td>Payment deadline</td>
           </tr>
           <tr>
-            <td>{ info.contest_date }</td>
+            <td>{ info.dates.contest_date }</td>
             <td>The contest</td>
           </tr>
         </tbody>

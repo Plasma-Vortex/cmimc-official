@@ -59,7 +59,9 @@ class TeamForm extends React.Component {
 
   teamField = ({ input, meta, ...rest }) => {
     const { defaultValue } = this.props;
-    return <TeamInput defaultValue={ defaultValue } { ...input } { ...rest } />;
+    return <TeamInput
+              registrationIsOpen={ this.props.registrationIsOpen }
+              defaultValue={ defaultValue } { ...input } { ...rest } />;
   }
 
   render() {

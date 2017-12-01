@@ -11,31 +11,29 @@ import { subjects, tshirts } from "../../../constants";
 
 const { SUCCESS, ERROR, PENDING, IDLE } = requestStatuses;
 
-const REGISTRATION = false;
-
-const AddTeamModal = () => {
+const AddTeamModal = ({ registrationIsOpen }) => {
   return (
     <Modal
       header="Add Team"
-      trigger={<a disabled={!REGISTRATION} className="waves-effect waves-light btn right red darken-2" >Add Team</a>}>
-      <TeamForm mode="add" />
+      trigger={<a disabled={ !registrationIsOpen } className="waves-effect waves-light btn right red darken-2" >Add Team</a>}>
+      <TeamForm mode="add" registrationIsOpen={ registrationIsOpen } />
     </Modal>
   );
 }
 
-const EditTeamModal = ({ team }) => {
+const EditTeamModal = ({ team, registrationIsOpen }) => {
   return (
     <Modal
       header="Edit Team"
       trigger={<a className="waves-effect waves-light btn red darken-2"><i className="fa fa-pencil-square-o" aria-hidden="true" /> Edit</a>}>
-      <TeamForm mode="edit" defaultValue={ team } />
+      <TeamForm mode="edit" defaultValue={ team } registrationIsOpen={ registrationIsOpen } />
     </Modal>
   );
 }
 
-const DeleteTeamModal = ({ team, teamDelete }) => (
+const DeleteTeamModal = ({ team, teamDelete, registrationIsOpen }) => (
   <Modal
-    trigger={<a disabled={!REGISTRATION} className="waves-effect waves-light btn red darken-2"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
+    trigger={<a disabled={ !registrationIsOpen } className="waves-effect waves-light btn red darken-2"><i className="fa fa-times" aria-hidden="true" /> Delete</a>}
     actions={
               <div>
                 <Button flat modal="close" waves="light">Cancel</Button>
@@ -47,11 +45,11 @@ const DeleteTeamModal = ({ team, teamDelete }) => (
   </Modal>
 );
 
-const TeamProfile = ({ registration_price, team, teamDelete }) => {
+const TeamProfile = ({ registration_price, team, teamDelete, registrationIsOpen }) => {
   return (
     <Card className="account-team">
       <h5>
-        { team.team_name } <ul className="team-btns right"><li><EditTeamModal team={ team } /></li><li><DeleteTeamModal team={ team } teamDelete={ teamDelete }/></li></ul>
+        { team.team_name } <ul className="team-btns right"><li><EditTeamModal team={ team } registrationIsOpen={ registrationIsOpen } /></li><li><DeleteTeamModal team={ team } teamDelete={ teamDelete } registrationIsOpen={ registrationIsOpen }/></li></ul>
       </h5>
       <p>Chaperone: <b>{ team.chaperone_name }</b> - { team.chaperone_email } / { team.chaperone_number }</p>
       <p>Registration Fee: ${ team.members ? registration_price * team.members.length : 0 } - { team.paid ? <span className="green-text text-accent-3">Paid</span> : <span className="red-text text-accent-3">Unpaid</span> }</p>
@@ -104,12 +102,13 @@ class Account extends React.Component {
     if (requestStatus === PENDING) return <Spinner />;
     return (
       <div>
-        <h4>Account<AddTeamModal /></h4>
+        <h4>Account<AddTeamModal registrationIsOpen={ info.registration_is_open } /></h4>
         {
           (!user.teams || user.teams.length === 0) ? (<p>No teams on this account.</p>) : (
             user.teams.map((team, idx) => (
               <TeamProfile
                 key={idx} team={team} teamDelete={teamDelete}
+                registrationIsOpen={info.registration_is_open}
                 registration_price={info.registration_price} />
             ))
           )
