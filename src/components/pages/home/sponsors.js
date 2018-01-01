@@ -2,6 +2,26 @@ import React from 'React';
 
 const sponsors = [
   {
+    name: 'CMU SCS',
+    link: 'https://www.cs.cmu.edu/',
+    className: 'sponsor sponsor-cm'
+  },
+  {
+    name: 'Citadel',
+    link: 'https://www.citadel.com/',
+    className: 'sponsor sponsor-ci'
+  },
+  {
+    name: 'Citadel Securities',
+    link: 'https://www.citadelsecurities.com/',
+    className: 'sponsor sponsor-cs'
+  },
+  {
+    name: 'DE Shaw',
+    link: 'https://www.deshaw.com/',
+    className: 'sponsor sponsor-de'
+  },
+  {
     name: 'Two Sigma',
     link: 'https://www.twosigma.com',
     className: 'sponsor sponsor-2s'
@@ -17,7 +37,7 @@ const sponsors = [
     className: 'sponsor sponsor-xp'
   },
   {
-    name: 'Two Sigma',
+    name: 'Wolfram',
     link: 'https://www.wolfram.com',
     className: 'sponsor sponsor-wa'
   },

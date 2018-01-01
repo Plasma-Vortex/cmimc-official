@@ -92,6 +92,26 @@ footer .footer-copyright ul li  {
   background-color: #f5f5f5;
 }
 
+.sponsor-cm {
+  background-image: url('../img/CMU-SCS.png');
+  background-size: 86%;
+}
+
+.sponsor-ci {
+  background-image: url('../img/Citadel.png');
+  background-size: 86%;
+}
+
+.sponsor-cs {
+  background-image: url('../img/Citadel-Securities.png');
+  background-size: 86%;
+}
+
+.sponsor-de {
+  background-image: url('../img/de-shaw-logo.png');
+  background-size: 86%;
+}
+
 .sponsor-2s {
   background-image: url('../img/2s-tran.png');
   background-size: 86%;
