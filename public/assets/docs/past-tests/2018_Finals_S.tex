@@ -1,0 +1,255 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{3pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{3pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}
+
+\begin{center}
+\huge\textbf{Algebra Individual Finals Solutions}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item For all real numbers $r$, denote by $\{r\}$ the fractional part of $r$, i.e. the unique real number $s\in[0,1)$ such that $r-s$ is an integer.  How many real numbers $x\in[1,2)$ satisfy the equation $\left\{x^{2018}\right\} = \left\{x^{2017}\right\}?$
+
+\proposed{David Altizio}
+
+\solution The condition is equivalent to $x^{2018} = x^{2017} + N$ for some integer $N\geq 0$ (since $x^{2018}\geq x^{2017}$ due to $x\geq 1$).  Note that the function $f(x) := x^{2018} - x^{2017}$ is continuous and increasing in $[1,2)$, with $f(1) = 0$ and $f(2) = 2^{2017}$.  Thus, for every $N\in\{0,\ldots, 2^{2017}-1\}$, there exists exactly one $x_N\in[1,2]$ for which $x_N^{2018} = x_N^{2017} + N$.  Thus the requested answer is $\boxed{2^{2017}}$.
+
+\item Compute the sum of the digits of \[\prod_{n=0}^{2018}\left(10^{2\cdot 3^n} - 10^{3^n} + 1\right)\left(10^{2\cdot 3^n} + 10^{3^n} + 1\right).\]
+
+\proposed{Cody Johnson}
+
+\solution Let $a_n = 10^{3^n}$ for notational convienence.  Note that $a_{n+1} = a_n^3$, so \[\prod_{n=0}^{2018}(a_n^2 - a_n + 1)(a_n^2 + a_n + 1) = \prod_{n=0}^{2018}\frac{a_n^6 - 1}{a_n^2 - 1} = \frac{\prod_{n=0}^{2018}(a_{n+1}^2 - 1)}{\prod_{n=0}^{2018}(a_n^2 - 1)} = \frac{a_{2019}^2 - 1}{a_0^2 - 1}.\] Now $a_0^2 - 1 = 99$ and $a_{2019}^2 - 1$ is just a number consisting of $2\cdot 3^{2019}$ nines, and so the answer is $\boxed{3^{2019}}$.
+
+\item Let $a$ be a complex number, and set $\alpha$, $\beta$, and $\gamma$ to be the roots of the polynomial $x^3 - x^2 + ax - 1$.  Suppose \[(\alpha^3+1)(\beta^3+1)(\gamma^3+1) = 2018.\] Compute the product of all possible values of $a$.
+
+\proposed{Keerthana Gurushankar and David Altizio}
+
+\solution Let $\omega$ be a primitive sixth root of unity, so that $\omega^3 = -1$ and $\omega^2 - \omega + 1 = 0$.  Note that the product on the LHS becomes \[-\prod_{cyc}(\alpha+1)(\alpha-\omega)(\alpha-\bar\omega) = -p(-1)p(\omega)p(\bar\omega).\] It is not hard to compute $p(-1) = -3-a$.  Moreover, note that \[p(\omega) = \omega^3 - (\omega^2 + 1) + a\omega = -1 + \omega(a-1),\] and similarly $p(\bar\omega) = -1 + \bar\omega(a-1)$.  As a result, \[p(\omega)p(\bar\omega) = (-1 + \omega(a-1))(-1 + \bar\omega(a-1)) = 1 - (a-1) + (a-1)^2 = a^2 - 3a + 3.\] So the given equation becomes \[(a+3)(a^2 - 3a + 3) = 2018\] and the product of the roots is $2018 - 9 = \boxed{2009}$.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Combinatorics Individual Finals Solutions}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item How many nonnegative integers with at most $40$ digits consisting of entirely zeroes and ones are divisible by $11$?
+
+\proposed{David Altizio}
+
+\solution Let $\omega:=\exp(2\pi i/11)$, and consider the function \[f(z):=(1+z)(1+z^{10})(1+z^{10^2})\dots(1+z^{10^{39}})\] Using a roots of unity filter, we seek \[\frac1{11}\left[f(1)+f(\omega)+f(\omega^2)+\dots+f(\omega^{10})\right]\] Note that \[f(\omega^k)=(1+\omega^k)^{20}(1+\omega^{-k})^{20}=\omega^{-20k}(1+\omega^k)^{40}=\sum_{j=0}^{40}\binom{40}j\omega^{-20k+jk}=\sum_{j=-20}^{20}\binom{40}{j+20}\omega^{jk}\] Thus, the answer is \[\frac1{11}\sum_{k=0}^{10}\sum_{j=-20}^{20}\binom{40}{j+20}\omega^{jk}=\sum_{j=-20}^{20}\left[\binom{40}{j+20}\sum_{k=0}^{10}\frac1{11}\omega^{jk}\right]=\boxed{2\binom{40}{9}+\binom{40}{20}}.\]
+
+\item John has a standard four-sided die. Each roll, he gains points equal to the value of the roll multiplied by the number of times he has now rolled that number; for example, if he first rolls were $3,3,2,3$, he would have $3+6+2+9=20$ points. Find the expected number of points he'll have after rolling the die 25 times.
+
+\proposed{Patrick Lin}
+
+\solution
+For general $n$, suppose instead that the multiplier is always decreased by one; we look at the number of times we've previously rolled a number. Then in total, the number of points we get from rolling 4's is equal to 4 times the number of pairs of rolls such that both rolls in the pair came out to be 4. In this scenario, the expected number of points would then just be $\binom{n}{2}\cdot\frac{1}{4}\cdot\frac{5}{2}$, since each pair has a $\frac14$ chance to contribute (in expectancy) $\frac52$ points.
+
+\par Now, when we add one to every multiplier this just increases the expected number of points by $\frac52 n$, so the answer is $\frac58\binom{n}{2} + \frac52 n = \frac52 n \left(1 + \frac{n-1}{8}\right)$. Substituting $n = 25$ yields an answer of $\boxed{250}$.
+
+\item Let $\mathcal{F}$ be a family of subsets of $\{1,2,\ldots, 2017\}$ with the following property: if $S_1$ and $S_2$ are two elements of $\mathcal{F}$ with $S_1\subsetneq S_2$, then $\abs{S_2\setminus S_1}$ is odd. Compute the largest number of subsets $\mathcal{F}$ may contain.
+
+\proposed{David Altizio}
+
+\solution We claim the answer is $\boxed{\textstyle\binom{2018}{1009}}$.
+
+\par First, we show that $|\mathcal F| \geq \binom{2018}{1009} + 1 = 2\binom{2017}{1008} + 1$ is impossible.  Assume for the sake of contradiction there exists such a family $\mathcal F$ with at least that many elements, and set $N = |\mathcal F|$.  Consider the poset $(\mathcal F, \subseteq)$ of all subsets in $\mathcal F$ ordered by inclusion.  Note that $\mathcal F$ is a subset of $2^{[2017]}$, meaning that the poset $P$ can be embedded into the Boolean lattice $\mathcal B_{2017}$\footnote{i.e. the poset of all subsets of $[2017]$ ordered by inclusion}.  By Sperner, the maximum size of an antichain in this lattice is $\binom{2017}{1008}$, meaning that in turn the maximum size of an antichain in $\mathcal F$ is at most $\binom{2017}{1008}$.  Thus, since \[2\binom{2017}{1008} = \binom{2018}{1009} < N,\] Dilworth guarantees the existence of a chain of length $3$ in $\mathcal F$.  In other words, there exist $S_1,S_2,S_3$ in $\mathcal F$ such that $S_1\subsetneq S_2\subsetneq S_3$.  But now we have a contradiction: if $|S_2\setminus S_1|$ and $|S_3\setminus S_2|$ are both odd, then \[|S_3\setminus S_1| = |S_3\setminus S_2| + |S_2\setminus S_1|\] is even.
+
+\par It remains to construct an example of a family $\mathcal F$ with $\binom{2018}{1009}$ elements.  Take \[\mathcal F = \{S\subseteq [2017]: |S|=1008\text{ or }|S| = 1009\}.\] Note that this family has exactly $\binom{2018}{1009}$ elements.  Furthermore, if $S_1\subsetneq S_2$ for $S_1$ and $S_2$ in $\mathcal F$, then it must be the case that $S_2 = S_1\cup\{a\}$ for some $1\leq a\leq 2017$, and so $|S_2\setminus S_1| = 1$.  Thus, we have a valid construction, and so we are done.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Computer Science Individual Finals Solutions}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item Consider a connected graph $G$ with vertex set $\{0,1,2,...,6\}$. Suppose there exist $3$ vertices of distance $1$ away from vertex $0$, $2$ vertices of distance $2$ away from vertex $0$, and $1$ vertex of distance $3$ away from vertex $0$. How many such graphs satisfy this property?
+
+\proposed{Cody Johnson}
+
+\solution
+There are \[\frac{n!}{a_1!\cdot a_2!\cdot...\cdot a_m!}\] ways to choose which vertices are at each distance from vertex $0$. Then, for each vertex at distance $d$ away from vertex $0$ ($1\le d\le m$), we need to choose some nonempty subset of the vertices of distance $d-1$ to connect them to. Therefore, if we let $a_0=1$, there are \[(2^{a_0}-1)^{a_1}\cdot(2^{a_1}-1)^{a_2}\cdot...\cdot(2^{a_{m-1}}-1)^{a_m}\] Finally, we can connect vertices at the same distance together arbitrarily. There are \[2^{\binom{a_1}2}\cdot2^{\binom{a_2}2}\cdot...\cdot2^{\binom{a_m}2}\] In total, there are thus \[n!\cdot\prod_{i=1}^m\frac{(2^{a_{i-1}}-1)^{a_i}\cdot2^{\binom{a_i}2}}{a_i!}\] such graphs. Plugging in the numbers gives an answer of 
+\[\dfrac{6!(2-1)^3(2^3-1)^2(2^2-1)^12^32^12^0}{3!2!1!}=\boxed{141120}.\]
+
+
+%\item Find all pairs of integer constants $(b, d)$ such that the function \[f(t) = (3\log(t) + bt)(8\log(t) + dt) - bdt^2 + (95+ bd)t\log(t)\] is $o(t)$.
+
+%\proposed{Varun Kambhampati}
+
+%\solution
+%We expand:
+%\[f(t) = 24\log^2(t)+t\log t(bd +8b+3d+95)\]
+%Notice that $24\log^2(t)\in o(t)$, so all we need is
+%\[bd+8b+3d+95=0 \iff (b+3)(d+8)=-71\]
+%so the answer is $\boxed{(b,d)=(-4,63);(-2,-79);(68,-9);(-74,-7)}$
+
+\item Determine the largest number of steps for $\gcd(k,76)$ to terminate over all choices of $0 < k < 76$, using the following algorithm for gcd. Give your answer in the form $(n,k)$ where $n$ is the maximal number of steps and $k$ is the $k$ which achieves this. If multiple $k$ work, submit the smallest one.
+
+\begin{tabular}{l}
+1: \textbf{FUNCTION} $\text{gcd}(a,b)$: \\
+2: $\qquad$ \textbf{IF} $a = 0$ \textbf{RETURN} $b$ \\ 
+3: $\qquad$ \textbf{ELSE RETURN} $\text{gcd}(b \bmod a,a)$
+\end{tabular}
+
+\proposed{Misha Ivkov and Gunmay Handa}
+
+\solution
+We claim the answer is $\boxed{(8, 47)}$. Denote by $\gcd(a,b)$ the number of steps needed for $\gcd$ to finish given two inputs $a,\ b$. First notice that $\gcd(F_{n-1},F_n)$ takes the most steps to finish over all $\gcd(a,b)$ for $a < b < F_n$ (easy to show by induction). Hence $\gcd(k, 76) < \gcd(55, 89) = 9$ is our first upper bound. Now we split into four cases.
+
+\begin{itemize}
+
+\item \textbf{Case 1.} If $k \le 34$, then $\gcd(k, 76) = 1 + \gcd(76\bmod k, k) < 1 + \gcd(21, 34) = 8$ (We note that $76\bmod 34 \neq 21$, so this is strict inequality).
+\item \textbf{Case 2.} If $34 < k \le 38$, then $\gcd(k, 76) = 1 + \gcd(76 - 2k, k) < 1 + \gcd(34, 55) = 9$. Notice that $76 - 2k < 8$, so $\gcd(76-2k, k) < 1 + \gcd(5, 8) = 5$. Putting everything together again gives $\gcd(k, 76) < 6$, as in case 1.
+\item \textbf{Case 3.} If $38 < k \le 55$, then $\gcd(k, 76) = 1 + \gcd(76 - k, k) < 1 + \gcd(34, 55) = 9$ and we have no way of improving further.
+\item\textbf{Case 4.} If $55 < k$, then $\gcd(k, 76) = 1 + \gcd(76 - k, k)$. Since $76 - k < 21$, then $\gcd(76 -k, k) = 1 + \gcd(k\pmod{76 - k}, 76 - k ) < 1 + \gcd(13, 21) = 7$, so $\gcd(k, 76) < 8$.
+\end{itemize}
+Hence we simply analyze the numbers $k\in(38, 55]$ which are relatively prime to $76$ to get that $47$ indeed gives $8$ steps.
+
+
+\item For $n\in\mathbb N$, let $x$ be the solution of $x^x=n$. Find the asymptotics of $x$, i.e., express $x=\Theta(f(n))$ for some suitable explicit function of $n$.
+
+\proposed{Cody Johnson}
+
+\solution
+We claim
+\[x = \boxed{\Theta\left(\frac{\ln n}{\ln \ln n}\right)}.\]
+Indeed, we claim that $\frac{\ln n}{\ln \ln n}$ is a lower bound on $x$. Notice that
+\begin{align*}
+\frac{\ln n}{\ln \ln n} < x & \iff \frac{\ln n}{\ln \ln n}\ln \left(\frac{\ln n}{\ln \ln n}\right) < x\ln x = \ln n \\
+& \iff \frac{\ln n}{\ln \ln n}\left(\ln\ln n - \ln\ln\ln n\right) < \ln n \\
+& \iff \ln n - \frac{\ln n \ln\ln\ln n}{\ln\ln n} < \ln n,
+\end{align*}
+which is clearly true for any $n > e^e$, so this is a lower bound. We also claim that $\frac{2\ln n}{\ln \ln n}$ is an upper bound on $x$. Observe that
+\begin{align*}
+x < \frac{2\ln n}{\ln \ln n} & \iff \ln n = x \ln x < \frac{2\ln n}{\ln \ln n} \ln \left(\frac{2\ln n}{\ln \ln n}\right) \\
+& \iff \ln n < \frac{2 \ln n}{\ln \ln n} \left(\ln 2 \ln n - \ln \ln \ln n\right).
+\end{align*}
+Since $\ln 2 \ln n > \ln \ln n$ we can write
+\begin{align*}
+\frac{2 \ln n}{\ln \ln n} \left(\ln 2 \ln n - \ln \ln \ln n\right) & > \frac{2 \ln n}{\ln 2 \ln n} \left(\ln 2 \ln n - \ln \ln \ln n\right) \\
+& > 2 \ln n - \ln n \cdot \frac{2 \ln \ln \ln n}{\ln 2 \ln n} \\
+& > \ln n \left(2 - \frac{\ln \ln \ln n}{\ln 2 \ln n}\right) \\
+& > \ln n,
+\end{align*}
+for large enough values of $n$. Hence $x$ is bounded on both sides by scalar multiples of $\frac{\ln n}{\ln \ln n}$, as desired.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Geometry Individual Finals Solutions}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item Let $ABC$ be a triangle with $AB=9$, $BC=10$, $CA=11$, and orthocenter $H$.  Suppose point $D$ is placed on $\overline{BC}$ such that $AH=HD$.  Compute $AD$.
+
+\proposed{David Altizio}
+
+\solution Let $A'$ be the reflection over $\overline{BC}$.  Then $\triangle AHD\sim\triangle ADA'$ since both triangles are isosceles, and so \[AD^2 = AH\cdot AA' = 2AH\cdot d(A,BC) = 2AB\cdot AC\cos A = 2\cdot 9\cdot 11\cdot\frac{17}{33} = 102,\] whence $AD=\boxed{\sqrt{102}}$.
+
+\begin{center}OR\end{center}
+
+\solution Recall that four points $A$, $B$, $C$, and $D$ satisfy $AC\perp BD$ if and only if $AD^2 - CD^2 = AB^2 - CB^2$.  With this in mind, write \[BH^2 - AH^2 = BH^2 - DH^2\quad\Rightarrow\quad BC^2 - AC^2 = AB^2 - AD^2.\] Rearranging thus yields \[AD = \sqrt{AB^2+AC^2-BC^2} = \sqrt{9^2+11^2-10^2} = \boxed{\sqrt{102}}.\]
+
+\item Suppose $ABCD$ is a trapezoid with $AB\parallel CD$ and $AB\perp BC$. Let $X$ be a point on segment $\overline{AD}$ such that $AD$ bisects $\angle BXC$ externally, and denote $Y$ as the intersection of $AC$ and $BD$. If $AB=10$ and $CD=15$, compute the maximum possible value of $XY$.
+
+\proposed{Gunmay Handa}
+
+\solution Let $Z=CX\cap AB$.  Then $XZ$ bisects $\angle BXZ$ from the definition of $X$, and so \[\frac{BX}{BA} = \frac{ZX}{ZA} = \frac{XC}{CD}\quad\Rightarrow\quad \frac{BC}{XC} = \frac{AB}{CD} = \frac23.\] Now let $C'$ denote the reflection of $C$ over $CA$.  Then $B$, $X$, and $C'$ are collinear with $\frac{BX}{XC'} = \frac23$.  But note that $\frac{BY}{YD} = \frac23$ as well, and so $XY\parallel DC'$.  In turn, when combined with $C'D = CD = 15$, we obtain \[\frac{XY}{DC'} = \frac{XB}{C'B} = \frac25\quad\Rightarrow\quad XY = \frac25\cdot 15 = 6.\]
+
+\item Let $ABC$ be a triangle with incircle $\omega$ and incenter $I$.  The circle $\omega$ is tangent to $BC$, $CA$, and $AB$ at $D$, $E$, and $F$ respectively.  Point $P$ is the foot of the angle bisector from $A$ to $BC$, and point $Q$ is the foot of the altitude from $D$ to $EF$. Suppose $AI=7$, $IP=5$, and $DQ=4$.  Compute the radius of $\omega$.
+
+\solution We claim that in general \[DQ = \frac{AP\cdot r^2}{AI\cdot IP},\] from which computation gives the answer as $\boxed{\tfrac{\sqrt{105}}3}$.  There are many ways to prove this; we now present three of them.  \\
+\\
+\textbf{Solution 1:} Invert about $\omega$, and denote inverses with a $^*$.  Recall that since $AE$ and $AF$ are tangents to $\omega$, $A^*$ is the intersection point of $AI\equiv AP$ and $EF$.  In a similar vein, $P^*$ is the projection of $D$ onto $AP$.  But now $DQA^*P^*$ is a rectangle, and so \[DQ = A^*P^* = \frac{AP\cdot r^2}{AI\cdot IP}\] by the Inversion Distance Formula.\\
+\\
+\textbf{Solution 2:} Let $X$ denote the foot of the perpendicular from $A$ to $BC$.  Recall that $EF$ and $BC$ are the polars of $A$ and $D$ respectively with respect to $\omega$, so by Salmon's Theorem, \[\frac{DQ}{AX} = \frac{\operatorname{dist}(D,EF)}{\operatorname{dist}(A,BC)} = \frac{r}{IA}.\] In turn, \[DQ = \frac{AX\cdot r}{IA} = \frac{AP\cdot r^2}{AI\cdot IP},\] where the last step uses $\triangle PDI\sim\triangle PXA$.\\
+\\
+\textbf{Solution 3:} Let $\triangle I_AI_BI_C$ denote the excentral triangle in the usual fashion. Recall that $\triangle DEF \sim \triangle I_AI_BI_C$ with similarity ratio $r:2R$, as $\odot(ABC)$ is the nine-point circle of $\odot(I_AI_BI_C)$. Then $$DQ=\frac{AI_A\cdot r}{2R}=\frac{AB\cdot AC\cdot r}{2R\cdot AI}=\frac{d(A,BC)\cdot r}{AI}=\frac{d(A,BC)\cdot r^2}{d(I,BC)\cdot AI}=\frac{AP\cdot r^2}{IP\cdot AI}.$$
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Number Theory Individual Finals Solutions}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+\item  Alex has one-pound red bricks and two-pound blue bricks, and has 360 total pounds of brick. He observes that it is impossible to rearrange the bricks into piles that all weigh three pounds, but he can put them in piles that each weigh five pounds. Finally, when he tries to put them into piles that all have three bricks, he has one left over. If Alex has $r$ red bricks, find the number of values $r$ could take on.
+
+\proposed{Patrick Lin}
+
+\solution Let $b$ denote the number of blue bricks that Alex has. The first condition tells us that $r + 2b = 360$. In particular, $r + 2b \equiv 0 \pmod{3}$. The last condition tells us that $r + b \equiv 1 \pmod{3}$. Thus, $b \equiv 2 \pmod{3}$ and $r \equiv 2 \pmod{3}$ also. The third condition informs us that the $r + b$ bricks can be partitioned into 72 piles that each weight 5 pounds. Since this cannot be done with only the two-pound bricks, there must be at least one one-pound brick in each pile; that is, $r \geq 72$.\\ 
+
+Now, the last condition informs us that $b$ must be greater than $120$. If there were fewer than $120$ two-pound blue bricks, then we could form 120 piles, each with at most one two-pound blue brick, and then use the rest of the red one-pound bricks. Thus, $b > 120$ and since $r + 2b = 360$, $r< 120$. 
+
+Thus, the conditions on $r$ are $72\leq r < 120$ and $r\equiv 2\pmod 3$; it is not hard to calculate that there are $\boxed{16}$ possible such values of $r$.
+
+\item How many integer values of $k$, with $1 \leq k \leq 70$, are such that $x^{k}-1 \equiv 0 \pmod{71}$ has at least $\sqrt{k}$ solutions?
+
+\proposed{Andrew Kwon}
+
+\solution
+We use the well-known fact that $x^{d} - 1 \equiv 0 \pmod{p}$ has exactly $d$ solutions when $d \mid p - 1$. It is also evident that if $d$ is coprime to $p-1$, then there is only the trivial solution.
+
+\par Now, any prime factors of $k$ that do not divide $p-1$ are irrelevant. In particular, the number of solutions to $x^{k} - 1 \equiv 0 \pmod{p}$ is exactly $\gcd(k, p - 1)$. Therefore, we need $\gcd(k, p - 1) \geq \sqrt{k}$, and this can now be counted manually by changing variables to $d = \gcd(k, p - 1)$, $k = d \ell$, where $\ell \leq \min(d, \frac{p-1}{d})$ and $\gcd(\ell, \tfrac{p-1}{d}) = 1$.
+
+\begin{itemize}
+\item For $d = 1, 35, 70$ it is clear there is only one choice of $\ell$ and for $d = 2$, $\ell$ can be 1 or 2.
+
+\item For $d = 5,7$ there are 3 choices for $\ell$, which are $\{1, 3, 5\}$ and $\{1, 3, 7\}$ respectively.
+		
+\item For $d = 10$, $\ell$ can be any positive integer at most $6$; for $d = 14$, $\ell$ can be any positive integer at most $4$.
+\end{itemize}
+		
+In total we find $\boxed{21}$ possible $(d,\ell)$ pairs which correspond to the desired values of $k$.
+
+\item Determine the number of integers $a$ with $1\leq a\leq 1007$ and the property that both $a$ and $a+1$ are quadratic residues mod $1009$.
+
+\proposed{Gunmay Handa}
+
+\solution Let $p=1009$ be a general prime congruent to $1 \pmod 4$ and $(\frac{\cdot}{p})$ denote the Legendre symbol; this is the value of the sum 
+\begin{align*}
+\frac{1}{4}\sum_{a=1}^{p-2}\left(1+\left(\frac{a}{p}\right)\right)\left(1+\left(\frac{a+1}{p}\right)\right)&=\frac{p-2}{4}+\frac{1}{4}\sum_{a=1}^{p-2}\left(\frac{a}{p}\right)+\frac{1}{4}\sum_{a=1}^{p-2}\left(\frac{a+1}{p}\right)+\frac{1}{4}\sum_{a=1}^{p-2}\left(\frac{a^2+a}{p}\right)\\
+&=\frac{p-2}{4}-\frac{1}{4}-\frac{1}{4}+\frac{1}{4}\sum_{a=1}^{p-2}\left(\frac{a^2}{p}\right)\left(\frac{1+a^{-1}}{p}\right)\\
+&=\frac{p-4}{4}+\frac{1}{4}\sum_{b=2}^{p-2}\left(\frac{b}{p}\right)=\frac{p-5}{4}.
+\end{align*}
+Thus our final answer is $\frac{p-5}{4}=\boxed{251}.$
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,151 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newtheorem{lemma}{Lemma}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{5pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{5pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}
+
+\begin{center}
+\huge\textbf{Number Theory Solutions Packet}\normalsize
+
+\vspace{3pt}
+\end{center}
+
+\begin{enumerate}
+\item Suppose $a$, $b$, and $c$ are relatively prime integers such that \[\frac{a}{b+c} = 2\qquad\text{and}\qquad \frac{b}{a+c} = 3.\] What is the value of $|c|$?
+
+\proposed{David Altizio}
+
+\solution
+The given equations rewrite to $2c = a-2b$ and $3c = b-3a$, which implies \[3(a-2b) = 2(b-3a)\quad\Rightarrow\quad 9a = 8b.\] Hence $a=\pm 8$ and $b=\pm 9$.  Now back-substitution yields $c=\pm 5$, giving an answer of $\boxed 5$.
+
+\item Find all integers $n$ for which $(n-1)\cdot 2^n + 1$ is a perfect square.
+
+\proposed{Cody Johnson}
+
+\solution First note that if $n\leq 0$, then $(n-1)2^n$ is an integer precisely when $n\geq -1$; checking yields $n=0$ and $n=-1$ as solutions.  Now assume $n > 0$.  We need to solve \[x^2=(n-1)\cdot2^n+1\] or \[(x-1)(x+1)=(n-1)\cdot2^n.\] Note that $\gcd(x-1,x+1)\le2$, so $2^{n-1}$ completely divides one either $x-1$ or $x+1$. Supposing that $2^{n-1}\mid x-1$, we have \[2=(x+1)-(x-1)\le2(n-1)-2^{n-1},\] since $x-1 \geq 2^{n-1}$, and so $x+1 \leq 2(n-1)$. For $n > 4$, this is impossible because $2(n-1) - 2^{n-1} < 0$. On the other hand, if $2^{n-1}\mid x+1$, then we have \[2=(x+1)-(x-1)\ge2^{n-1}-2(n-1) > 2\] for all $n> 4$. In either case, $n > 4$ is impossible, so we only need to test $n\le4$. We get $n=\boxed{-1,0,1,4}$ are the answers.
+
+\item Let $S$ be the set of natural numbers that cannot be written as the sum of three squares. Legendre's three-square theorem states that $S=\{4^a\cdot(8b+7)\mid a,b\ge0\}.$ Find the smallest $n\in\mathbb N$ such that $n$ and $n+1$ are both in $S$.
+
+\proposed{Cody Johnson}
+
+\solution
+If $n$ is even, then $4\mid n$, so $n+1\equiv1\pmod4$ which is not $7\pmod8$, so it is not in $S$. Thus, $n$ is odd, so $8\mid n+1$, so $16\mid n+1$, so $n+1\ge16\cdot(8\cdot0+7)=112$. Thus, $n\ge\boxed{111}$, which we can easily verify works since $n=4^0\cdot(8\cdot13+7)\in S$ and $n+1=4^2\cdot(8\cdot0+7)\in S$.
+
+
+\item Let $a>1$ be a positive integer.  The sequence of natural numbers $\{a_n\}$ is defined as follows: $a_1 = a$ and for all $n\geq 1$, $a_{n+1}$ is the largest prime factor of $a_n^2 - 1$.  Determine the smallest possible value of $a$ such that the numbers $a_1,a_2,\ldots, a_7$ are all distinct.
+
+\proposed{David Altizio}
+
+\iffalse
+\begin{soln}{Cody}
+Note that for any prime value of $a_2$, the smallest value of $a$ that works is $a=a_2-1$. Therefore, it suffices to simply minimize $a_2$.
+
+From here, we need two observations. The first observation is that for odd $p$ (which is all $p>2$) the largest prime factor of $(p-1)(p+1)$ is at most $\frac{p-1}2,\frac{p+1}2$, both of which are less than $p$. This means that the trajectories are strictly decreasing, and thus if they are continued long enough they will end at $2$. The second observation is that if $2$ ever appears in a trajectory, it is preceded by $3$ since $2$ and $4$ are the only two consecutive powers of $2$. This means that a minimal trajectory will end with $a_6=3$ and $a_7=2$.
+
+From here, it makes sense to trace the trajectory of several small primes, at least until one has a trajectory of size at least $6$. The very last column is filled in using the two observations, which are that $2$ has a trajectory of length $1$, $3$ has a trajectory of length $2$, and the length of a trajectory is $1$ more than the length of the trajectory of the largest prime factor of $p^2-1=(p-1)(p+1)$.
+
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+$p$ & $p-1$ & $p+1$ & largest prime factor of $(p-1)(p+1)$ & trajectory length \\
+\hline
+$2$ & $1$ & $3$ & $3$ & $1$ \\
+$3$ & $2$ & $4$ & $2$ & $2$ \\
+$5$ & $4$ & $6$ & $3$ & $3$ \\
+$7$ & $6$ & $8$ & $3$ & $3$ \\
+$11$ & $10$ & $12$ & $5$ & $4$ \\
+$13$ & $12$ & $14$ & $7$ & $4$ \\
+$17$ & $16$ & $18$ & $3$ & $3$ \\
+$19$ & $18$ & $20$ & $5$ & $4$ \\
+$23$ & $22$ & $24$ & $11$ & $5$ \\
+$29$ & $28$ & $30$ & $7$ & $4$ \\
+$31$ & $30$ & $32$ & $5$ & $4$ \\
+$37$ & $36$ & $38$ & $19$ & $5$ \\
+$41$ & $40$ & $42$ & $7$ & $4$ \\
+$43$ & $42$ & $44$ & $11$ & $5$ \\
+$47$ & $46$ & $48$ & $23$ & $6$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The answer is thus $\boxed{46}$.
+\end{soln}
+\fi
+
+\solution First remark that if $a=2$, then the sequence repeats $2\mapsto3\mapsto 2\mapsto\cdots$, so in order to minimize $a_7$ it must be the case that $a_7 = 2$ and $a_6 \geq 3$.  (Note that the other way around is not possible, since for no integer $a\geq 4$ is $a^2-1$ a power of $2$.) Now examine $a_2$, noting that it is prime.  Then $a_3$ must satisfy \[a_3\mid a_2^2 - 1 = (a_2 - 1)(a_2 + 1).\] Since $a_2$ is an odd prime, $a_2-1$ and $a_2 + 1$ are both even, and so $a_3\leq\frac{a_2+1}2$.  Thus \[a_2\geq 2a_3 - 1\geq 4a_4 - 3\geq\cdots\geq 16a_6 - 15 \geq 33,\] where here we use the fact that $a_6\geq 3$.  Trying a few primes past $33$ shows that in fact \[47\mapsto 23\mapsto 11\mapsto 5\mapsto 3\mapsto 2\] gives a valid sequence $a_2,\ldots, a_7$ of distinct integers.  Hence the smallest possible value of $a_2$ is $47$, meaning the smallest possible value of $a_1$ is $\boxed{46}$.
+
+\item It is given that there exist unique integers $m_1,\ldots, m_{100}$ such that \[0\leq m_1 < m_2 < \cdots < m_{100}\quad\text{and}\quad 2018 = \binom{m_1}1 + \binom{m_2}2 + \cdots + \binom{m_{100}}{100}.\] Find $m_1 + m_2 + \cdots + m_{100}$.
+
+\proposed{David Altizio}
+
+\solution Say the sequence \emph{jumps} at $i$ if $m_{i+1}-m_i>1$. If $m_{100}\ge102$, then $\binom{m_{100}}{100}\ge\binom{102}{100}=5151>2018$. Thus, the sequence jumps at most twice, i.e., for some $1\le a\le b\le100$, we have $m_i=i-1$ for all $1\le i\le a$, $m_i=i$ for all $a<i\le b$, and $m_i=i+1$ for all $b<i\le100$. Hence, we have \[2018=\sum_{i=1}^a\binom{i-1}i+\sum_{i=a+1}^b\binom{i}i+\sum_{i=b+1}^{100}\binom{i+1}i=b-a+\frac{101(102)}2-\frac{(b+1)(b+2)}2,\] so \[3132=\frac{b^2+b}2+a.\] Trying some values of $b$ near $\sqrt{2\cdot3132}\approx\sqrt{6400}=80$, we find that $b=78$, $a=51$ works. Thus, the answer is \[\sum_{i=1}^{51}(i-1)+\sum_{i=52}^{78}i+\sum_{i=79}^{100}(i+1)=\frac{100(101)}2-51+22=\boxed{5021}.\]
+
+\textbf{Remark.} This is called the 100-nomial representation of 2018.  In general, for any positive integers $m$ and $n$, one can show that the $m$-nomial representation of $n$ is unique.
+
+\item Let $\phi(n)$ denote the number of positive integers less than or equal to $n$ that are coprime to $n$. Find the sum of all $1 < n < 100$ such that $\phi(n) | n$. 
+
+\proposed{Andrew Kwon}
+
+\solution
+We claim that for $n > 1$, $\phi(n) | n \iff n = 2^a 3^b,$ where $a \geq 1$ and $b \geq 0$. Evidently $n$ must be even. Let $n = 2^a m$, where $m$ is odd. If $m$ has more than 2 prime distinct prime factors, then $\varphi(m)$ will be divisible by $4$. However, then $2^{a+1} | 2^{a-1} \varphi(m) = \varphi(n) | n$, which is a contradiction. Therefore, $m = p^b$ for some prime $p$ and nonnegative integer $b$. Then, $p-1 | \varphi(n) | n$, and so $p-1$ must be a power of 2. Upon analogous considerations as before to the largest power of 2 that can divide $\varphi(n)$, we find that $p-1$ is necessarily equal to 2, and so $p = 3$.\\
+
+We thus must find the sum of all integers of the form $2^a 3^b < 100$, where $a \geq 1$ and $b \geq 0$, and casing on the value of $b$ we can calculate this with geometric series to be $\boxed{492}$.
+
+\item For each $q\in\mathbb Q$, let $\pi(q)$ denote the period of the repeating base-$16$ expansion of $q$, with the convention of $\pi(q)=0$ if $q$ has a terminating base-$16$ expansion. Find the maximum value among \[\pi\left(\frac11\right),~\pi\left(\frac12\right),~\dots,~\pi\left(\frac1{70}\right).\]
+
+\proposed{Cody Johnson}
+
+\solution
+Suppose $\frac1n$ has a repeating base-$16$ expansion with period $\pi$. If we multiply $\frac1n$ by a large enough power of $16$ (say $16^N$), then the fractional part will look like $0.\overline{b_1\dots b_\pi}$. If we then multiply this by just $16^\pi$ and take the difference, we will get an integer, i.e., $16^{N+\pi}\frac1n-16^N\frac1n=\frac{16^{N+\pi}-16^N}n\in\mathbb Z$. This proves that the length of the period of $\frac1n$ is equal to the smallest integer $p$ such that $n\mid 16^{N+\pi}-16^N$ for some sufficiently large $N$, or equivalently the smallest $\pi$ such that \[16^{N+\pi}\equiv16^N\pmod n\implies16^\pi\equiv1\pmod n\] (since $\gcd(16,n)=1$).
+
+\par When $n$ is odd, $\pi$ is equal to the multiplicative order of $16\pmod n$. However, $16=2^4$, so we need $2^{4k}\equiv 1\pmod n$ for the smallest $k$ possible. Note that $2^{2\phi(n)}\equiv1\pmod n$ and $4\mid 2\phi(n)$ since $\phi(n)$ is even. Thus, \[\pi\le\frac{2\phi(n)}4\le\frac{n-1}2\implies \pi\le\left\lfloor\frac{n-1}2\right\rfloor\le\left\lfloor\frac{68-1}2\right\rfloor=\boxed{33}\] as long as $n\le68$. When $n=69$, note that $16^{11}\equiv1\pmod{69}$. When $n=67$, which is prime, we can get prove that we have equality for this inequality by showing that $2$ is a primitive root $\pmod{67}$. It suffices to show that $2^{33},2^{22},2^6\not\equiv1\pmod{67}$, which is fairly simple.
+
+
+\item It is given that there exists a unique triple of positive primes $(p,q,r)$ such that $p<q<r$ and \[\dfrac{p^3+q^3+r^3}{p+q+r} = 249.\] Find $r$.
+
+\proposed{David Altizio}
+
+\solution
+We recall the identity $p^3+q^3+r^3-3pqr=(p+q+r)(p^2+q^2+r^2-pq-qr-rp)$. Hence, 
+$$(p+q+r)(p^2+q^2+r^2-pq-qr-rp)=p^3+q^3+r^3-3pqr=249(p+q+r)-3pqr $$ $$\Longrightarrow 3pqr=(p+q+r)(249+pq+qr+pr-p^2-q^2-r^2) $$ The left hand side is a product of primes, so there are only a finite number of ways we can assign these primes to the factors on right hand side. Note that $p+q+r>3$ and $p+q+r>3p$, so the first thing we try is setting $p+q+r=3q$. Then $$0=249+q(p+r)-p^2-q^2-r^2=249+q^2-p^2-r^2$$ which implies $3p^2-2pr+3r^2=996$. Consequently, $3|2pr$ and since $r>p$, we get that $p=3$; plugging this into the newly derived equation gives $r=\boxed{19}$. It is not hard to verify that $(p,q,r)=(3,11,19)$ is indeed a valid triple. 
+
+\item Let $\phi(n)$ denote the number of positive integers less than or equal to $n$ which are coprime to $n$. Find the value of$$\sum_{n=1}^{\infty}\frac{\phi(n)}{5^n+1}.$$
+
+\proposed{Gunmay Handa}
+
+\solution Let $x=\frac{1}{5}$. Then $$\sum_{n=1}^{\infty}\frac{\phi(n)}{x^{-n}+1}=\sum_{n=1}^{\infty}\frac{\phi(n)}{x^{-n}-1}-2\sum_{n=1}^{\infty}\frac{\phi(n)}{x^{-2n}-1}=\sum_{n=1}^{\infty}\frac{\phi(n)x^n}{1-x^n}-2\sum_{n=1}^{\infty}\frac{\phi(n)x^{2n}}{1-x^{2n}}.$$ The key claim is then that $\sum_{n=1}^{\infty}\frac{\phi(n)t^n}{1-t^n}=\frac{t}{(1-t)^2}$ for $|t|<1$. We have $$\sum_{n=1}^{\infty}\frac{\phi(n)t^n}{1-t^n}=\sum_{n=1}^{\infty}\phi(n)\sum_{m=1}^{\infty}t^{nm}=\sum_{s=1}^{\infty}st^s=\frac{t}{(1-t)^2}$$ where we used the fact that $\sum_{d|n}\phi(d)=n$. Finally, the desired value is just $$\frac{x}{(1-x)^2}-2\frac{x^2}{(1-x^2)^2} =\frac{x(1+x^2)}{(1-x^2)^2}=\boxed{\frac{65}{288}}.$$
+
+\item Let $a_1 < a_2 < \cdots < a_k$ denote the sequence of all positive integers between $1$ and $91$ which are relatively prime to $91$, and set $\omega = e^{2\pi i/91}$. Define \[S = \prod_{1\leq q < p\leq k}\left(\omega^{a_p} - \omega^{a_q}\right).\] Given that $S$ is a positive integer, compute the number of positive divisors of $S$.
+
+\proposed{David Altizio}
+
+\solution Let $\Phi_n(x)$ be the $n^{\text{th}}$ cyclotomic polynomial.  Let $S$ be the desired product and for each $1\leq i\leq k$ define $P_i(x) = \tfrac{\Phi_{91}(x)}{x-\omega^{a_i}}$.  Then we have \[S^2 = \prod_{p\neq q}(\omega^{a_q} - \omega^{a_p}) = \prod_{i=1}^kP_i(\omega^{a_i}).\] Since $\Phi_{91}(\omega^{a_i}) = 0$ by definition, L'Hopital's rule gives $P_i(\omega^{a_i}) = \Phi_{91}'(\omega^{a_i})$.  Now by well-known properties of cyclotomic polynomials, \[\Phi_{91}(x) = \frac{x^{91} - 1}{\Phi_1(x)\Phi_7(x)\Phi_{13}(x)} = \frac{(x^{91} - 1)(x - 1)}{(x^7 - 1)(x^{13} - 1)}.\] Since $(\omega^{a_i})^{91} = 1$ for all $i$, we have by the product rule that \[\Phi_{91}'(\omega^{a_i}) = \frac{d}{dx}\left[(x^{91} - 1)\cdot \frac{(x - 1)}{(x^7 - 1)(x^{13} - 1)}\right]_{x = \omega^{a_i}}  = 91(\omega^{a_i})^{90}\cdot\frac{\omega^{a_i} - 1}{((\omega^{a_i})^7 - 1)((\omega^{a_i})^{13} - 1)}.\] We of course have that $\prod_i(1 - \omega^{a_i}) = \Phi_{91}(1)$. Note that the sequence $((\omega^{a_i})^7)_{1\leq i\leq k}$ must contain each of the twelve nontrivial $13^{\text{th}}$ roots of unity exactly six times.  Hence $\prod_i(1-(\omega^{a_i})^7) = \Phi_{13}(1)^6$.  Similarly, $\prod_i(1 - (\omega^{a_i})^{13}) = \Phi_7(1)^{12}$.  Since $\prod_i\omega^{a_i} = 1$ (each root of unity has a conjugate pair, and $\gcd(a_i,91) = 1\Leftrightarrow \gcd(91-a_i,91) = 1$), it follows that \[|S^2| = \frac{91^{\varphi(91)}\Phi_{91}(1)}{\Phi_7(1)^{12}\Phi_{13}(1)^6}.\] We have $\Phi_7(1) = 7$, $\Phi_{13}(1) = 13$, $\varphi(91) = 6\cdot 12 = 72$, and \[\Phi_{91}(1) = \lim_{x\to 1}\frac{x^{91} - 1}{x^{13} - 1}\cdot\frac{x-1}{x^7 - 1} = 7\cdot\frac17 = 1.\] So $|S|^2 = 7^{72-12}13^{72-6}$ and $|S| = 7^{30}13^{33}$, giving a final answer of $31\cdot 34 = \boxed{1054}$.
+
+\textbf{Remark. }It is possible to do the computations above without using calculus.  For example, another solution which is longer but more elementary is to employ PIE + complementary counting, since the above product excludes all terms of the form $\omega^{i_0} - \omega^{j_0}$ where $i_0j_0$ is a multiple of $7$ or $13$.  (This was the author's original solution.)
+
+\end{enumerate}
+
+\end{document}

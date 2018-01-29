@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{3pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{3pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}
+
+\begin{center}
+\huge\textbf{Algebra Individual Finals}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item For all real numbers $r$, denote by $\{r\}$ the fractional part of $r$, i.e. the unique real number $s\in[0,1)$ such that $r-s$ is an integer.  How many real numbers $x\in[1,2)$ satisfy the equation $\left\{x^{2018}\right\} = \left\{x^{2017}\right\}?$
+
+\item Compute the sum of the digits of \[\prod_{n=0}^{2018}\left(10^{2\cdot 3^n} - 10^{3^n} + 1\right)\left(10^{2\cdot 3^n} + 10^{3^n} + 1\right).\]
+
+\item Let $a$ be a complex number, and set $\alpha$, $\beta$, and $\gamma$ to be the roots of the polynomial $x^3 - x^2 + ax - 1$.  Suppose \[(\alpha^3+1)(\beta^3+1)(\gamma^3+1) = 2018.\] Compute the product of all possible values of $a$.
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Combinatorics Individual Finals}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+%\item Assume you have an infinite cache of red, black, green, and yellow marbles. You start taking marbles randomly from the cache and put them into your backpack until you get a red marble. What is the expected number of black marbles in your backpack?
+
+%\item For every natural number $n$, define its \textit{astele representation} to be the 35-digit string formed by concatenating the last digits of the base-2, base-3, \dots, base-36 representation of $n$, where digits $A \sim Z$ represent values $10 \sim 35$. For example, the astele representation of 10 is \[012043210AAAA\cdots.\] Determine the number of 3-digit strings that do not appear in any astele representations.
+
+\item How many nonnegative integers with at most $40$ digits consisting of entirely zeroes and ones are divisible by $11$?
+
+\item John has a standard four-sided die. Each roll, he gains points equal to the value of the roll multiplied by the number of times he has now rolled that number; for example, if his first rolls were $3,3,2,3$, he would have $3+6+2+9=20$ points. Find the expected number of points John will have after rolling the die 25 times.
+
+\item Let $\mathcal{F}$ be a family of subsets of $\{1,2,\ldots, 2017\}$ with the following property: if $S_1$ and $S_2$ are two elements of $\mathcal{F}$ with $S_1\subsetneq S_2$, then $\abs{S_2\setminus S_1}$ is odd. Compute the largest number of subsets $\mathcal{F}$ may contain.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Computer Science Individual Finals}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item The \emph{distance} between two vertices in a connected graph is defined to be the length of the shortest path between them. How many graphs with the vertex set $\{0,1,2,\dots,6\}$ satisfy the following property: there are $3$ vertices of distance $1$ away from vertex $0$, $2$ of distance $2$ away, and $1$ of distance $3$ away?
+
+%\item Find all pairs of integer constants $(b, d)$ such that the function \[f(t) = (3\log(t) + bt)(8\log(t) + dt) - bdt^2 + (95+ bd)t\log(t)\] is $o(t)$.
+
+\item Determine the largest number of steps for $\gcd(k,76)$ to terminate over all choices of $0 < k < 76$, using the following algorithm for gcd. Give your answer in the form $(n,k)$ where $n$ is the maximal number of steps and $k$ is the $k$ which achieves this. If multiple $k$ work, submit the smallest one.
+
+\begin{tabular}{l}
+1: \textbf{FUNCTION} $\text{gcd}(a,b)$: \\
+2: $\qquad$ \textbf{IF} $a = 0$ \textbf{RETURN} $b$ \\ 
+3: $\qquad$ \textbf{ELSE RETURN} $\text{gcd}(b \bmod a,a)$
+\end{tabular}
+
+\item For $n\in\mathbb N$, let $x$ be the solution of $x^x=n$. Find the asymptotics of $x$, i.e., express $x=\Theta(f(n))$ for some suitable explicit function of $n$.
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Geometry Individual Finals}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+
+\item Let $ABC$ be a triangle with $AB=9$, $BC=10$, $CA=11$, and orthocenter $H$.  Suppose point $D$ is placed on $\overline{BC}$ such that $AH=HD$.  Compute $AD$.
+
+\item Suppose $ABCD$ is a trapezoid with $AB\parallel CD$ and $AB\perp BC$. Let $X$ be a point on segment $\overline{AD}$ such that $AD$ bisects $\angle BXC$ externally, and denote $Y$ as the intersection of $AC$ and $BD$. If $AB=10$ and $CD=15$, compute the maximum possible value of $XY$.
+
+\item Let $ABC$ be a triangle with incircle $\omega$ and incenter $I$.  The circle $\omega$ is tangent to $BC$, $CA$, and $AB$ at $D$, $E$, and $F$ respectively.  Point $P$ is the foot of the angle bisector from $A$ to $BC$, and point $Q$ is the foot of the altitude from $D$ to $EF$. Suppose $AI=7$, $IP=5$, and $DQ=4$.  Compute the radius of $\omega$.
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\huge\textbf{Number Theory Individual Finals}
+\end{center} \vspace{3pt}
+
+\begin{enumerate}
+\item Alex has one-pound red bricks and two-pound blue bricks, and has 360 total pounds of brick. He observes that it is impossible to rearrange the bricks into piles that all weigh three pounds, but he can put them in piles that each weigh five pounds. Finally, when he tries to put them into piles that all have three bricks, he has one left over. If Alex has $r$ red bricks, find the number of values $r$ could take on. 
+
+\item How many integer values of $k$, with $1 \leq k \leq 70$, are such that $x^{k}-1 \equiv 0 \pmod{71}$ has at least $\sqrt{k}$ solutions?
+
+\item Determine the number of integers $a$ with $1\leq a\leq 1007$ and the property that both $a$ and $a+1$ are quadratic residues mod $1009$.
+\end{enumerate}
+
+\end{document}

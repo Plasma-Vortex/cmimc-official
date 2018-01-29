@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{5pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{5pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}\thispagestyle{empty}
+\begin{center}
+
+\vspace*{40pt}
+
+\includegraphics[scale=0.2]{../CMIMC-header-2018.png}
+
+\includegraphics[scale=0.35]{team-header.png}
+
+\vspace{0.2in}
+
+\Huge\textbf{Set One}\normalsize
+
+\vspace{1in}
+
+\includegraphics[scale=0.20]{Instruction-Header.png}
+
+\noindent\rule{15.7cm}{2pt}
+\end{center}
+
+\vspace{10pt}
+
+\input{input/team-instructions}
+
+\vspace{0.7in}
+
+\begin{center}
+\includegraphics[scale=0.15]{../sponsor-footer.png}
+\end{center}
+\newpage
+
+\begin{center}
+\huge\textbf{Team (Set One)}\normalsize
+
+\vspace{3pt}
+\end{center}
+
+\begin{enumerate}
+
+\item[1-1.] Let $ABC$ be a triangle with $BC=30$, $AC=50$, and $AB=60$.  Circle $\omega_B$ is the circle passing through $A$ and $B$ tangent to $BC$ at $B$; $\omega_C$ is defined similarly.  Suppose the tangent to $\odot(ABC)$ at $A$ intersects $\omega_B$ and $\omega_C$ for the second time at $X$ and $Y$ respectively.  Compute $XY$.
+
+\item[2-1.] Suppose that $a$ and $b$ are non-negative integers satisfying $a + b + ab + a^b = 42$. Find the sum of all possible values of $a + b$.
+
+\item[3-1.] Let $\Omega$ be a semicircle with endpoints $A$ and $B$ and diameter 3. Points $X$ and $Y$ are located on the boundary of $\Omega$ such that the distance from $X$ to $AB$ is $\frac{5}{4}$ and the distance from $Y$ to $AB$ is $\frac{1}{4}$. Compute \[(AX+BX)^2 - (AY+BY)^2.\]
+
+\item[4-1.] Define an integer $n \ge 0$ to be \textit{two-far} if there exist integers $a$ and $b$ such that $a$, $b$, and $n + a + b$ are all powers of two. If $N$ is the number of two-far integers less than 2048, find the remainder when $N$ is divided by 100.
+
+\item[5-1.] How many ordered triples $(a,b,c)$ of integers satisfy the inequality \[a^2+b^2+c^2 \leq a+b+c+2?\]
+
+\end{enumerate}
+
+\begin{center}
+\noindent\rule{0.5\textwidth}{0.4pt}
+\end{center}
+
+\begin{enumerate}
+
+\item[6-2.] Let $T = TNYWR$. Compute the number of ordered triples $(a,b,c)$ such that $a$, $b$, and $c$ are distinct positive integers and $a + b + c = T$.
+
+\item[7-2.] Let $T = TNYWR$. A total of $2T$ students go on a road trip. They take two cars, each of which seats $T$ people. Call two students \textit{friendly} if they sat together in the same car going to the trip and in the same car going back home. What is the smallest possible number of friendly pairs of students on the trip?
+
+\item[8-2.] Let $T = TNYWR$, and let $T = 10X + Y$ for an integer $X$ and a digit $Y$. Suppose that $a$ and $b$ are real numbers satisfying $a+\frac1b=Y$ and $\frac{b}a=X$. Compute $(ab)^4+\frac1{(ab)^4}$.
+
+\item[9-2.] Let $T = TNYWR$. The solutions in $z$ to the equation \[\left(z + \frac Tz\right)^2 = 1\] form the vertices of a quadrilateral in the complex plane.  Compute the area of this quadrilateral.
+
+\item[10-2.] Let $T = TNYWR$. Circles $\omega_1$ and $\omega_2$ intersect at $P$ and $Q$.  The common external tangent $\ell$ to the two circles closer to $Q$ touches $\omega_1$ and $\omega_2$ at $A$ and $B$ respectively.  Line $AQ$ intersects $\omega_2$ at $X$ while $BQ$ intersects $\omega_1$ again at $Y$.  Let $M$ and $N$ denote the midpoints of $\overline{AY}$ and $\overline{BX}$, also respectively.  If $AQ=\sqrt{T}$, $BQ=7$, and $AB=8$, then find the length of $MN$.
+
+\end{enumerate}
+
+\end{document}

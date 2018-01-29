@@ -1,0 +1,247 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem{lemma}{Lemma}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{5pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{5pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}
+
+\begin{center}
+\huge\textbf{Geometry Solutions Packet}\normalsize
+
+\vspace{3pt}
+\end{center}
+
+\begin{enumerate}
+\item Let $ABC$ be a triangle.  Point $P$ lies in the interior of $ABC$ such that $\angle ABP = 20^\circ$ and $\angle ACP = 15^\circ$.  Compute $\angle BPC - \angle BAC$.
+
+\proposed{David Altizio}
+
+\solution Note that \[\angle BPC + \angle PBC + \angle PCB = 180^\circ = \angle BAC + (20^\circ + \angle PBC) + (15^\circ + \angle PCB);\] canceling $\angle PBC + \angle PCB$ from both sides and rearranging yields the desired answer of $\boxed{35^\circ}$.
+
+
+\item Let $ABCD$ be a square of side length $1$, and let $P$ be a variable point on $\overline{CD}$.  Denote by $Q$ the intersection point of the angle bisector of $\angle APB$ with $\overline{AB}$.  The set of possible locations for $Q$ as $P$ varies along $\overline{CD}$ is a line segment; what is the length of this segment?
+
+\proposed{David Altizio}
+
+\solution Note that \[\frac{PB}{PA} = \sqrt{\frac{PC^2 + CB^2}{PD^2 + DA^2}} = \sqrt{\frac{PC^2 + 1}{(1-PC)^2 + 1}}.\] This increases as $PC$ increases, so by the Angle Bisector Theorem $\frac{QB}{QA}$ increases as well.  It follows that the endpoints of this line segment occur precisely when $P=C$ or $P=B$. 
+
+\par Let $Q_0$ be the foot of the angle bisector of $\angle ACD$.  By another use of the Angle Bisector Theorem, \[\sqrt 2 = \frac{AQ_0}{Q_0B} = \frac{1-Q_0B}{Q_0B}\quad\Rightarrow\quad Q_0B = \sqrt 2 - 1.\] Similarly, if $Q_1$ is the foot of the angle bisector from $\angle ADB$, $AQ_1 = \sqrt 2 - 1$.  It follows that the length of the desired line segment is \[1 - 2(\sqrt 2 - 1) = \boxed{3 - 2\sqrt 2}. \]
+
+\item Let $ABC$ be a triangle with side lengths $5$, $4\sqrt 2$, and $7$.  What is the area of the triangle with side lengths $\sin A$, $\sin B$, and $\sin C$?
+
+\proposed{David Altizio}
+
+\solution Let $R$ be the circumradius of $\triangle ABC$.  The key is to realize that by the Extended Law of Sines, \[\sin A = \frac{a}{2R},\quad \sin B = \frac{b}{2R},\quad \text{and}\quad \sin C = \frac{c}{2R}.\] It follows that the triangle with side lengths $\sin A$, $\sin B$, and $\sin C$ is similar to $\triangle ABC$ with scale factor $\tfrac{1}{2R}$.  Thus, it suffices to compute the area of $\triangle ABC$ and divide by $4R^2$ to get the answer.
+
+\par WLOG let $AB=4\sqrt 2$, $AC=5$, and $BC=7$.  Let $D$ denote the foot of the altitude from $A$ to $BC$.  The Law of Cosines applied to $\triangle ABC$ yields \[\cos C = \frac{5^2 + 7^2 - (4\sqrt 2)^2}{2\cdot 5\cdot 7} = \frac{3}{5},\] so $\sin C = \frac 45$ and $AD=4$.  This means that the area of $\triangle ABC$ is $\tfrac12\cdot 4\cdot 7 = 14$ and \[R = \dfrac{4\sqrt 2}{2\sin C} = \frac{4\sqrt 2}{8/5} = \frac{5}{\sqrt 2}.\] Thus the desired answer is \[\frac{14}{4\cdot (\frac{5}{\sqrt 2})^2} = \boxed{\frac{7}{25}}.\]
+
+\item Suppose $\overline{AB}$ is a segment of unit length in the plane. Let $f(X)$ and $g(X)$ be functions of the plane such that $f$ corresponds to rotation about $A$ $60^\circ$ counterclockwise and $g$ corresponds to rotation about $B$ $90^\circ$ clockwise. Let $P$ be a point with $g(f(P))=P$; what is the sum of all possible distances from $P$ to line $AB$?
+
+\proposed{Gunmay Handa}
+
+\solution In this solution, all angles are directed. For any line $\ell$, let $\ell_1=f(\ell), \ell_2=g(\ell_1)$. Then $\angle(\ell,\ell_1)=60^\circ$ and $\angle(\ell_1,\ell_2)=-90^\circ$, so $\angle(\ell,\ell_2)=-30^\circ$. This tells us that the composition of these two rotations itself corresponds to a rotation of $30^\circ$ clockwise; evidently, rotations can only have one fixed point, which is their center. Construct the point $C$ with $\angle(CA,AB)=30^\circ$ and $\angle(CB,BA)=-135^\circ$; it is not hard to see that $g(f(C))\equiv C$ (in this instance, each function is equivalent to reflection about $AB$). Let $C'$ be the projection of $C$ onto $AB$, then $CC'\cot 30^\circ-CC'\cot 45^\circ=AC'-BC'=1$ and so \[CC'=\frac{1}{\cot 30^\circ-\cot 45^\circ}=\frac{1}{\sqrt{3}-1}=\boxed{\frac{1+\sqrt{3}}{2}}.\]
+
+\item Select points $T_1,T_2$ and $T_3$ in $\mathbb{R}^3$ such that $T_1=(0,1,0)$, $T_2$ is at the origin, and $T_3=(1,0,0)$. Let $T_0$ be a point on the line $x=y=0$ with $T_0\neq T_2$. Suppose there exists a point $X$ in the plane of $\triangle T_1T_2T_3$ such that the quantity $(XT_i)[T_{i+1}T_{i+2}T_{i+3}]$ is constant for all $i=0$ to $i=3$, where $[\mathcal{P}]$ denotes area of the polygon $\mathcal{P}$ and indices are taken modulo 4.  What is the magnitude of the $z$-coordinate of $T_0$?
+
+\proposed{Gunmay Handa}
+
+\solution Let $M$ be the midpoint of $\overline{T_1T_3}$.  We claim that $X$ is the reflection $M'$ of $M$ across $T_2$.  To prove this, first remark that \[\frac{XT_1}{XT_3} = \frac{[T_1T_2T_0]}{[T_2T_3T_0]} = \frac{\frac12(T_1T_2)(T_2T_0)}{\frac12(T_2T_3)(T_2T_0)} = \frac{T_1T_2}{T_3T_2} = 1.\] Thus $XT_1 = XT_3$; since $X$ lies in the plane $T_1T_2T_3$, $X$ must lie on the perpendicular bisector of $\overline{T_1T_3}$.  Now applying similar logic on the points $T_2$ and $T_0$ yields \[\frac{XT_2}{XT_0} = \frac{[T_1T_2T_3]}{[T_1T_3T_0]} = \frac{T_2M}{T_0M}.\] Now remark that as $X$ moves farther away from $T_2$, the ratio $\frac{XT_2}{XT_0}$ gets closer to $1$ (without ever equalling one).  Thus, either $X\equiv M$ or $X\equiv M'$.  To show it is not $M$, suppose it were, and write \[\frac{MT_1}{MT_0} = \frac{[T_1T_2T_3]}{[T_2T_3T_0]} = \frac{T_2T_1}{T_2T_0}.\qquad(*)\]  But this is not possible, since $MT_1 < T_2T_1$ and $MT_0 > T_2T_0$.  Thus the only possible option is $T\equiv M'$ as desired.
+
+\par Now let $z$ be the $z$-coordinate of $T_0$.  Using $(*)$ but with $M'$ in place of $M$ gives \[\frac{1}{z} = \frac{T_2T_1}{T_2T_0} = \frac{M'T_1}{M'T_0} = \frac{\sqrt{5/2}}{\sqrt{1/2 + z^2}} = \sqrt{\frac{5}{1+2z^2}};\] solving this equation yields $z = \boxed{\tfrac{\sqrt 3}3}$.
+
+\item Let $\omega_1$ and $\omega_2$ be intersecting circles in the plane with radii $12$ and $15$, respectively. Suppose $\Gamma$ is a circle such that $\omega_1$ and $\omega_2$ are internally tangent to $\Gamma$ at $X_1$ and $X_2$, respectively. Similarly, $\ell$ is a line that is tangent to $\omega_1$ and $\omega_2$ at $Y_1$ and $Y_2$, respectively. If $X_1X_2=18$ and $Y_1Y_2=9$, what is the radius of $\Gamma$?
+
+\proposed{Gunmay Handa}
+
+\solution First we compute the distance between their centers, which is just \[\sqrt{9^2+(15-12)^2}=3\sqrt{10}.\] Now let $O_1,O_2,O$ be the centers of $\omega_1$, $\omega_2$, and $\Gamma$, respectively, and let $R:=OX_1=OX_2$. Since $\angle X_1OX_2=\angle O_1OO_2$, we have \[\frac{R^2+R^2-18^2}{R^2}=\frac{OX_1^2+OX_2^2-X_1X_2^2}{OX_1\cdot OX_2}=\frac{OO_1^2+OO_2^2-O_1O_2^2}{OO_1\cdot OO_2}=\frac{(R-12)^2+(R-15)^2-(3\sqrt{10})^2}{(R-12)(R-15)}.\] Strategically subtracting $2$ from both sides, we get \[\frac{-18^2}{R^2}=\frac{-81}{(R-12)(R-15)}\implies R^2=4(R-12)(R-15)\implies R=18\pm2\sqrt{21}.\] Thus the answer is $\boxed{18+2\sqrt{21}}$ since the other root is extraneous ($R$ needs to be at least $9$ or else it will not contain two points $X_1,X_2$ at distance $18$ from each other).
+
+\begin{center}OR\end{center}
+
+\solution
+Denote by $P$ and $Q$ the intersection points of $\Gamma$ and $\ell$, with $P$, $Y_1$, $Y_2$, and $Q$ appearing in that order.  Let $M$ denote the midpoint of the minor arc $\widehat{PQ}$.  Note that by Archimedes' Lemma, $X_1$, $Y_1$, and $M$ are collinear, as are $X_2$, $Y_2$, and $M$.  Furthermore, angle chasing yields \[\angle MY_1Q = \frac{\widehat{MQ} + \widehat{X_1P}}2 = \frac{\widehat{MP} + \widehat{PX_1}}2 = \angle MX_2X_1,\] and so $\triangle MY_1Y_2\sim\triangle MX_2X_1$ with ratio of similitude $2$.
+
+\par Now as in the first solution let $R$ denote the radius of $\Gamma$.  Then homothety yields $\frac{X_1Y_1}{X_1M} = \frac{12}{R}$ and $\frac{X_2Y_2}{X_2M} = \frac{15}R$.  As a result, \[\frac 14 = \left(\frac{MY_1}{MX_2}\right)\left(\frac{MY_2}{MX_1}\right) = \left(1 - \frac{X_1Y_1}{X_1M}\right)\left(1 - \frac{X_2Y_2}{X_2M}\right) = \frac{(R-12)(R-15)}{R^2}.\] Solving this equation yields $R = \boxed{18 + 2\sqrt{21}}$ as before.
+
+\item Let $ABC$ be a triangle with $AB=10$, $AC=11$, and circumradius $6$.  Points $D$ and $E$ are located on the circumcircle of $\triangle ABC$ such that $\triangle ADE$ is equilateral.  Line segments $\overline{DE}$ and $\overline{BC}$ intersect at $X$.  Find $\frac{BX}{XC}$.
+
+\proposed{David Altizio}
+
+\solution Set $AX=d$, $BX=m$, $CX=n$.  Let $\omega$ denote the circle centered at $A$ with radius $AD=AE$.  Then $X$ lies on the radical axis of $\odot(ABC)$ and $\omega$, and so the powers of $X$ with respect to both circles are equal.  In other words, \[mn = BX\cdot XC = DX\cdot XE = AD^2 - d^2 = 3R^2 - d^2.\] This rearranges to $mn+d^2 = 3R^2$, or, after multiplying by $a$, \[3R^2a = amn + ad^2 = b^2m+c^2n,\] where the last equality is an application of Stewart.  Now substituting $a=m+n$ into the above equality yields \[3R^2(m+n) = b^2m+c^2n\quad\Rightarrow\quad \frac{m}{n} = \dfrac{3R^2-c^2}{b^2-3R^2} = \boxed{\frac{8}{13}}.\]
+
+\vspace{6pt}
+
+\textbf{Remark. }Essentially, we are applying Stewart's Theorem on two triangle/cevian pairs for which the value of $d^2 + mn$ is the same: the values of $d^2$ are identical trivially, while the values of $mn$ are equal by Power of a Point.
+
+\item In quadrilateral $ABCD$, $AB=2$, $AD=3$, $BC=CD=\sqrt7$, and $\angle DAB=60^\circ$. Semicircles $\gamma_1$ and $\gamma_2$ are erected on the exterior of the quadrilateral with diameters $\overline{AB}$ and $\overline{AD}$; points $E\neq B$ and $F\neq D$ are selected on $\gamma_1$ and $\gamma_2$ respectively such that $\triangle CEF$ is equilateral. What is the area of $\triangle CEF$?
+
+\proposed{Gunmay Handa}
+
+\solution The following solution is intended to optimize the amount of arithmetic needed; more staightforward solutions are possible.
+
+\par First note that $\triangle CDB$ is equilateral, so there exists a spiral similarity between $\triangle CBD$ and $\triangle CEF$; this implies that $DF=EB$. Translate by vector $\vec{BD}$, and denote images with a $'$; we have that $\triangle DFE'$ is equilateral since $DF=DE'$ and $\angle(DF, DE')=\angle(DF,BE)=60^\circ$. Now let $\Phi$ denote the transformation of the plane corresponding to rotation about $C$ by $60^\circ$, as seen in the figure, and set $A^* = \Phi(A)$ for ease of typesetting.  Then $\angle A^*DA = 120^\circ$ since $\Phi$ takes $AB$ to $A^*D$ and $\angle BAD = 60^\circ$. In addition, remark that $\triangle A^*FD\cong\triangle AEB$ since $\Phi$ takes the latter triangle to the former.  This has many implications: $F$ is the foot of the altitude from $D$ to $AA^*$, $A^*F = AE$, and $\angle EAF = 120^\circ$.  (Convince yourself that these properties hold!)
+
+\begin{figure}[ht]
+	\centering
+	\begin{asy}
+	import olympiad;
+	size(220);
+defaultpen(linewidth(0.8));
+real d = 8;
+pair A = (5,0), B = origin, D = A + d * dir(120), C = rotate(60,B)*D;
+path circ1 = arc(A/2,abs(A/2),180,360), circ2 = rotate(-60,(A+D)/2) * arc((A+D)/2,abs((A-D)/2),0,180);
+draw(A--B--C--D--cycle^^D--B);
+draw(circ1^^circ2);
+path rot = rotate(60,C)*(circ1--cycle);
+draw(rot,linetype("4 4"));
+pair[] X = intersectionpoints(rot,circ2);
+pair F = X[1], E = rotate(-60,C)*F, Ap = rotate(60, C)*A;
+draw(E--F--C--cycle^^A--Ap,linetype("4 4"));
+label("$A$",A,SE);
+label("$B$",B,SW);
+label("$C$",C,W);
+label("$D$",D,NW);
+label("$E$",E,S);
+label("$F$",F,2*dir(20));
+label("$A^*$",Ap,N);
+\end{asy}
+\end{figure}
+
+\par Now compute $AA^* = \sqrt{19}$ by Law of Cosines, so comparing areas gives $DF = \sqrt{\tfrac{27}{19}}$.  Thus, \begin{align*}EF^2 &= AF^2 + AE^2 + AE\cdot AF = AF^2 + A^*F^2 + AF\cdot A^*F\\&= (AF + A^*F)^2 - AF\cdot A^*F = (\sqrt{19})^2 - \sqrt{4 - \frac{27}{19}}\sqrt{9 - \frac{27}{19}} = 19 - \frac{7\cdot 12}{19} = \frac{277}{19}.\end{align*} It follows easily that the area of $\triangle CEF$ is $\boxed{\tfrac{277\sqrt 3}{76}}$.
+
+\item Suppose $\mathcal{E}_1 \neq \mathcal{E}_2$ are two intersecting ellipses with a common focus $X$; let the common external tangents of $\mathcal{E}_1$ and $\mathcal{E}_2$ intersect at a point $Y$. Further suppose that $X_1$ and $X_2$ are the other foci of $\mathcal{E}_1$ and $\mathcal{E}_2$, respectively, such that $X_1\in \mathcal{E}_2$ and $X_2\in \mathcal{E}_1$. If $X_1X_2=8, XX_2=7$, and $XX_1=9$, what is $XY^2$?
+
+\proposed{Gunmay Handa}
+
+\solution Our solution proceeds in two lemmas.
+
+\begin{lemma}Suppose $A_1$ and $A_2$ are the reflections of $X$ over each of the common external tangents. Then $Y$ is the circumcenter of $\odot(A_1XA_2)$; moreover, $Y\in X_1X_2$. 
+\end{lemma}
+\begin{proof}Let $X_3$ be the the tangency point of $\mathcal{E}_1$ nearer to $A_1$. Then $$X_1A_1=X_1X_3+X_3A_1=X_1X_3+X_3X=15$$ by the reflection property of ellipses. Hence we know that $\{A_1, A_2\}$ are the common points of the circles centered at $X_1$ and $X_2$ with radii $15$ and $17$, respectively. Finally, the common external tangents and the line $X_1X_2$ comprise the set of perpendicular bisectors of $\triangle XA_1A_2$; this implies the conclusion. 
+\end{proof}
+
+\begin{figure}[ht]
+    \centering
+    \begin{asy}
+    import olympiad;
+import graph; size(250); 
+real labelscalefactor = 0.5;
+pen dps = linewidth(0.8) + fontsize(10); defaultpen(dps); 
+pen dotstyle = black;
+real xmin = -14, xmax = 15.965943712055406, ymin = -10, ymax = 16.698149541717765;
+pair X1 = origin, X2 = (8,0), X = (6.,6.708203932499369), Y = (-12,0), X3 = (0.,8.683281572999753);
+
+ draw(X--X1--X2--cycle); 
+ draw(shift((3.,3.3541019662496847))*rotate(48.189685104221404)*xscale(7.5)*yscale(6.)*unitcircle, linewidth(0.8)); 
+draw(shift((7.,3.3541019662496843))*rotate(-73.39845040097977)*xscale(8.5)*yscale(7.745966692414834)*unitcircle, linewidth(0.8)); 
+draw(Y--(xmax, -0.27639320225001973*xmax-3.31671842700026), linewidth(0.8));
+draw(Y--(xmax, 0.7236067977499764*xmax + 8.683281572999753), linewidth(0.8));
+draw(Y--X1, linewidth(0.8)+linetype("4 4"));
+draw(circle((-12.,0.), 19.209372712298606)^^(0,15)--(0,0), linewidth(0.8)+linetype("4 4")); 
+draw(rightanglemark(X3,X1,Y,25));
+dot((0.,0.),dotstyle); 
+label("$X_1$", X1, 1.5*dir(240)); 
+dot((8.,0.),dotstyle); 
+label("$X_2$", X2, 1.5*dir(300)); 
+dot((6.,6.708203932499369),linewidth(4.pt) + dotstyle); 
+label("$X$", X, NE); 
+dot((0.,-3.3167184270002474),linewidth(4.pt) + dotstyle);
+dot(X3,linewidth(4.pt) + dotstyle); 
+dot((-12.,0.),linewidth(4.pt) + dotstyle); 
+label("$Y$", Y, W); 
+dot((0.,15.),linewidth(4.pt) + dotstyle); 
+label("$A_1$", (0,15), 1.5 * NE); 
+dot((0.,-15.),linewidth(4.pt) + dotstyle); 
+label("$A_2$", (0,-15),1.5 * NW); 
+dot((0.,8.683281572999753),linewidth(4.pt) + dotstyle); 
+label("$X_3$", X3, 1.5 * NW); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+\end{asy}
+\end{figure}
+
+\begin{lemma}The product of distances from the foci to a variable tangent of a fixed ellipse is constant.  
+\end{lemma}
+
+\begin{proof}
+Given an ellipse with foci $F_1, F_2$, let $P_1$ and $P_2$ be the projections of $F_1$ and $F_2$ onto an arbitrary tangent to the ellipse at the point $X$. Let $M$ be the midpoint of $\overline{F_1F_2}$; the reflection of $P_2$ about $M$ produces a point $P_3$ with $F_2P_2=F_1P_3$. In addition, we know that $P_1, P_2$ lie on a circle centered at $M$ with radius $\frac{F_1X+F_2X}{2}$ by the reflection property and consequent dilations at $F_2$ and $F_1$ with ratio $\frac{1}{2}$, respectively. Hence, $P_1F_1\cdot P_2F_2=P_1F_1\cdot P_3F_1$ is fixed at $(\frac{F_1X+F_2X}{2})^2-(\frac{F_1F_2}{2})^2$ by Power of a Point on this circle. 
+\end{proof}
+Let $\ell_1$ be a common external tangent of the two ellipses. Then 
+$$\frac{YX_1}{YX_2}=\frac{d(X_1, \ell_1)}{d(X_2,\ell_1)}=\frac{d(X_1, \ell_1)d(X,\ell_1)}{d(X_2,\ell_1)d(X,\ell_1)}=\frac{15^2-9^2}{17^2-7^2}=\frac{3}{5}.$$ Since $X_1X_2=8$, we know $YX_1=12$. Note that $\triangle A_1X_1X_2$ is right, so $$A_1Y^2=A_1X_1^2+X_1Y^2=15^2+12^2=369$$ and since $Y$ is the circumcenter of $\odot(A_1XA_2)$ we know $XY^2=A_1Y^2=\boxed{369}$, as desired (alternatively, one could use Stewart's theorem).
+
+\item Let $ABC$ be a triangle with circumradius $17$, inradius $4$, circumcircle $\Gamma$ and $A$-excircle $\Omega$. Suppose the reflection of $\Omega$ over line $BC$ is internally tangent to $\Gamma$.  Compute the area of $\triangle ABC$.
+
+\proposed{Gunmay Handa}
+
+\solution In this solution, define $BC=a$ and cyclic variants, and let $K$, $R$, $s$, $r$, $r_a$ be the area, circumradius, semiperimeter, inradius and $A$-exradius of $\triangle ABC$, respectively. 
+
+\par Denote $\Omega'$ as the reflection of $\Omega$ over $BC$. Let $D$ be the tangency point of $\Omega'$ on $\overline{BC}$, and suppose $X$ is the tangency point of $\Omega'$ on $\Gamma$; note by Archimedes' lemma that $DX$ passes through the midpoint $M_A$ of minor arc $BC$ in $\Gamma$. Let $\ell$ be the tangent to $\Gamma$ at $M_A$, $D'$ be the antipode of $D$ in $\Omega'$, and $Y\equiv DD'\cap \ell$. From $\triangle DM_AY\sim \triangle DD'X$ we know $DY\cdot DD'=DM_A\cdot DX=DB\cdot DC$. Hence $DD'\cdot DY=2r_a\cdot DY=(s-b)(s-c)$ and from the well-known identity $(s-b)(s-c)=rr_a$ we get that $DY=\frac{r}{2}$. Finally, if $M$ is the midpoint of $\overline{BC}$, then $MM_A=DY$ and so Power of a Point at $M$ gives $MB\cdot MC=\frac{r}{2}\left(2R-\frac{r}{2}\right)=64$, whence $a=16$.
+
+\begin{figure}[ht]
+	\centering
+	\begin{asy}
+	import olympiad;
+	size(240);
+defaultpen(linewidth(0.8)+fontsize(11pt));
+real xmin = -17.5, xmax = 19, ymin = -20, ymax = 18;
+real R = 17, r = 6.2, a = sqrt(r*(4*R-r)), theta = aSin(a/2R), d = sqrt(R*(R - 2*r));
+pair B = R*dir(270-theta), C = R*dir(270+theta);
+path Gamma = circle(origin,R);
+path loc1 = arc(origin,d,90,270),loc2 = (B.x,B.y+r)--(C.x,C.y+r);
+pair I = intersectionpoint(loc1,loc2), Pa = foot(I,B,C);
+draw(B--C^^Gamma);
+pair refB = reflect(I,B)*Pa, refC = reflect(I,C)*Pa, A = extension(B,refB, C, refC);
+draw(B--A--C);
+real k = 0.8;
+pair Xb = (1+k)*B - k*A, Xc = (1+k)*C - k*A, bisB = bisectorpoint(Xb,B,C), bisC = bisectorpoint(Xc,C,B), Ia = extension(B,bisB,C,bisC), D = foot(Ia,B,C);
+draw(Xb--A--Xc^^B--C^^circumcircle(A,B,C));
+path wA = circle(Ia,abs(Ia-D)), wAp = reflect(B,C)*wA;
+draw(wA);
+draw(wAp,linetype("4 4"));
+pair M = dir(270) * R, Pp = 15*D - 14*M, X = intersectionpoint(Pp--D,Gamma);
+dot(X^^M);
+pair Iap = reflect(B,C)*Ia, Dp = 2*Iap - D, Tb = (xmin,-R), Tc = (xmax,-R), L = extension(D,Dp,Tb,Tc); 
+dot(Dp^^D);
+draw(Tb--Tc^^L--Dp--X--M,linetype("5 5"));
+label("$A$",A,dir(origin--A));
+label("$B$",B,1.5*dir(210));
+label("$C$",C,1.5*dir(350));
+label("$D$",D,NW);
+label("$D'$",Dp,N);
+label("$X$",X,dir(origin--X));
+label("$M_A$",M,S);
+label("$Y$",L,S);
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);
+\end{asy}
+\end{figure}
+
+\par By well-known formulas, we have 
+$$K=4\left(\frac{16+b+c}{2}\right)=\frac{16bc}{4\cdot 17}$$ so that $b+c=\frac{K-32}{2}$ and $bc=\frac{17K}{4}$. Then by Heron's formula,
+\begin{align*}16K^2&=(a+b+c)(-a+b+c)(a-b+c)(a+b-c)
+\\&=\frac{2K}{r}\left(-a+\frac{K-32}{2}\right)(a^2-(b-c)^2)
+\\&=\frac{K}{2}\left(\frac{K-64}{2}\right)(256-(b+c)^2+4bc)
+\\&=\frac{K}{2}\left(\frac{K-64}{2}\right)\left(33K-\frac{K^2}{4}\right)\end{align*}
+so $256=(K-64)(132-K)\Longrightarrow K=68,128$. It is easy to check that only $128$ yields real $b$ and $c$, so the answer is $\boxed{128}$.
+
+\end{enumerate}
+
+\end{document}

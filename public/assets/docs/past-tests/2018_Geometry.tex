@@ -1,0 +1,80 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{asymptote}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\newcommand{\proposed}[1]
+{
+\vspace{5pt}
+\noindent\textit{Proposed by #1}
+}
+\newcommand{\solution}
+{
+\vspace{5pt}
+\noindent\textit{Solution.}\qquad
+}
+\begin{document}\thispagestyle{empty}
+\begin{center}
+
+\vspace*{40pt}
+
+\includegraphics[scale=0.2]{../CMIMC-header-2018.png}
+
+\includegraphics[scale=0.35]{geometry-header.png}
+
+\vspace{1.4in}
+
+\includegraphics[scale=0.20]{Instruction-Header.png}
+\noindent\rule{15.7cm}{2pt}
+\end{center}
+
+\vspace{10pt}
+
+\input{input/test-instructions}
+
+\vspace{0.7in}
+
+\begin{center}
+\includegraphics[scale=0.15]{../sponsor-footer.png}
+\end{center}
+\newpage
+
+\begin{center}
+\huge\textbf{Geometry}\normalsize
+
+\vspace{3pt}
+\end{center}
+
+\begin{enumerate}
+\item Let $ABC$ be a triangle.  Point $P$ lies in the interior of $\triangle ABC$ such that $\angle ABP = 20^\circ$ and $\angle ACP = 15^\circ$.  Compute $\angle BPC - \angle BAC$.
+
+\item Let $ABCD$ be a square of side length $1$, and let $P$ be a variable point on $\overline{CD}$.  Denote by $Q$ the intersection point of the angle bisector of $\angle APB$ with $\overline{AB}$.  The set of possible locations for $Q$ as $P$ varies along $\overline{CD}$ is a line segment; what is the length of this segment?
+
+\item Let $ABC$ be a triangle with side lengths $5$, $4\sqrt 2$, and $7$.  What is the area of the triangle with side lengths $\sin A$, $\sin B$, and $\sin C$?
+
+\item Suppose $\overline{AB}$ is a segment of unit length in the plane. Let $f(X)$ and $g(X)$ be functions of the plane such that $f$ corresponds to rotation about $A$ $60^\circ$ counterclockwise and $g$ corresponds to rotation about $B$ $90^\circ$ clockwise. Let $P$ be a point with $g(f(P))=P$; what is the sum of all possible distances from $P$ to line $AB$?
+
+\item Select points $T_1,T_2$ and $T_3$ in $\mathbb{R}^3$ such that $T_1=(0,1,0)$, $T_2$ is at the origin, and $T_3=(1,0,0)$. Let $T_0$ be a point on the line $x=y=0$ with $T_0\neq T_2$. Suppose there exists a point $X$ in the plane of $\triangle T_1T_2T_3$ such that the quantity $(XT_i)[T_{i+1}T_{i+2}T_{i+3}]$ is constant for all $i=0$ to $i=3$, where $[\mathcal{P}]$ denotes area of the polygon $\mathcal{P}$ and indices are taken modulo 4.  What is the magnitude of the $z$-coordinate of $T_0$?
+
+\item Let $\omega_1$ and $\omega_2$ be intersecting circles in the plane with radii $12$ and $15$, respectively. Suppose $\Gamma$ is a circle such that $\omega_1$ and $\omega_2$ are internally tangent to $\Gamma$ at $X_1$ and $X_2$, respectively. Similarly, $\ell$ is a line that is tangent to $\omega_1$ and $\omega_2$ at $Y_1$ and $Y_2$, respectively. If $X_1X_2=18$ and $Y_1Y_2=9$, what is the radius of $\Gamma$?
+
+\item Let $ABC$ be a triangle with $AB=10$, $AC=11$, and circumradius $6$.  Points $D$ and $E$ are located on the circumcircle of $\triangle ABC$ such that $\triangle ADE$ is equilateral.  Line segments $\overline{DE}$ and $\overline{BC}$ intersect at $X$.  Find $\frac{BX}{XC}$.
+
+\item In quadrilateral $ABCD$, $AB=2$, $AD=3$, $BC=CD=\sqrt7$, and $\angle DAB=60^\circ$. Semicircles $\gamma_1$ and $\gamma_2$ are erected on the exterior of the quadrilateral with diameters $\overline{AB}$ and $\overline{AD}$; points $E\neq B$ and $F\neq D$ are selected on $\gamma_1$ and $\gamma_2$ respectively such that $\triangle CEF$ is equilateral. What is the area of $\triangle CEF$?
+
+\item Suppose $\mathcal{E}_1 \neq \mathcal{E}_2$ are two intersecting ellipses with a common focus $X$; let the common external tangents of $\mathcal{E}_1$ and $\mathcal{E}_2$ intersect at a point $Y$. Further suppose that $X_1$ and $X_2$ are the other foci of $\mathcal{E}_1$ and $\mathcal{E}_2$, respectively, such that $X_1\in \mathcal{E}_2$ and $X_2\in \mathcal{E}_1$. If $X_1X_2=8, XX_2=7$, and $XX_1=9$, what is $XY^2$?
+
+\item Let $ABC$ be a triangle with circumradius $17$, inradius $4$, circumcircle $\Gamma$ and $A$-excircle $\Omega$. Suppose the reflection of $\Omega$ over line $BC$ is internally tangent to $\Gamma$.  Compute the area of $\triangle ABC$.
+
+\end{enumerate}
+\end{document}

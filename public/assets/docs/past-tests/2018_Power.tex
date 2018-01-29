@@ -1,0 +1,430 @@
+\documentclass[10pt]{article}
+\usepackage{amsthm,amssymb,amsmath}
+\usepackage{graphicx,tcolorbox,framed,enumerate}
+\usepackage[top=2cm, left = 2cm, right = 2cm, bottom = 3cm]{geometry}
+\usepackage{fancyhdr}
+\newcommand{\N}{\mathbb{N}}
+\pagestyle{fancy}
+\rhead{}
+\chead{\includegraphics[scale=0.1]{../CMIMC-header-2018.png}}
+\lhead{}
+\setlength{\headheight}{43pt}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{mdrecbox}{%
+			linewidth=0.5pt,
+			skipabove=12pt,
+			frametitleaboveskip=5pt,
+			frametitlebelowskip=0pt,
+			skipbelow=2pt,
+			frametitlefont=\bfseries,
+			innertopmargin=4pt,
+			innerbottommargin=8pt,
+			nobreak=true,
+		}
+\declaretheoremstyle[
+	headfont=\bfseries,
+	mdframed={style=mdrecbox},
+	headpunct={\\[3pt]},
+	postheadspace={0pt},
+]{thmrecbox}
+\declaretheorem[style=thmrecbox,name=Problem,numberwithin=section]{problem}
+
+\usepackage{todonotes}
+\presetkeys{todonotes}{inline}{}
+
+% whoever is reading this, change \paperfalse to \papertrue if you want to see power with solutions
+\newif\ifpaper
+%\papertrue
+\paperfalse
+
+\begin{document}\thispagestyle{empty}
+\begin{center}
+
+%\vspace*{10pt}
+
+\includegraphics[scale=0.2]{../CMIMC-header-2018.png}
+
+\includegraphics[scale=0.35]{power-header.png}
+
+\vspace{0.5in}
+
+\includegraphics[scale=0.20]{Instruction-Header.png}
+\noindent\rule{15.7cm}{2pt}
+\end{center}
+
+\vspace{10pt}
+
+\input{input/power-instructions}
+
+\vspace{0.7in}
+
+\begin{center}
+\includegraphics[scale=0.15]{../sponsor-footer.png}
+\end{center}
+\newpage
+
+%\title{Power Round: Crazy Concentration}
+%\author{CMIMC 2018}
+%\maketitle
+
+This Power Round will examine a variant of the classic
+Concentration game.
+
+\renewcommand{\listtheoremname}{Problems}
+\listoftheorems
+
+\section{Permutations}
+Let $A=\{a_1,a_2,\dots,a_n\}$ be a set of size $n$.
+
+\begin{itemize}
+\item A \emph{permutation} of $A$ is a bijection $\sigma:A\to A$. In other words, a permutation is a way of rearranging the order of the elements in a set, so if you list out the elements of $A$ in some order
+\[a_1,\quad a_2,\quad\dots,\quad a_n\]
+you rearrange them to get
+\[\sigma(a_1),\quad\sigma(a_2),\quad\dots,\quad\sigma(a_n)\]
+
+\item We can \emph{multiply} two permutations $\sigma_1,\sigma_2$ in the way we compose functions, i.e., $\sigma_1\sigma_2$ is the permutation sending $a_i$ to $\sigma_1(\sigma_2(a_i))$. Intutively, this is equivalent to first rearranging the elements of $A$ according to $\sigma_2$ and then according to $\sigma_1$.
+
+\item The product of two permutations is still a permutation.
+
+\item We denote $\sigma^k$ to be $\sigma\sigma\dots\sigma$, where $\sigma$ is multiplied with itself $k$ times.
+
+\item Let $S_A$ denote the set of all permutations of the set $A$. We will use the abuse of notation $S_n$ to denote the set of permutations of the set $\{1,2,\dots,n\}$, i.e., $S_n=S_{\{1,2,\dots,n\}}$.
+
+\item We can represent a permutation in the following way:
+\[\begin{pmatrix}1&2&3&4&5\\3&1&5&4&2\end{pmatrix}\in S_5\]
+which corresponds to the permutation sending $1$ to $3$, $2$ to $1$, $3$ to $5$, etc.
+
+\item We call a permutation $\sigma\in S_n$ a \emph{$k$-cycle} or a \emph{cycle of length $k$} if there are distinct integers $a_1,a_2,\dots,a_k$ such that
+\[\sigma(a_1)=a_2,\quad\sigma(a_2)=a_3,\quad\dots,\quad\sigma(a_k)=a_1\] and $\sigma(i)=i$ for all $i\not\in\{a_1,a_2,\dots,a_k\}$. In this case, we denote the permutation by $(a_1,a_2,\dots,a_k)$. For example, we now have two different notations for the permutation
+\[(1,5,2)=\begin{pmatrix}1&2&3&4&5\\5&1&3&4&2\end{pmatrix}\]
+
+\item Two cycles are called \emph{disjoint} if none of their elements are the same. For example, $(1,2,3)$ and $(4,5,6)$ are disjoint, but $(1,2,3)$ and $(3,4,5)$ are not since they share $3$.
+
+\item Every permutation can be written as the product of disjoint cycles. This representation is unique, up to rearranging the order in which we write them. One ``proof by picture" of this fact is that you can always draw a diagram similar to this:
+\begin{center}
+\includegraphics[scale=0.15]{permutation.png}
+\end{center}
+This picture illustrates the cycle decomposition of 
+\[\begin{pmatrix}1&2&3&4&5&6&7\\2&4&3&5&1&7&6\end{pmatrix}=(1,2,4,5)(3)(6,7).\]
+Above, writing adjacent cycles indicates multiplication of cycles
+(which is the same as composition).
+\end{itemize}
+
+\begin{problem}
+    [3 points]
+    The following parts are each worth $1$ point.
+    \begin{enumerate}[(a)]
+    \item Give an expression for $|S_n|$, the number of elements in $S_n$, in terms of $n$.
+    \item Let $\sigma, \tau \in S_6$ be the permutations $\sigma = (3, 1, 4, 2)$ and $\tau = (1, 2, 6, 5)$. Compute $\sigma\tau$ and write it as a product of disjoint cycles.
+    \item Let $\sigma$ and $\tau$ be as above. Compute $(\sigma\tau)^{2018}$.
+    \end{enumerate}
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+\begin{enumerate}[(a)]
+\item $n!$
+\item $(3, 1) (6, 5, 4, 2)$
+\item $(4,6)(2,5)$
+\end{enumerate}
+\end{tcolorbox}
+\fi
+
+\begin{problem}[2 points]
+Prove the last bullet point:
+every permutation can be written as the product of disjoint cycles.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+Fix $n\in\mathbb N$, and let $x\in [n]$ be arbitrary.  Consider the numbers $x,\sigma(x),\sigma^2(x),\ldots, \sigma^n(x)$.  By Pigeonhole there exist $i<j$ such that $\sigma^i(x) = \sigma^j(x)$, and since $\sigma$ is a bijection, $\sigma^{j-i}(x) = x$.  Now write \[\sigma = (x,\sigma(x),\ldots, \sigma^{j-i-1}(x)) \sigma'\] where $\sigma'$ is the restriction of $\sigma$ to the remaining elements of $[n]$.  Finish by an inductive argument.
+\end{tcolorbox}
+\fi
+
+\section{Concentration}
+There is a classical memory game called \emph{concentration}
+that you can play with a deck of cards.
+Let $N$ be a positive integer, and suppose that
+you have a deck of $2N$ cards labeled $1$, $1$, $2$, $2$, $\dots$, $N$, $N$.
+(Cards with the same value are indistinguishable.)
+
+You start by shuffling the deck of cards and lay them face-down on a table in front of you.
+At each turn, you pick two face-down cards and flip them face-up.
+\begin{itemize}
+    \item If they do not match, you flip them back over. 
+    \item If the cards match, then those cards remain face-up for the rest of the game.
+\end{itemize}
+The game ends when all the cards are face-up.
+
+Throughout the entire game, we will assume you have a perfect memory.
+
+\begin{problem}[4 points]
+    Normal concentration isn't that fun if you play it with a perfect memory.
+    Find a strategy that is guaranteed to finish the game in at most $2N$ moves.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+On turn $t$ for $1\le t\le N$, flip over cards $\{2t-1,2t\}$. After this, we know exactly where every card is. Therefore, in the next $N$ turns, we can simply flip over pairs of matching cards because we know where they are.
+\end{tcolorbox}
+\fi
+
+\begin{problem}
+    [6 points]
+    Consider the following strategy:
+    each turn you choose a pair of cards uniformly at random
+    from the set of pairs of face-down cards,
+    until all cards are turned face-up.
+    (That is, each turn you play perfectly randomly.)
+    What is the expected number of turns this strategy will take?
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+This strategy takes an expected $N^2$ steps. When $N=1$, it obviously takes $1$ step. When $N>1$, the waiting time until we see a matching pair has a geometric distribution with parameter $\frac{N}{\binom{2N}2}=\frac1{2N-1}$. Therefore, in expectation, we take $\left(\frac1{2N-1}\right)^{-1}=2N-1$ steps and commence the exact same strategy for $N-1$. By linearity of expectation, the answer is just \[1+\sum_{k=2}^N\left(2k-1\right)=N^2\]
+\end{tcolorbox}
+\fi
+
+
+\section{Crazy Concentration}
+Consider a variant of this game called \emph{crazy concentration}.
+This game is like concentration, except that in addition to the shuffled cards,
+a permutation $\sigma \in S_{2N}$ is fixed, but hidden from the player.
+This is called the \emph{mystery permutation}.
+Then the following modification is made:
+\begin{quote}
+    At the end of each turn, the player closes their eyes
+    and the cards are rearranged according to the permutation $\sigma$,
+    meaning the card in the $i$\textsuperscript{th} position from the left
+    is placed in the $\sigma(i)$\textsuperscript{th} position instead.
+\end{quote}
+Note that cards that are flipped face-up remain face-up
+even during the rearrangement.
+The diagram below shows an excerpt of a game with $2N = 6$,
+after which two cards have already been matched.
+The mystery permutation is given by
+\[ \sigma = 
+    \begin{pmatrix}
+        1 & 2 & 3 & 4 & 5 & 6 \\
+        1 & 3 & 4 & 2 & 6 & 5
+    \end{pmatrix}.
+\]
+\begin{center}
+\includegraphics[scale=0.2]{power-diagram.png}
+\end{center}
+
+\begin{problem}
+    [4 points]
+    Show that if the mystery permutation is told to you,
+    then you can guarantee finishing the game in at most $2N$ moves.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+On turn $t$ for $1\le t\le N$, flip over cards $\{\sigma^t(2t-1),\sigma^t(2t)\}$. Each time we do this, we discover what cards were originally located in positions $\{2t-1,2t\}$. Therefore, after doing this, we know exactly how the deck was originally shuffled. Thus, on the $t$th turn for $N+1\le t\le2N$, we find a new matching pair $i,j$ in the original shuffling of the deck and flip them over by choosing cards $\{\sigma^t(i),\sigma^t(j)\}$.
+\end{tcolorbox}
+\fi
+
+\begin{problem}
+    [3 points]
+    Find a strategy which is guaranteed to finish
+    crazy concentration in at most $(2N) \cdot (2N)!$ turns.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+We know that after $(2N)!$ applications of $\sigma$, all the cards return to their original position. Therefore, we can just play our normal concentration strategy on turns that are divisible by $(2N)!$, and play arbitrarily on any other turn.
+\end{tcolorbox}
+\fi
+
+
+\section{Extreme Concentration}
+Extreme concentration is like crazy concentration
+(with the mystery permutation $\sigma$ shuffling the cards
+after each turn),
+with two changes:
+\begin{itemize}
+    \item The deck is labeled $\{1, \dots, 2N\}$ instead
+    of having two copies each of $\{1, \dots, N\}$.
+    Thus, cards can never be matched to each other,
+    and are always turned face down again after being flipped.
+    \item The win condition is changed to the following:
+    the player wins if on any turn they can deduce with 100\% certainty
+    the positions of each of the $2N$ cards.
+\end{itemize}
+At first glance, extreme concentration seems like it is even
+harder than crazy concentration.
+However, it turns out it is in some sense easier:
+it can be won in just $2N$ moves with perfect memory!
+
+Here is the strategy for extreme concentration.
+Let $i=1$ and $j=2N$ at the beginning of the algorithm.
+Then repeat the following steps:
+\begin{enumerate}
+    \item Flip the cards at position $i$ and $j$.
+    \begin{itemize}
+        \item If we have seen the card at position $i$ at any point in the past,
+        then we increment $i$ by one.
+        (Otherwise, we do not change $i$.)
+        \item If we have seen the card at position $j$ at any point before,
+        then we decrement $j$ by one.
+        (Otherwise, we do not change $j$.)
+    \end{itemize}
+    \item Terminate the algorithm if $i \ge j$.
+\end{enumerate}
+
+\begin{problem}
+    [8 points]
+    Show that the algorithm terminates in exactly $2N$ turns.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+    If the algorithm takes $T$ turns, it makes $2T$ flips
+    (where if $i=j$ we consider that card to be flipped twice).
+    So it's equivalent to show there are at most $4N$ flips.
+
+    Each flip can be categorized into two categories:
+    \begin{itemize}
+        \item A \emph{cached} flip, where we have seen the card before (and change $i$ or $j$).
+        \item A \emph{new} flip, where we flip a card that we have never
+        seen before (and thus don't change $i$ or $j$).
+    \end{itemize}
+    There are exactly $2N$ of the first type (exactly one per index)
+    and exactly $2N$ of the latter type (exactly one per card),
+    plus possibly an addition flip due to a contribution if $i = j$.
+
+    Thus the algorithm takes at most $4N+1$ flips,
+    but since the number of flips is even, it takes at most $4N$.
+    (Note that this actually implies that the $i=j$ case never appears in the algorithm.)
+\end{tcolorbox}
+\fi
+
+\begin{problem}
+    [8 points]
+    Show that the observations from this algorithm
+    are sufficient to win the game.
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+    Since the cards are all distinct,
+    we can think of $\sigma$ as a permutation on the cards,
+    rather than just on the positions.
+    Indeed, there exists a permutation $\tau$ on the cards
+    such that application of $\sigma$ on the indices
+    is the same as applying $\tau$ on each card (and not moving it).
+
+    Let $X$ and $Y$ be cards such that $X = \tau(Y)$.
+    Then in this algorithm, we will always encounter a point
+    where we flip a position, observe card $X$ for the first time,
+    and then see card $Y$ immediately after it.
+    In this way we know the entire permutation $\tau$.
+
+    Moreover, on the $(t+1)$st turn,
+    if we flip the card at position $i$ and see a card $Z$,
+    then we know at the beginning the card was originally $\tau^{-t}(Z)$.
+    Thus at the end of the algorithm we know exactly where all cards are.
+\end{tcolorbox}
+\fi
+
+%\begin{problem}
+%   [7 points]
+%   How could we modify the strategy for extreme
+%   concentration to apply to normal crazy concentration?
+%   (This is deliberately open-ended and many answers are possible.
+%   Answers which work with high probability, even if not certain, are also valid.)
+%\end{problem}
+%\ifpaper
+%\begin{tcolorbox}
+%We need some way to artificially distinguish two matching cards. We begin with an observation: if cards $i$ and $j$ match, then the probability that cards $\sigma(i)$ and $\sigma(j)$ match is $O(1/N)$. The probability that $\sigma^2(i)$ and $\sigma^2(j)$ match is $O(1/N^2)$. So the way to adapt it is by choosing each position a minimum of three times before incrementing/decrementing; only with low probability will there be pathological matching cycles where you have to take a few more steps.
+%\end{tcolorbox}
+%\fi
+%
+\section{Face-Up Cards}
+Now back to normal crazy concentration.
+Suppose at the start of the game,
+we flip the cards in positions $i$ and $j$ and find that they match!
+These cards thus remain face-up for the rest of the game
+(and we observe their movement under the mystery permutation $\sigma$).
+Let's see how much information we can get out of this.
+
+For the problems in this section,
+suppose that the indices $i$ and $j$ are part of cycles $C_i$ and $C_j$ in $\sigma$,
+which have lengths $c_i$ and $c_j$, respectively, that we are trying to figure out.
+(To determine $C_i$ means to figure out the indices in $C_i$;
+equivalently, to compute $\sigma^n(i)$ for any integer $n$.)
+
+\begin{problem}[6 points]
+    Find a strategy which guarantees at least one of the following two things:
+    \begin{itemize}
+        \item the strategy proves that $c_i = c_j$, or
+        \item the strategy proves that $c_i \neq c_j$,
+        determines the value of $\min\{c_i,c_j\}$,
+        and determines which of $c_i$ and $c_j$ is smaller.
+    \end{itemize}
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+    signal argument. TODO.
+    (Cody's original does not work.)
+\end{tcolorbox}
+\fi
+
+\begin{problem}
+    [6 points]
+    Assume that $c_i\neq c_j$
+    (but the player does not know this in advance).
+    \begin{enumerate}[(a)]
+        \item Show that after $2\cdot\min\{c_i,c_j\}-1$ turns,
+        we can determine either of $C_i$ or $C_j$.
+        \item Show that after $\max\{2\cdot\min\{c_i,c_j\}-1,c_i,c_j\}$ turns,
+    we can completely figure out both of $C_i$ and $C_j$.
+    \end{enumerate}
+\end{problem}
+
+\ifpaper
+\begin{tcolorbox}
+    The signal argument succeeds in at most this time,
+    and by this time, we can read the repeats in the shorter cycle.
+    % Assume without loss of generality that $c_i<c_j$, since our strategy in the previous problem tells us which of $c_i$ and $c_j$ is the smaller one. Suppose we see the cards follow the trajectory $\{x_0,y_0\}=\{i,j\}$, $\{x_1,y_1\}$, $\{x_2,y_2\}$, $\dots$, $\{x_{2c_i-1},y_{2c_i-1}\}$. Then note that $\{x_t,y_t\}$ and $\{x_{t+c_i},y_{t+c_i}\}$ will have at least one element in common for each $0\le t<c_i$. In fact, they will have precisely one element in common, since otherwise we will have $\{x_t,y_t\}=\{x_{t+c_i},y_{t+c_i}\}$ for all $0\le t<c_i$ by periodicity. In particular, $y_0=y_{c_i}$ so $c_i=c_j$, contradiction. Therefore, let $a_t$ be the common element of $\{x_t,y_t\}$ and $\{x_{t+c_i},y_{t+c_i}\}$ for each $0\le t<c_i$. Then we have figured out that $C_i=(a_0,a_1,\dots,a_{c_i-1})$.
+
+    % Adopt the notation in the previous solution, and make the same assumption that $c_i<c_j$. For each $0\le t<2c_i$, let $b_t$ be the element of $\{x_t,y_t\}$ that is not $a_t$. If $b_t=j$ for any $1\le t<2c_i$, then we have figured out that $C_j=(b_0,b_1,\dots,b_{t-1})$. Otherwise, we will step until we find that one of the cards has returned to $c_j$; at this moment, we will have $C_j$ completely figured out. And this only takes $c_j-(2c_i-1)$ more steps.
+\end{tcolorbox}
+\fi
+
+\begin{problem}
+    [8 points]
+    Assume that $c_i=c_j$ now (but the player does not know this in advance).
+    Find a strategy which guarantees at least one of the following two things,
+    in at most $3c_i$ turns:
+    \begin{itemize}
+        \item the strategy determines both cycles $C_i$ and $C_j$ completely
+        (which may even be the same cycle), or
+        \item all $2c_i$ cards are matched (and thus remain face up thereafter).
+    \end{itemize}
+\end{problem}
+
+
+\ifpaper
+\begin{tcolorbox}
+The player realizes $c_i = c_j$ in at most $c_i$ steps.
+Again, suppose our cards follow the trajectory $\{x_0,y_0\}=\{i,j\}$, $\{x_1,y_1\}$, $\dots$, $\{x_{c_i},y_{c_i}\}=\{i,j\}$. On the first turn, flip over cards $\{i,j\}$, and first assume they do not match. Then on turn $t$ for $2\le t\le c_i$, flip over cards $\{x_{t-1},y_{t-1}\}$. We know that they will not match and thus tracking their trajectories, we will be able to determine what the entire cycle is. If they do match, then we essentially restart the strategy. That is, flip over $\{i,j\}$ again: if they don't match, then for $3\le t\le c_i$, flip over cards $\{x_{t-2},y_{t-2}\}$. If they do match, then repeat again.
+\end{tcolorbox}
+\fi
+
+
+\section{Your Turn}
+\begin{problem}[5 points]
+What other observations or strategies could speed up the number of turns
+it takes to solve crazy concentration?
+Describe as many as you can come up with,
+and for each observation briefly discuss how it might lead to a better strategy.
+\end{problem}
+
+\end{document}

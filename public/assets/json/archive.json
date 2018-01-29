@@ -1,6 +1,53 @@
 {
   "problems" : [
     {
+      "year" : "2018",
+      "individuals" : [
+        {
+          "name" : "Algebra",
+          "problems" : "2018_Algebra.pdf",
+          "solutions" : "2018_Algebra_S.pdf"
+        },
+        {
+          "name" : "Combinatorics",
+          "problems" : "2018_Combinatorics.pdf",
+          "solutions" : "2018_Combinatorics_S.pdf"
+        },
+        {
+          "name" : "Computer Science",
+          "problems" : "2018_ComputerScience.pdf",
+          "solutions" : "2018_ComputerScience_S.pdf"
+        },
+        {
+          "name" : "Geometry",
+          "problems" : "2018_Geometry.pdf",
+          "solutions" : "2018_Geometry_S.pdf"
+        },
+        {
+          "name" : "Number Theory",
+          "problems" : "2018_NumberTheory.pdf",
+          "solutions" : "2018_NumberTheory_S.pdf"
+        }
+      ],
+      "others" : [
+        {
+          "name" : "Individual Finals",
+          "problems" : "2018_Finals.pdf",
+          "solutions" : "2018_Finals_S.pdf"
+        },
+        {
+          "name" : "Team Round",
+          "problems" : "2018_Team.pdf",
+          "solutions" : "2018_Team_S.pdf"
+        },
+        {
+          "name" : "Power Round",
+          "problems" : "2018_Power.pdf",
+          "solutions" : "2018_Power_S.pdf"
+        }
+      ]
+    },
+    {
       "year" : "2017",
       "individuals" : [
         {
