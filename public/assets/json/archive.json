@@ -144,6 +144,297 @@
   ],
   "results" : [
     {
+      "year" : "2018",
+      "individuals" : [
+        {
+          "name" : "Algebra",
+          "results" : {
+            "1" : [
+              "Andrew Gu (Allderdice)"
+            ],
+            "2" : [
+              "Alan Chen (K-6)"
+            ],
+            "3" : [
+              "Muhua Xu (PRISMS Eyas)"
+            ],
+            "4" : [
+              "Richard Liu (Florida A)"
+            ],
+            "5" : [
+              "Sam Wang (BASIS Independent McLean)"
+            ],
+            "6" : [
+              "Daniel Li (PHS Alpha)"
+            ],
+            "7" : [
+              "Daniel Yuan (Fairfax Math Circle)"
+            ],
+            "8" : [
+              "David Wu (No Child Left Behind)"
+            ],
+            "9" : [
+              "Ethan (BASIS Independent McLean)"
+            ],
+            "10" : [
+              "Frank Lu (Minnesota Mathletes)"
+            ],
+            "HM" : [
+              "Gregory Pylypovych",
+              "Haydn Gwyn",
+              "Jacob Furfine",
+              "Jeffery Yu",
+              "Jeffrey Chang",
+              "Justin Park",
+              "Konwoo Kim",
+              "Kyle Gatesman",
+              "Nathan Ramesh",
+              "Noah Singer",
+              "Peter Rowley",
+              "Saaketh Vedantam",
+              "Sebastian Jeon",
+              "Srinivasan Sathiamurthy",
+              "Vlad Oleksenko",
+              "William Xi",
+              "Yuang Shen",
+              "Adam Ardeishar",
+              "Aarav Bajaj",
+              "Aditya Akula"
+            ]
+          }
+        },
+        {
+          "name" : "Combinatorics",
+          "results" : {
+            "1" : [
+              "Alex Zhang (Top 10 Anime Plot Twists)"
+            ],
+            "2" : [
+              "Daniel Zhu (MoCoSwaggaSquad)"
+            ],
+            "3" : [
+              "Guangqi Cui (MoCoSwaggaSquad)"
+            ],
+            "4" : [
+              "Jaedon Whyte (Florida B)"
+            ],
+            "5" : [
+              "Cynthia Du (Florida A)"
+            ],
+            "6" : [
+              "Daniel Park (TJ Amethyst)"
+            ],
+            "7" : [
+              "Jacob Stavrianos (MoCoSwaggaSquad)"
+            ],
+            "8" : [
+              "Jeffrey Chang (Lexington Alpha)"
+            ],
+            "9" : [
+              "Joshua Lee (TJ Ruby)"
+            ],
+            "10" : [
+              "Kevin Qian (MoCoSwaggaSquad)"
+            ],
+            "HM" : [
+              "Xuzhang Li",
+              "Yuru Niu"
+            ]
+          }
+        },
+        {
+          "name" : "Computer Science",
+          "results" : {
+            "1" : [
+              "Guangqi Cui (MoCoSwaggaSquad)"
+            ],
+            "2" : [
+              "Tej Stead (Florida C)"
+            ],
+            "3" : [
+              "Yichen Zhang (PRISMS Matrix)"
+            ],
+            "4" : [
+              "Brandon Wong (BCAyyy)"
+            ],
+            "5" : [
+              "David Wang (Conestoga)"
+            ],
+            "6" : [
+              "Harrison Grodin (Winchester Thurston (WT))"
+            ],
+            "7" : [
+              "Matvey Yutin (Fairfax Math Circle)"
+            ],
+            "8" : [
+              "Michael Gintz (Friends Don't Lie)"
+            ],
+            "9" : [
+              "Peter Zhang ($leezy $avage$)"
+            ],
+            "10" : [
+              "Richard Liu (Florida A)"
+            ],
+            "HM" : [
+              "Rishab Mehta",
+              "Siddharth Taneja",
+              "Stuart Nevans Locke",
+              "Vivek Bhupatiraju",
+              "Yizhen Chen",
+              "Zan Xu"
+            ]
+          }
+        },
+        {
+          "name" : "Geometry",
+          "results" : {
+            "1" : [
+              "Joshua Lee (TJ Ruby)"
+            ],
+            "2" : [
+              "Janabel Xia (Lexington Beta)"
+            ],
+            "3" : [
+              "Jesse Yang (Chicago Air)"
+            ],
+            "4" : [
+              "Khunpob Sereesuchart (BCA 1)"
+            ],
+            "5" : [
+              "Tianyue Cao (PRISMS Eyas)"
+            ],
+            "6" : [
+              "Vicent Bian (PHS Alpha)"
+            ],
+            "7" : [
+              "Vlad Oleksenko (Florida A)"
+            ],
+            "8" : [
+              "William Sun (TJ Ruby)"
+            ],
+            "9" : [
+              "Albert Zhang (Lexington Beta)"
+            ],
+            "10" : [
+              "Alex Li (Lexington Beta)"
+            ],
+            "HM" : [
+              "Andrew Yuan",
+              "Ben Kang",
+              "Cynthia Du",
+              "David (Zi Xuan) Ni",
+              "Ezra Erives",
+              "Geoffrey Wu",
+              "Graham O'Donnell",
+              "Hongze Chen",
+              "Konwoo Kim",
+              "Max Guo",
+              "Rishi Salwi",
+              "Rishi Verma",
+              "Ryan Kim",
+              "Shankar Padmanabhan",
+              "Swapnil Garg",
+              "Utkarsh Priyam",
+              "Yuru Niu",
+              "Yuxuan Zheng"
+            ]
+          }
+        },
+        {
+          "name" : "Number Theory",
+          "results" : {
+            "1" : [
+              "Andrew Gu (Allderdice)"
+            ],
+            "2" : [
+              "Thomas Luo (Smoke Threes)"
+            ],
+            "3" : [
+              "Ben Epstein (Lexington Alpha)"
+            ],
+            "4" : [
+              "Ben Kang (TJ Emerald)"
+            ],
+            "5" : [
+              "Daniel Zhu (MoCoSwaggaSquad)"
+            ],
+            "6" : [
+              "Jason Lee (PHS Alpha)"
+            ],
+            "7" : [
+              "Kyle Gatesman (TJ Emerald)"
+            ],
+            "8" : [
+              "Neeyanth Kopparapu (TJ Emerald)"
+            ],
+            "9" : [
+              "Srinivasan Sathiamurthy (Lexington Beta)"
+            ],
+            "10" : [
+              "Steven Qu (MoCoSwaggaSquad)"
+            ],
+            "HM" : [
+              "Vincent Bian"
+            ]
+          }
+        }
+      ],
+      "teams" : [
+        {
+          "name" : "Overall",
+          "results" : {
+            "1" : [
+              "PEARL"
+            ],
+            "2" : [
+              "TJ Ruby"
+            ],
+            "3" : [
+              "Florida A1"
+            ],
+            "4" : [
+              "MoCoSwaggaSquad"
+            ],
+            "5" : [
+              "PHS Alpha"
+            ]
+          }
+        },
+        {
+          "name" : "Power",
+          "results" : {
+            "1" : [
+              "PEARL"
+            ],
+            "2" : [
+              "MoCoSwaggaSquad"
+            ],
+            "3" : [
+              "TJ Ruby"
+            ],
+            "4" : [
+              "sorry_TJ"
+            ],
+            "5" : [
+              "Minnesota Math"
+            ]
+          }
+        },
+        {
+          "name" : "Team",
+          "results" : {
+            "1" : [
+                "Florida A1",
+                "MoCoSwaggaSquad",
+                "TJ Ruby",
+                "PHS Alpha",
+                "PEARL"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "year" : "2017",
       "individuals" : [
         {
