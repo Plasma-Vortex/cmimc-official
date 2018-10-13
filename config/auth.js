@@ -38,7 +38,7 @@ module.exports = {
     } else {
       handler(false, 'No token provided.', 403)(req, res);
     }
-  }, 
+  },
 
   /***************************************************************************
    * signJWT: helper function for creating the token
@@ -53,8 +53,9 @@ module.exports = {
       email: email,
       user_id: user_id,
       exp: parseInt(exp.getTime() / 1000),
+      admin: admin
     }, process.env.JWT_SECRET);
-  }, 
+  },
 
   /***************************************************************************
    * authenticate: authenticate user with email and password

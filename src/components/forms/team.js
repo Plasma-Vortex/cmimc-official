@@ -27,7 +27,7 @@ const verifyTeam = team => {
   else {
     for (let i in members) {
       const { name, email, subject1, subject2, age, tshirt } = members[i];
-      if (!name || !email || !subject1 || !subject2 || !age || !tshirt) {
+      if (!name || !email || !age || !tshirt) {
         return "Please fill out all fields for all students.";
       }
     }

@@ -37,6 +37,7 @@ const Routes = () => (
     <Route exact path="/faq" component={ inContainer(Pages.Faq) } />
     <Route exact path="/privacy" component={ inContainer(Pages.Privacy) } />
     <Route exact path="/terms" component={ inContainer(Pages.Terms) } />
+    <Route exact path="/admin" component={ inContainer(requireAuth(Pages.Admin)) } />
     <Route path="*" component={ inContainer(Pages.NotFound) } />
   </Switch>
 );

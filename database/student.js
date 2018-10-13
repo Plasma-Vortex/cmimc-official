@@ -2,13 +2,11 @@ const bcrypt = require('bcrypt'),
       mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
-const { subjects, tshirts } = require('../constants');
+const { tshirts } = require('../constants');
 
 const studentSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
-  subject1: { type: String, enum: Object.keys(subjects), required: true },
-  subject2: { type: String, enum: Object.keys(subjects), required: true },
   age: { type: Number, required: true },
   tshirt: { type: String, enum: Object.keys(tshirts), required: true},
   created: { type: Date, required: true },

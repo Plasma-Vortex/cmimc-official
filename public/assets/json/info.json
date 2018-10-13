@@ -1,20 +1,12 @@
 {
-  "year" : "2018",
+  "year" : "2019",
   "dates": {
-    "registration_open" : "October 2nd, 2017",
-    "registration_close" : "November 5th, 2017",
-    "payment_deadline" : "November 12th, 2017",
-    "contest_date" : "January 27th, 2018"
+    "registration_open" : "October 12th, 2018",
+    "registration_close" : "TBA",
+    "payment_deadline" : "TBA",
+    "contest_date" : "TBA"
   },
-  "registration_is_open": false,
   "registration_price" : 15,
-  "subjects" : [
-    "Algebra",
-    "Combinatorics",
-    "Computer Science",
-    "Geometry",
-    "Number Theory"
-  ],
   "tshirts" : [
     "XS",
     "S",

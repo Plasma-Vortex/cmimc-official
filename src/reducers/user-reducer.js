@@ -1,10 +1,11 @@
 import $ from "jquery";
 
-import { 
-  USER_GET, 
+import {
+  USER_GET,
   USER_TEAM_POST,
   USER_TEAM_PUT,
   USER_TEAM_DELETE,
+  RESET_USER,
   requestStatuses } from "../actions/types";
 
 const { SUCCESS, ERROR, IDLE, PENDING } = requestStatuses;
@@ -20,6 +21,8 @@ export default function (state = INITIAL_STATE, { type, payload }) {
   const { requestStatus, message, content } = payload || {};
   let newState;
   switch (type) {
+    case RESET_USER:
+      return INITIAL_STATE;
     case USER_GET:
       return { ...state, user: payload };
     case USER_TEAM_DELETE:
@@ -28,7 +31,7 @@ export default function (state = INITIAL_STATE, { type, payload }) {
         user: Object.assign({}, state.user, { requestStatus, message }),
         deleteTeam: { requestStatus, message }
       };
-      newState = { 
+      newState = {
         ...state,
         user: {
           requestStatus,
@@ -47,7 +50,7 @@ export default function (state = INITIAL_STATE, { type, payload }) {
         user: Object.assign({}, state.user, { requestStatus, message }),
         putTeam: { requestStatus, message }
       };
-      newState = { 
+      newState = {
         ...state,
         user: {
           requestStatus,
@@ -66,13 +69,13 @@ export default function (state = INITIAL_STATE, { type, payload }) {
         user: Object.assign({}, state.user, { requestStatus, message }),
         postTeam: { requestStatus, message }
       };
-      return { 
+      return {
         ...state,
         user: {
           requestStatus,
           message,
           content: Object.assign({}, state.user.content, {
-            teams: state.user.content.teams.concat(content) 
+            teams: state.user.content.teams.concat(content)
           })
         },
         postTeam: { requestStatus, message }

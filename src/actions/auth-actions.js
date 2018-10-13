@@ -1,10 +1,12 @@
-import { AUTH_USER, UNAUTH_USER, CHANGE_PASS } from "./types";
+import { AUTH_USER, UNAUTH_USER, CHANGE_PASS, RESET_DB } from "./types";
 import { authAPIAction, APIAction, payload } from "./utilities";
 
 export function logout() {
   return dispatch => {
     localStorage.removeItem("token");
     let action = { type: UNAUTH_USER };
+    dispatch(Object.assign(action, payload.success()));
+    action = { type: UNSET_USER };
     dispatch(Object.assign(action, payload.success()));
   }
 }
@@ -65,3 +67,20 @@ export function changePassword({ oldPassword, newPassword }) {
   });
 }
 
+export function resetDatabase() {
+  console.log('asdf');
+  return authAPIAction({
+    type: RESET_DB,
+    url: "/reset",
+    opts: {
+      method: "post",
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json"
+        }
+    },
+    formatData: ({ success, message }) => {
+      return ({ success, message });
+    }
+  });
+}

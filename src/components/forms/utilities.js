@@ -45,39 +45,13 @@ class StudentInput extends React.Component {
           }
         </Col>
         <Input
-          l={6} s={12} type="text" label="Name"
+          l={12} s={12} type="text" label="Name"
           onChange={ this.onFieldChange("name") }
           defaultValue={ value.name } />
         <Input
           l={6} s={12} validate type="email" label="Email"
           onChange={ this.onFieldChange("email") }
           defaultValue={ value.email } />
-        <Input
-          l={3} s={6} type="select" label="Subject 1"
-          onChange={ this.onFieldChange("subject1") }
-          defaultValue={ value.subject1 } >
-          <option value="">Subject 1</option>
-          {
-            Object.keys(subjects).map((subject, idx) => (
-              <option
-                disabled={ subject === value.subject2 }
-                value={subject} key={idx}>{subjects[subject]}</option>
-            ))
-          }
-        </Input>
-        <Input
-          l={3} s={6} type="select" label="Subject 2"
-          onChange={ this.onFieldChange("subject2") }
-          defaultValue={ value.subject2 }>
-          <option value="">Subject 2</option>
-          {
-            Object.keys(subjects).map((subject, idx) => (
-              <option
-                disabled={ subject === value.subject1 }
-                value={subject} key={idx}>{subjects[subject]}</option>
-            ))
-          }
-        </Input>
         <Input
           l={3} s={6} type="number" label="Age" min={0} max={20}
           onChange={ this.onFieldChange("age") }

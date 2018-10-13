@@ -11,7 +11,8 @@ const userSchema = new Schema({
   teams: [ { type: Schema.Types.ObjectId, ref: 'Team', required: true } ],
   registrationWhitelist: { type: Boolean, default: false },
   created: { type: Date, required: true },
-  updated: { type: Date, required: true }
+  updated: { type: Date, required: true },
+  admin: { type: Boolean, default: false }
 });
 
 userSchema.methods.checkPassword = function(password, callback) {

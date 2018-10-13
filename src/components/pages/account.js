@@ -62,7 +62,6 @@ const TeamProfile = ({ registration_price, team, teamDelete, registrationIsOpen 
                 <th>Student</th>
                 <th>Email</th>
                 <th>Age</th>
-                <th>Topics</th>
                 <th>T-Shirt</th>
               </tr>
             </thead>
@@ -73,7 +72,6 @@ const TeamProfile = ({ registration_price, team, teamDelete, registrationIsOpen 
                     <td>{ member.name }</td>
                     <td>{ member.email }</td>
                     <td>{ member.age }</td>
-                    <td>{ subjects[member.subject1] }, { subjects[member.subject2] }</td>
                     <td>{ tshirts[member.tshirt] }</td>
                   </tr>
                 ))
@@ -95,13 +93,14 @@ class Account extends React.Component {
   render() {
     const {
       infoData: { content: info },
+      serverInfoData: { content: serverInfo },
       userData: { requestStatus, message, content: user },
       teamDelete
     } = this.props;
     if (!user) return <Spinner />;
     if (requestStatus === PENDING) return <Spinner />;
     // allow for whitelisting users
-    const registrationIsOpen = info.registration_is_open || user.registrationWhitelist;
+    const registrationIsOpen = serverInfo.registration_status || user.registrationWhitelist;
     return (
       <div>
         <h4>Account<AddTeamModal registrationIsOpen={ registrationIsOpen } /></h4>
@@ -122,6 +121,7 @@ class Account extends React.Component {
 
 const mapStateToProps = state => ({
         infoData: state.init.info,
+        serverInfoData: state.init.server_info,
         userData: state.user.user
       }),
       mapDispatchToProps = dispatch => ({
