@@ -37,6 +37,7 @@ class Admin extends React.Component {
       serverInfoData: { content: serverInfo },
       resetDB
     } = this.props;
+    console.log(this.props);
     // allow for whitelisting users
     const registrationIsOpen = serverInfo.registration_status,
           token = localStorage.getItem("token"),
