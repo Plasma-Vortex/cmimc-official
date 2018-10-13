@@ -34,11 +34,11 @@ class Admin extends React.Component {
   render() {
     const {
       infoData: { content: info },
-      serverInfoData: { content: serverInfo },
+      serverInfoData: { requestStatus, message, content: serverInfo },
       resetDB
     } = this.props;
-    console.log(this.props);
-    // allow for whitelisting users
+    if (!serverInfo) return <Spinner />;
+    if (requestStatus === PENDING) return <Spinner />;
     const registrationIsOpen = serverInfo.registration_status,
           token = localStorage.getItem("token"),
           admin = parseJwt(token).admin;
