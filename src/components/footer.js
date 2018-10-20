@@ -31,7 +31,7 @@ const Footer = () => (
           <li>&copy; 2017 CMIMC</li>
           <li><Link to="/terms" className="grey-text text-lighten-3">Terms</Link></li>
           <li><Link to="/privacy" className="grey-text text-lighten-3">Privacy</Link></li>
-          <li><a className="grey-text text-lighten-3">ctj@math.cmu.edu</a></li>
+          <li><a className="grey-text text-lighten-3">cmimc@math.cmu.edu</a></li>
         </ul>
       </div>
     </div>
