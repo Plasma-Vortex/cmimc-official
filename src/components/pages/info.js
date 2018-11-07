@@ -61,7 +61,7 @@ const Info = ({ infoData: { requestStatus, message, content: info } }) => {
             <div className="card-content">
               <h5>Power/Team Rounds</h5>
               <p>In the power round, we present an interesting topic with all of its background information and then pose some proof-based problems exploring the different branches of the topic. It's up to the team to collaboratively solve these problems in 60 minutes.</p><br />
-              <p>The team round consists of 10 short-answer problems from all five topics for the team to collaboratively solve in 30 minutes.</p>
+              <p>The team round consists of 15 short-answer problems from all five topics for the team to collaboratively solve in 60 minutes.</p>
             </div>
           </div>
         </Col>
