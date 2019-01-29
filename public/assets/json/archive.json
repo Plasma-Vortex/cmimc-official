@@ -1140,6 +1140,11 @@
   ],
   "photos" : [
     {
+      "year" : "2019",
+      "thumbnail" : "assets/img/gallery/2019-thumbnail.png",
+      "link" : "https://drive.google.com/drive/folders/1pMUDjJvLrTCNDzD5QWqZR4J9BkqrHmdQ?usp=sharing"
+    },
+    {
       "year" : "2017",
       "thumbnail" : "assets/img/gallery/2017-thumbnail.png",
       "link" : "https://flic.kr/s/aHskXqv9HA"
