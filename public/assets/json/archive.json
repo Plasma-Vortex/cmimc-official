@@ -176,6 +176,179 @@
   ],
   "results" : [
     {
+      "year" : "2019",
+      "individuals" : [
+        {
+          "name" : "Algebra & Number Theory",
+          "results" : {
+            "1" : [
+              "[46.75] Saaketh Vedantam (Florida A)"
+            ],
+            "2" : [
+              "[38.56] Freddie Zhao (MI All Stars)",
+              "[38.56] Luke Robitaille (Waddle Squad)"
+            ],
+            "4" : [
+              "[33.29] Benjamin Jia (Staples High School)"
+            ],
+            "5" : [
+              "[32.83] Adam Ardeishar (Thecomolo Jygroupsofthedu Alsteenrodalgebra)",
+              "[32.83] Ben Kang (Thecomolo Jygroupsofthedu Alsteenroalgebra)"
+            ],
+            "7" : [
+              "[32.31] Vincent Bian (PogU)",
+              "[32.31] Leo Lin (Prime BASIS McLean)"
+            ],
+            "9" : [ 
+              "[30.89] Akash Das (Tin Man)"
+            ],
+            "10" : [
+              "[27.97] Serena An (Satan's Irrelephants)"
+            ]
+          }
+        },
+        {
+          "name" : "Combinatorics & Computer Science",
+          "results" : {
+            "1" : [
+              "[45.83] Luke Robitaille (Waddle Squad)"
+            ],
+            "2" : [
+              "[41.98] Thomas Luo (PogU)",
+              "[41.98] Adam Ardeishar (Thecomolo Jygroupsofthedu Alsteenrodalgebra)"
+            ],
+            "4" : [
+              "[36.00] Vincent Bian (PogU)"
+            ],
+            "5" : [
+              "[33.50] Milan Haiman (Tin Man)"
+            ],
+            "6" : [
+              "[31.28] Kevin Liu (Vivek's Cornstars)"
+            ],
+            "7" : [
+              "[30.55] Jason Lee (PogU)"
+            ],
+            "8" : [
+              "[29.58] Daniel Zhu (MoCoSwaggaSquad)"
+            ],
+            "9" : [
+              "[28.51] Nathan Hu (Vivek's Cornstars)"
+            ],
+            "10" : [
+               "[28.07] Jacob Stavrianos (MoCoSwaggaSquad)",
+               "[28.07] Kevin Zhao (Lexington Beta)",
+               "[28.07] Ryan Li (Hamiltonian Bicycles)"
+            ]
+          }
+        }
+        {
+          "name" : "Geometry",
+          "results" :  {
+            "1" : [
+              "[42.19] Luke Robitaille (Waddle Squad)"
+            ],
+            "2" : [
+              "[38.18] Akash Das (Tin Man)",
+              "[38.18] Kevin Liu (Vivek's Cornstars)"
+            ],
+            "4" : [
+              "[33.21] Milan Haiman (Tin Man)"
+            ],
+            "5" : [
+              "[32.37] Freddie Zhao (MI All Stars)"
+            ],
+            "6" : [
+              "[30.69] Dylan Liu (Waddle Squad)",
+              "[30.69] Ethan Joo (Tin Man)",
+              "[30.69] Kimi Sun (Tin Man)",
+              "[30.69] Ryan Kim (Thecomolo Jygroupsofthedu Alsteenrodalgebra)",
+              "[30.69] Saaketh Vedantam (Florida A)",
+              "[30.69] Sooyoung Choi (Lexington Alpha)",
+              "[30.69] Steven Qu (MoCoSwaggaSquad)"
+            ]
+          }
+        }
+      ],
+      "teams" : [
+        {
+          "name" : "Overall",
+          "results" : {
+            "1" : [
+              "[1024.04] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
+            ],
+            "2" : [
+              "[1015.14] Waddle Squad"
+            ],
+            "3" : [
+              "[885.55] Vivek's Cornstars"
+            ],
+            "4" : [
+              "[845.97] Tin Man"
+            ],
+            "5" : [
+              "[824.51] PRISMS Falcons"
+            ],
+            "6" : [
+              "[818.12] MoCoSwaggaSquad"
+            ],
+            "7" : [
+              "[738.15] PogU"
+            ],
+            "8" : [
+              "[720.28] Florida A"
+            ],
+            "9" : [
+              "[711.76] MI All Stars"
+            ],
+            "10" : [
+              "[678.19] The Jigglypuff Fainted"
+            ]
+          }
+        },
+        {
+          "name" : "Power",
+          "results" : {
+            "1" : [
+              "[39] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
+            ],
+            "2" : [
+              "[36] PRISMS Falcons"
+            ],
+            "3" : [
+              "[30.5] MoCoSwaggaSquad"
+            ],
+            "4" : [
+              "[29.5] Not Lehigh Valley"
+            ],
+            "5" : [
+              "[29] Tin Man"
+            ]
+          }
+        },
+        {
+          "name" : "Team",
+          "results" : {
+            "1" : [
+              "[84.44] Waddle Squad"
+            ],
+            "2" : [
+              "[70.75] Vivek's Cornstars"
+            ],
+            "3" : [
+              "[68.70] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
+            ],
+            "4" : [
+              "[65.61] Florida A"
+            ],
+            "5" : [
+              "[54.50] Ten Junior Guys"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "year" : "2018",
       "individuals" : [
         {
