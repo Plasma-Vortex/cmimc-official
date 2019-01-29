@@ -1,6 +1,38 @@
 {
   "problems" : [
     {
+      "year" : "2019",
+      "individuals" : [
+        {
+            "name" : "Algebra & Number Theory",
+            "problems" : "2019_ANT.pdf",
+            "solutions" : "2019_ANT_S.pdf"
+        },
+        {
+            "name" : "Combo & Computer Science",
+            "problems" : "2019_CCS.pdf",
+            "solutions" : "2019_CCS_S.pdf"
+        },
+        {
+            "name" : "Geometry",
+            "problems" : "2019_GEO.pdf",
+            "solutions" : "2019_GEO_S.pdf"
+        }
+      ],
+      "others" : [
+        {
+            "name" : "Team Round",
+            "problems" : "2019_Team.pdf",
+            "solutions" : "2019_Team_S.pdf"
+        },
+        {
+            "name" : "Power Round",
+            "problems" : "2019_Power.pdf",
+            "solutions" : "2019_Power_S.pdf"
+        }
+      ]
+    },
+    {
       "year" : "2018",
       "individuals" : [
         {
