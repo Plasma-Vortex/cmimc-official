@@ -43,6 +43,12 @@
       "year" : [2020]
     },
     {
+      "name" : "Fei Peng",
+      "photo" : "euler.jpg",
+      "description" : "Events Chair",
+      "year" : [2019, 2020]
+    },
+    {
       "name" : "Chittesh Thavamani",
       "photo" : "euler.jpg",
       "description" : "Logistics Officer",
@@ -50,7 +56,7 @@
     },
     {
       "name" : "Daniel Li",
-      "photo" : "euler.jpg",
+      "photo" : "daniel-li.jpg",
       "description" : "Logistics Officer",
       "year" : [2020]
     },
