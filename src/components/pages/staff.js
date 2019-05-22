@@ -19,14 +19,14 @@ const StaffCard = ({ staff: { name, photo, description, year } }) => (
   </Col>
 );
 
-const StaffP = ({ staff }) => (
+const StaffP = ({ people: staff, chunkSize: chunkSize }) => (
   <div>
     { 
       _.chunk(staff, chunkSize).map((staffRow, idx) => (
         <Row className="staff-row" key={ idx }>
           {
-            staffRow.map((staff, idx) => (
-              <StaffCard staff={ staff } key={ idx } />
+            staffRow.map((person, idx) => (
+              <StaffCard staff={ person } key={ idx } />
             ))
           }
         </Row>
@@ -62,12 +62,12 @@ class Staff extends React.Component {
     else {
       return ( <Tabs>
         <Tab title="Current Staff" className="grey-text text-darken-4" active>
-          <StaffP staff={ staff.staff.filter((value, index, array) => 
-            { return value.year.includes(currYear) === true; }) } />
+          <StaffP staff={{ chunkSize: chunkSize, people: staff.staff.filter((value, index, array) => 
+            { return value.year.includes(currYear) === true; }) }} />
         </Tab>
         <Tab title="Former Staff" className="grey-text text-darken-4">
-          <StaffP staff={ staff.staff.filter((value, index, array) => 
-            { return value.year.includes(currYear) === false; }) } />
+          <StaffP staff={{ chunkSize: chunkSize, people: staff.staff.filter((value, index, array) => 
+            { return value.year.includes(currYear) === false; }) }} />
         </Tab>
       </Tabs> )
     } 
