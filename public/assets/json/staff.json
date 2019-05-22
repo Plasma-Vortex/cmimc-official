@@ -1,6 +1,13 @@
 {
   "staff" : [
     {
+      "name" : "Test",
+      "photo" : "euler.jpg",
+      "description" : "Role: Supreme Overlord"
+    }
+  ],
+  "pstaff" : [
+    {
       "name" : "Cody Johnson",
       "photo" : "cody-johnson.jpg",
       "description": "I do my work using a DFS: start a task, get distracted for a while, then come back and do the task at hand."
