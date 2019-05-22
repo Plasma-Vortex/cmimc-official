@@ -40,13 +40,13 @@ class Staff extends React.Component {
 
   render() {
     const { staff, pending } = this.state,
-          chunkSize = 4, year = 2020;
+          chunkSize = 4, currYear = 2020;
     if (pending) return <Spinner />;
     if (!staff) return <div />;
     else return (
       <div>
         { 
-          _.chunk(staff.staff.filter((value, index, array) => {value === year;}), 
+          _.chunk(staff.staff.filter((value, index, array) => {value.year === currYear;}), 
                   chunkSize).map((staffRow, idx) => (
             <Row className="staff-row" key={ idx }>
               {
