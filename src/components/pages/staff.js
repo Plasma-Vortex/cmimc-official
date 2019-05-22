@@ -60,10 +60,13 @@ class Staff extends React.Component {
     if (pending) return <Spinner />;
     if (!staff) return <div />;
     else {
+      console.log(staff);
+      console.log(staff.staff);
+      console.log(staff.staff.filter((value, index, array) => 
+            { return value.year.includes(currYear) === true;}));
       return ( <Tabs>
         <Tab title="Current Staff" className="grey-text text-darken-4" active>
-          <StaffP staff={{ chunkSize: chunkSize, people: staff.staff.filter((value, index, array) => 
-            { return value.year.includes(currYear) === true; }) }} />
+          <StaffP staff={{ chunkSize: chunkSize, people: staff.staff }} />
         </Tab>
         <Tab title="Former Staff" className="grey-text text-darken-4">
           <StaffP staff={{ chunkSize: chunkSize, people: staff.staff.filter((value, index, array) => 
