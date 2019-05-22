@@ -5,7 +5,7 @@ import _ from "lodash";
 
 import { Spinner } from "../utilities";
 
-const StaffCard = ({ staff: { name, photo, description } }) => (
+const StaffCard = ({ staff: { name, photo, description, year } }) => (
   <Col s={12} m={6} l={3}>
     <div className="card">
       <div className="card-image">
@@ -46,7 +46,10 @@ class Staff extends React.Component {
     else return (
       <div>
         { 
-          _.chunk(staff.staff.filter((value, index, array) => {value.year === currYear;}), 
+          _.chunk(staff.staff.filter((value, index, array) => 
+            {
+              return value.year.includes(currYear);
+            }), 
                   chunkSize).map((staffRow, idx) => (
             <Row className="staff-row" key={ idx }>
               {
