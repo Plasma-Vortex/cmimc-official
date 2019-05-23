@@ -12,14 +12,14 @@ const Footer = () => (
         <Col offset="l1" l={3} s={12}>
           <h5 className="grey-text text-lighten-4">Information</h5>
           <ul>
-            <li><Link to="/" className="grey-text text-lighten-3">Rules</Link></li>
+            <li><Link to="/info" className="grey-text text-lighten-3">Rules</Link></li>
             <li><Link to="/faq" className="grey-text text-lighten-3">FAQ</Link></li>
           </ul>
         </Col>
         <Col l={3} s={12}>
           <h5 className="grey-text text-lighten-4">Contact</h5>
           <ul>
-            <li><a className="grey-text text-lighten-3">Email</a></li>
+            <li><a href="mailto:cmimc@math.cmu.edu" target="_top" className="grey-text text-lighten-3">Email</a></li>
             <li><a href="https://www.facebook.com/CMIMC" target="_blank" className="grey-text text-lighten-3">Facebook</a></li>
           </ul>
         </Col>

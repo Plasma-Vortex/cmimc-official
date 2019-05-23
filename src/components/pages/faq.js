@@ -3,7 +3,7 @@ import React from "react";
 const FAQ = () => (
   <div>
     <h4>FAQ</h4>
-    <p><b>Q</b>: <i>What should I do if I do not understand something about the competition?</i><br /><b>A</b>: You should contact the CMIMC staff. The best form of contact is by email to <a className="red-text text-darken-2">ctj@math.cmu.edu</a>.</p>
+    <p><b>Q</b>: <i>What should I do if I do not understand something about the competition?</i><br /><b>A</b>: You should contact the CMIMC staff. The best form of contact is by email to <a className="red-text text-darken-2">cmimc@math.cmu.edu</a>.</p>
     <p><b>Q</b>: <i>How many chaperones can/should come?</i><br /><b>A</b>: Every team needs at least one chaperone; however, a team is invited to bring as many chaperones as they would like.</p>
     <p><b>Q</b>: <i>Can I buy a CMIMC t-shirt?</i><br /><b>A</b>: CMIMC t-shirts come for free with the registration fee. However, they are also sold at the competition for $15 each.</p>
     <p><b>Q</b>: <i>What awards will be offered?</i><br /><b>A</b>: Top teams will receive trophies, and top individuals will receive medals.</p>
