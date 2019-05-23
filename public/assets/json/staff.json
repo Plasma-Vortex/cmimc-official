@@ -2,13 +2,13 @@
   "staff" : [
     {
       "name" : "Gunmay Handa",
-      "photo" : "gunmay-handa.jpg",
+      "photo" : "gunmay-handa.png",
       "description" : "Co-President",
       "year" : [2019, 2020]
     },
     {
       "name" : "Misha Ivkov",
-      "photo" : "misha-ivkov.jpg",
+      "photo" : "misha-ivkov.png",
       "description" : "Co-President",
       "year" : [2019, 2020]
     },
