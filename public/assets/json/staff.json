@@ -2,13 +2,13 @@
   "staff" : [
     {
       "name" : "Gunmay Handa",
-      "photo" : "gunmay-handa.png",
+      "photo" : "gunmay-handa.jpg",
       "description" : "Co-President",
       "year" : [2019, 2020]
     },
     {
       "name" : "Misha Ivkov",
-      "photo" : "misha-ivkov.png",
+      "photo" : "misha-ivkov.jpg",
       "description" : "Co-President",
       "year" : [2019, 2020]
     },
@@ -17,6 +17,12 @@
       "photo" : "euler.jpg",
       "description" : "Treasurer",
       "year" : [2020]
+    },
+    {
+      "name" : "Fei Peng",
+      "photo" : "euler.jpg",
+      "description" : "Events Chair",
+      "year" : [2019, 2020]
     },
     {
       "name" : "Eugene Lee",
@@ -32,7 +38,7 @@
     },
     {
       "name" : "Vijay Srinivasan",
-      "photo" : "euler.jpg",
+      "photo" : "vijay-srinivasan.jpg",
       "description" : "Problem Czar",
       "year" : [2020]
     }, 
@@ -41,12 +47,6 @@
       "photo" : "euler.jpg",
       "description" : "Volunteer Coordinator",
       "year" : [2020]
-    },
-    {
-      "name" : "Fei Peng",
-      "photo" : "euler.jpg",
-      "description" : "Events Chair",
-      "year" : [2019, 2020]
     },
     {
       "name" : "Chittesh Thavamani",
