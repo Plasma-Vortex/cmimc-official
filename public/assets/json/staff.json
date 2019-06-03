@@ -44,7 +44,7 @@
     }, 
     {
       "name" : "William Liu",
-      "photo" : "euler.jpg",
+      "photo" : "william-liu.jpg",
       "description" : "Volunteer Coordinator",
       "year" : [2020]
     },
@@ -68,8 +68,20 @@
     },
     {
       "name" : "Simran Khunger",
+      "photo" : "simran-khunger.jpg",
+      "description" : "Logistics Officer",
+      "year" : [2020]
+    },
+    {
+      "name" : "Michelle Zhu",
       "photo" : "euler.jpg",
       "description" : "Logistics Officer",
+      "year" : [2020]
+    },
+    {
+      "name" : "Clara Sellke",
+      "photo" : "euler.jpg",
+      "description" : "Social Chair",
       "year" : [2020]
     },
     {
