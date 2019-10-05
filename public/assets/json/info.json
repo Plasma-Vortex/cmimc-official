@@ -1,10 +1,10 @@
 {
-  "year" : "2019",
+  "year" : "2020",
   "dates": {
-    "registration_open" : "October 12th, 2018",
-    "registration_close" : "November 19th, 2018",
-    "payment_deadline" : "December 31st, 2018",
-    "contest_date" : "January 26th, 2019"
+    "registration_open" : "October 14th, 2019",
+    "registration_close" : "November 18th, 2019",
+    "payment_deadline" : "December 9th, 2019",
+    "contest_date" : "February 1st, 2020"
   },
   "registration_price" : 15,
   "tshirts" : [
