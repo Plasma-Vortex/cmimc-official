@@ -1,264 +1,483 @@
 {
-  "problems" : [
+  "problems": [
     {
-      "year" : "2019",
-      "individuals" : [
+      "year": "2020",
+      "individuals": [
         {
-            "name" : "Algebra & Number Theory",
-            "problems" : "2019_ANT.pdf",
-            "solutions" : "2019_ANT_S.pdf"
+          "name": "Algebra & Number Theory",
+          "problems": "2020_ANT.pdf",
+          "solutions": "2020_ANT_S.pdf"
         },
         {
-            "name" : "Combo & Computer Science",
-            "problems" : "2019_CCS.pdf",
-            "solutions" : "2019_CCS_S.pdf"
+          "name": "Combo & Computer Science",
+          "problems": "2020_CCS.pdf",
+          "solutions": "2020_CCS_S.pdf"
         },
         {
-            "name" : "Geometry",
-            "problems" : "2019_GEO.pdf",
-            "solutions" : "2019_GEO_S.pdf"
+          "name": "Geometry",
+          "problems": "2020_GEO.pdf",
+          "solutions": "2020_GEO_S.pdf"
         }
       ],
-      "others" : [
+      "others": [
         {
-            "name" : "Team Round",
-            "problems" : "2019_Team.pdf",
-            "solutions" : "2019_Team_S.pdf"
+          "name": "Team Round",
+          "problems": "2020_Team.pdf",
+          "solutions": "2020_Team_S.pdf"
         },
         {
-            "name" : "Power Round",
-            "problems" : "2019_Power.pdf",
-            "solutions" : "2019_Power_S.pdf"
+          "name": "Power Round",
+          "problems": "2020_Power.pdf",
+          "solutions": "2020_Power_S.pdf"
         }
       ]
     },
     {
-      "year" : "2018",
-      "individuals" : [
+      "year": "2019",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "problems" : "2018_Algebra.pdf",
-          "solutions" : "2018_Algebra_S.pdf"
+          "name": "Algebra & Number Theory",
+          "problems": "2019_ANT.pdf",
+          "solutions": "2019_ANT_S.pdf"
         },
         {
-          "name" : "Combinatorics",
-          "problems" : "2018_Combinatorics.pdf",
-          "solutions" : "2018_Combinatorics_S.pdf"
+          "name": "Combo & Computer Science",
+          "problems": "2019_CCS.pdf",
+          "solutions": "2019_CCS_S.pdf"
         },
         {
-          "name" : "Computer Science",
-          "problems" : "2018_ComputerScience.pdf",
-          "solutions" : "2018_ComputerScience_S.pdf"
-        },
-        {
-          "name" : "Geometry",
-          "problems" : "2018_Geometry.pdf",
-          "solutions" : "2018_Geometry_S.pdf"
-        },
-        {
-          "name" : "Number Theory",
-          "problems" : "2018_NumberTheory.pdf",
-          "solutions" : "2018_NumberTheory_S.pdf"
+          "name": "Geometry",
+          "problems": "2019_GEO.pdf",
+          "solutions": "2019_GEO_S.pdf"
         }
       ],
-      "others" : [
+      "others": [
         {
-          "name" : "Individual Finals",
-          "problems" : "2018_Finals.pdf",
-          "solutions" : "2018_Finals_S.pdf"
+          "name": "Team Round",
+          "problems": "2019_Team.pdf",
+          "solutions": "2019_Team_S.pdf"
         },
         {
-          "name" : "Team Round",
-          "problems" : "2018_Team.pdf",
-          "solutions" : "2018_Team_S.pdf"
-        },
-        {
-          "name" : "Power Round",
-          "problems" : "2018_Power.pdf",
-          "solutions" : "2018_Power_S.pdf"
+          "name": "Power Round",
+          "problems": "2019_Power.pdf",
+          "solutions": "2019_Power_S.pdf"
         }
       ]
     },
     {
-      "year" : "2017",
-      "individuals" : [
+      "year": "2018",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "problems" : "2017_Algebra.pdf",
-          "solutions" : "2017_Algebra_S.pdf"
+          "name": "Algebra",
+          "problems": "2018_Algebra.pdf",
+          "solutions": "2018_Algebra_S.pdf"
         },
         {
-          "name" : "Combinatorics",
-          "problems" : "2017_Combinatorics.pdf",
-          "solutions" : "2017_Combinatorics_S.pdf"
+          "name": "Combinatorics",
+          "problems": "2018_Combinatorics.pdf",
+          "solutions": "2018_Combinatorics_S.pdf"
         },
         {
-          "name" : "Computer Science",
-          "problems" : "2017_ComputerScience.pdf",
-          "solutions" : "2017_ComputerScience_S.pdf"
+          "name": "Computer Science",
+          "problems": "2018_ComputerScience.pdf",
+          "solutions": "2018_ComputerScience_S.pdf"
         },
         {
-          "name" : "Geometry",
-          "problems" : "2017_Geometry.pdf",
-          "solutions" : "2017_Geometry_S.pdf"
+          "name": "Geometry",
+          "problems": "2018_Geometry.pdf",
+          "solutions": "2018_Geometry_S.pdf"
         },
         {
-          "name" : "Number Theory",
-          "problems" : "2017_NumberTheory.pdf",
-          "solutions" : "2017_NumberTheory_S.pdf"
+          "name": "Number Theory",
+          "problems": "2018_NumberTheory.pdf",
+          "solutions": "2018_NumberTheory_S.pdf"
         }
       ],
-      "others" : [
+      "others": [
         {
-          "name" : "Individual Finals",
-          "problems" : "2017_Finals.pdf",
-          "solutions" : "2017_Finals_S.pdf"
+          "name": "Individual Finals",
+          "problems": "2018_Finals.pdf",
+          "solutions": "2018_Finals_S.pdf"
         },
         {
-          "name" : "Team Round",
-          "problems" : "2017_Team.pdf",
-          "solutions" : "2017_Team_S.pdf"
+          "name": "Team Round",
+          "problems": "2018_Team.pdf",
+          "solutions": "2018_Team_S.pdf"
         },
         {
-          "name" : "Power Round",
-          "problems" : "2017_Power.pdf",
-          "solutions" : "2017_Power_S.pdf"
+          "name": "Power Round",
+          "problems": "2018_Power.pdf",
+          "solutions": "2018_Power_S.pdf"
         }
       ]
     },
     {
-      "year" : "2016",
-      "individuals" : [
+      "year": "2017",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "problems" : "2016_Algebra.pdf",
-          "solutions" : "2016_Algebra_S.pdf"
+          "name": "Algebra",
+          "problems": "2017_Algebra.pdf",
+          "solutions": "2017_Algebra_S.pdf"
         },
         {
-          "name" : "Combinatorics",
-          "problems" : "2016_Combinatorics.pdf",
-          "solutions" : "2016_Combinatorics_S.pdf"
+          "name": "Combinatorics",
+          "problems": "2017_Combinatorics.pdf",
+          "solutions": "2017_Combinatorics_S.pdf"
         },
         {
-          "name" : "Computer Science",
-          "problems" : "2016_ComputerScience.pdf",
-          "solutions" : "2016_ComputerScience_S.pdf"
+          "name": "Computer Science",
+          "problems": "2017_ComputerScience.pdf",
+          "solutions": "2017_ComputerScience_S.pdf"
         },
         {
-          "name" : "Geometry",
-          "problems" : "2016_Geometry.pdf",
-          "solutions" : "2016_Geometry_S.pdf"
+          "name": "Geometry",
+          "problems": "2017_Geometry.pdf",
+          "solutions": "2017_Geometry_S.pdf"
         },
         {
-          "name" : "Number Theory",
-          "problems" : "2016_NumberTheory.pdf",
-          "solutions" : "2016_NumberTheory_S.pdf"
+          "name": "Number Theory",
+          "problems": "2017_NumberTheory.pdf",
+          "solutions": "2017_NumberTheory_S.pdf"
         }
       ],
-      "others" : [
+      "others": [
         {
-          "name" : "Individual Finals",
-          "problems" : "2016_Finals.pdf",
-          "solutions" : "2016_Finals_S.pdf"
+          "name": "Individual Finals",
+          "problems": "2017_Finals.pdf",
+          "solutions": "2017_Finals_S.pdf"
         },
         {
-          "name" : "Team Round",
-          "problems" : "2016_Team.pdf",
-          "solutions" : "2016_Team_S.pdf"
+          "name": "Team Round",
+          "problems": "2017_Team.pdf",
+          "solutions": "2017_Team_S.pdf"
         },
         {
-          "name" : "Power Round",
-          "problems" : "2016_Power.pdf",
-          "solutions" : "2016_Power_S.pdf"
+          "name": "Power Round",
+          "problems": "2017_Power.pdf",
+          "solutions": "2017_Power_S.pdf"
+        }
+      ]
+    },
+    {
+      "year": "2016",
+      "individuals": [
+        {
+          "name": "Algebra",
+          "problems": "2016_Algebra.pdf",
+          "solutions": "2016_Algebra_S.pdf"
+        },
+        {
+          "name": "Combinatorics",
+          "problems": "2016_Combinatorics.pdf",
+          "solutions": "2016_Combinatorics_S.pdf"
+        },
+        {
+          "name": "Computer Science",
+          "problems": "2016_ComputerScience.pdf",
+          "solutions": "2016_ComputerScience_S.pdf"
+        },
+        {
+          "name": "Geometry",
+          "problems": "2016_Geometry.pdf",
+          "solutions": "2016_Geometry_S.pdf"
+        },
+        {
+          "name": "Number Theory",
+          "problems": "2016_NumberTheory.pdf",
+          "solutions": "2016_NumberTheory_S.pdf"
+        }
+      ],
+      "others": [
+        {
+          "name": "Individual Finals",
+          "problems": "2016_Finals.pdf",
+          "solutions": "2016_Finals_S.pdf"
+        },
+        {
+          "name": "Team Round",
+          "problems": "2016_Team.pdf",
+          "solutions": "2016_Team_S.pdf"
+        },
+        {
+          "name": "Power Round",
+          "problems": "2016_Power.pdf",
+          "solutions": "2016_Power_S.pdf"
         }
       ]
     }
   ],
-  "results" : [
+  "results": [
     {
-      "year" : "2019",
-      "individuals" : [
+      "year": "2020",
+      "individuals": [
         {
-          "name" : "Algebra & Number Theory",
-          "results" : {
-            "1" : [
+          "name": "Algebra & Number Theory",
+          "results": {
+            "1": [
+              "[41.91] Maxim Li (Michigan All-Stars)"
+            ],
+            "2": [
+              "[34.95] Jaedon Whyte (Florida Algae)"
+            ],
+            "3": [
+              "[34.01] Ben Epstein (Lexington Alpha)"
+            ],
+            "4": [
+              "[32.50] Karthik Vedula (Florida Algae)"
+            ],
+            "5": [
+              "[32.50] Michael Huang (The Jigglypuff Attacked)"
+            ],
+            "6": [
+              "[32.50] Alex Chung (The Jigglypuff Attacked)"
+            ],
+            "7": [
+              "[28.49] Quanlin Andy Chen (PRISMS Falcons)"
+            ],
+            "8": [
+              "[27.58] Akash Das (Tin Man)"
+            ],
+            "9": [
+              "[26.98] Derek Dong (The Jigglypuff Battled)"
+            ],
+            "10": [
+              "[26.98] Jerry Zhao (Daddy HONG. Arms)"
+            ]
+          }
+        },
+        {
+          "name": "Combinatorics & Computer Science",
+          "results": {
+            "1": [
+              "[32.90] Daniel Yuan (Montgomery Blair 1)"
+            ],
+            "2": [
+              "[32.90] Reagan Choi (Michigan All-Stars)"
+            ],
+            "3": [
+              "[32.90] David Tang (University of Toronto Schools A)"
+            ],
+            "4": [
+              "[32.90] Tianyue Daniel Cao (PRISMS Falcons)"
+            ],
+            "5": [
+              "[28.99] Isaac Uy (Team Eddie)"
+            ],
+            "6": [
+              "[28.48] Yuru Niu (Florida Algae)"
+            ],
+            "7": [
+              "[28.48] Timothy Qian (Montgomery Blair 1)"
+            ],
+            "8": [
+              "[28.34] Benjamin Kang (The Jigglypuff Attacked)"
+            ],
+            "9": [
+              "[27.92] Ben Kreiswirth (Lion)"
+            ],
+            "10": [
+              "[27.35] Edward Xiong (Pirates A)"
+            ]
+          }
+        },
+        {
+          "name": "Geometry",
+          "results": {
+            "1": [
+              "[40.09] Jaedon Whyte (Florida Algae)"
+            ],
+            "2": [
+              "[39.17] Maxim Li (Michigan All-Stars)"
+            ],
+            "3": [
+              "[39.17] Tianyue Daniel Cao (PRISMS Falcons)"
+            ],
+            "4": [
+              "[39.16] Zifan Atticus Wang (PRISMS Falcons)"
+            ],
+            "5": [
+              "[34.55] Quanlin Andy Chen (PRISMS Falcons)"
+            ],
+            "6": [
+              "[31.20] Locke Cai (Pirates A)"
+            ],
+            "7": [
+              "[31.20] Soo Young Choi (Lexington Alpha)"
+            ],
+            "8": [
+              "[31.20] Ethan Joo (Tin Man)"
+            ],
+            "9": [
+              "[31.20] Rishabh Das (Tin Man)"
+            ],
+            "10": [
+              "[31.20] Albert Wang (Florida Beaches)"
+            ]
+          }
+        }
+      ],
+      "teams": [
+        {
+          "name": "Overall",
+          "results": {
+            "1": [
+              "[1131.29] PRISMS Falcons"
+            ],
+            "2": [
+              "[1001.98] The Jigglypuff Attacked"
+            ],
+            "3": [
+              "[947.81] Michigan All-Stars"
+            ],
+            "4": [
+              "[884.00] Tin Man"
+            ],
+            "5": [
+              "[738.72] The Jigglypuff Battled"
+            ],
+            "6": [
+              "[721.96] Florida Algae"
+            ],
+            "7": [
+              "[703.21] Montgomery Blair 1"
+            ],
+            "8": [
+              "[690.31] University of Toronto A"
+            ],
+            "9": [
+              "[672.88] Scarecrow"
+            ],
+            "10": [
+              "[639.43] Pirates A"
+            ]
+          }
+        },
+        {
+          "name": "Power",
+          "results": {
+            "1": [
+              "[40] PRISMS Falcons"
+            ],
+            "2": [
+              "[38] The Jigglypuff Attacked"
+            ],
+            "3": [
+              "[37] Michigan All-Stars"
+            ],
+            "4": [
+              "[33] Tin Man"
+            ],
+            "5": [
+              "[29] Scarecrow"
+            ]
+          }
+        },
+        {
+          "name": "Team",
+          "results": {
+            "1": [
+              "[89.13] PRISMS Falcons"
+            ],
+            "2": [
+              "[77.85] The Jigglypuff Attacked"
+            ],
+            "3": [
+              "[61.87] Florida Algae"
+            ],
+            "4": [
+              "[57.72] Michigan All-Stars"
+            ],
+            "5": [
+              "[54.23] The Jigglypuff Battled"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "year": "2019",
+      "individuals": [
+        {
+          "name": "Algebra & Number Theory",
+          "results": {
+            "1": [
               "[46.75] Saaketh Vedantam (Florida A)"
             ],
-            "2" : [
+            "2": [
               "[38.56] Freddie Zhao (MI All Stars)",
               "Luke Robitaille (Waddle Squad)"
             ],
-            "4" : [
+            "4": [
               "[33.29] Benjamin Jia (Staples High School)"
             ],
-            "5" : [
+            "5": [
               "[32.83] Adam Ardeishar (TJ A)",
               "Ben Kang (TJ A)"
             ],
-            "7" : [
+            "7": [
               "[32.31] Vincent Bian (PogU)",
               "Leo Lin (Prime BASIS McLean)"
             ],
-            "9" : [ 
+            "9": [
               "[30.89] Akash Das (Tin Man)"
             ],
-            "10" : [
+            "10": [
               "[27.97] Serena An (Satan's Irrelephants)"
             ]
           }
         },
         {
-          "name" : "Combinatorics & Computer Science",
-          "results" : {
-            "1" : [
+          "name": "Combinatorics & Computer Science",
+          "results": {
+            "1": [
               "[45.83] Luke Robitaille (Waddle Squad)"
             ],
-            "2" : [
+            "2": [
               "[41.98] Thomas Luo (PogU)",
               "Adam Ardeishar (TJ A)"
             ],
-            "4" : [
+            "4": [
               "[36.00] Vincent Bian (PogU)"
             ],
-            "5" : [
+            "5": [
               "[33.50] Milan Haiman (Tin Man)"
             ],
-            "6" : [
+            "6": [
               "[31.28] Kevin Liu (Vivek's Cornstars)"
             ],
-            "7" : [
+            "7": [
               "[30.55] Jason Lee (PogU)"
             ],
-            "8" : [
+            "8": [
               "[29.58] Daniel Zhu (MoCoSwaggaSquad)"
             ],
-            "9" : [
+            "9": [
               "[28.51] Nathan Hu (Vivek's Cornstars)"
             ],
-            "10" : [
-               "[28.07] Jacob Stavrianos (MoCoSwaggaSquad)",
-               "Kevin Zhao (Lexington Beta)",
-               "Ryan Li (Hamiltonian Bicycles)"
+            "10": [
+              "[28.07] Jacob Stavrianos (MoCoSwaggaSquad)",
+              "Kevin Zhao (Lexington Beta)",
+              "Ryan Li (Hamiltonian Bicycles)"
             ]
           }
         },
         {
-          "name" : "Geometry",
-          "results" :  {
-            "1" : [
+          "name": "Geometry",
+          "results": {
+            "1": [
               "[42.19] Luke Robitaille (Waddle Squad)"
             ],
-            "2" : [
+            "2": [
               "[38.18] Akash Das (Tin Man)",
               "Kevin Liu (Vivek's Cornstars)"
             ],
-            "4" : [
+            "4": [
               "[33.21] Milan Haiman (Tin Man)"
             ],
-            "5" : [
+            "5": [
               "[32.37] Freddie Zhao (MI All Stars)"
             ],
-            "6" : [
+            "6": [
               "[30.69] Dylan Liu (Waddle Squad)",
               "Ethan Joo (Tin Man)",
               "Kimi Sun (Tin Man)",
@@ -270,78 +489,78 @@
           }
         }
       ],
-      "teams" : [
+      "teams": [
         {
-          "name" : "Overall",
-          "results" : {
-            "1" : [
+          "name": "Overall",
+          "results": {
+            "1": [
               "[1024.04] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
             ],
-            "2" : [
+            "2": [
               "[1015.14] Waddle Squad"
             ],
-            "3" : [
+            "3": [
               "[885.55] Vivek's Cornstars"
             ],
-            "4" : [
+            "4": [
               "[845.97] Tin Man"
             ],
-            "5" : [
+            "5": [
               "[824.51] PRISMS Falcons"
             ],
-            "6" : [
+            "6": [
               "[818.12] MoCoSwaggaSquad"
             ],
-            "7" : [
+            "7": [
               "[738.15] PogU"
             ],
-            "8" : [
+            "8": [
               "[720.28] Florida A"
             ],
-            "9" : [
+            "9": [
               "[711.76] MI All Stars"
             ],
-            "10" : [
+            "10": [
               "[678.19] The Jigglypuff Fainted"
             ]
           }
         },
         {
-          "name" : "Power",
-          "results" : {
-            "1" : [
+          "name": "Power",
+          "results": {
+            "1": [
               "[39] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
             ],
-            "2" : [
+            "2": [
               "[36] PRISMS Falcons"
             ],
-            "3" : [
+            "3": [
               "[30.5] MoCoSwaggaSquad"
             ],
-            "4" : [
+            "4": [
               "[29.5] Not Lehigh Valley"
             ],
-            "5" : [
+            "5": [
               "[29] Tin Man"
             ]
           }
         },
         {
-          "name" : "Team",
-          "results" : {
-            "1" : [
+          "name": "Team",
+          "results": {
+            "1": [
               "[84.44] Waddle Squad"
             ],
-            "2" : [
+            "2": [
               "[70.75] Vivek's Cornstars"
             ],
-            "3" : [
+            "3": [
               "[68.70] Thecomolo Jygroupsofthedu Alsteenrodalgebra"
             ],
-            "4" : [
+            "4": [
               "[65.61] Florida A"
             ],
-            "5" : [
+            "5": [
               "[54.50] Ten Junior Guys"
             ]
           }
@@ -349,27 +568,27 @@
       ]
     },
     {
-      "year" : "2018",
-      "individuals" : [
+      "year": "2018",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "results" : {
-            "1" : [
+          "name": "Algebra",
+          "results": {
+            "1": [
               "Andrew Gu (Allderdice)"
             ],
-            "2" : [
+            "2": [
               "Richard Liu (Florida A)"
             ],
-            "3" : [
+            "3": [
               "Sam Wang (BASIS Independent McLean)"
             ],
-            "4" : [
+            "4": [
               "Alan Chen (K-6)"
             ],
-            "5" : [
+            "5": [
               "Muhua Xu (PRISMS Eyas)"
             ],
-            "HM" : [
+            "HM": [
               "Adam Ardeishar",
               "Daniel Li",
               "Daniel Yuan",
@@ -397,64 +616,64 @@
           }
         },
         {
-          "name" : "Combinatorics",
-          "results" : {
-            "1" : [
+          "name": "Combinatorics",
+          "results": {
+            "1": [
               "Daniel Zhu (MoCoSwaggaSquad)"
             ],
-            "2" : [
+            "2": [
               "Jaedon Whyte (Florida B)"
             ],
-            "3" : [
+            "3": [
               "Guangqi Cui (MoCoSwaggaSquad)",
               "Alex Zhang (Top 10 Anime Plot Twists)"
             ],
-            "5" : [
+            "5": [
               "Joshua Lee (TJ Ruby)"
             ],
-            "6" : [
+            "6": [
               "Jacob Stavrianos (MoCoSwaggaSquad)"
             ],
-            "7" : [
+            "7": [
               "Daniel Park (TJ Amethyst)"
             ],
-            "8" : [
+            "8": [
               "Jeffrey Chang (Lexington Alpha)"
             ],
-            "9" : [
+            "9": [
               "Cynthia Du (Florida A)"
             ],
-            "10" : [
+            "10": [
               "Xuzhang Li (PRISMS Falcons)"
             ],
-            "HM" : [
+            "HM": [
               "Kevin Qian",
               "Yuru Niu"
             ]
           }
         },
         {
-          "name" : "Computer Science",
-          "results" : {
-            "1" : [
+          "name": "Computer Science",
+          "results": {
+            "1": [
               "Guangqi Cui (MoCoSwaggaSquad)"
             ],
-            "2" : [
+            "2": [
               "Yichen Zhang (PRISMS Matrix)"
             ],
-            "3" : [
+            "3": [
               "Tej Stead (Florida C)"
             ],
-            "4" : [
+            "4": [
               "Yizhen Chen (PRISMS Falcons)"
             ],
-            "5" : [
+            "5": [
               "Richard Liu (Florida A)"
             ],
-            "6" : [
+            "6": [
               "Matvey Yutin (Fairfax Math Circle)"
             ],
-            "HM" : [
+            "HM": [
               "Brandon Wang",
               "David Wang",
               "Harrison Grodin",
@@ -469,31 +688,31 @@
           }
         },
         {
-          "name" : "Geometry",
-          "results" : {
-            "1" : [
+          "name": "Geometry",
+          "results": {
+            "1": [
               "Joshua Lee (TJ Ruby)"
             ],
-            "2" : [
+            "2": [
               "Vlad Oleksenko (Florida A)"
             ],
-            "3" : [
+            "3": [
               "Vicent Bian (PHS Alpha)"
             ],
-            "4" : [
+            "4": [
               "Khunpob Sereesuchart (BCA 1)"
             ],
-            "5" : [
+            "5": [
               "Jesse Yang (Chicago Air)"
             ],
-            "6" : [
+            "6": [
               "Tianyue Cao (PRISMS Eyas)"
             ],
-            "7" : [
+            "7": [
               "Janabel Xia (Lexington Beta)",
               "William Sun (TJ Ruby)"
             ],
-            "HM" : [
+            "HM": [
               "Albert Zhang",
               "Alex Li",
               "Andrew Yuan",
@@ -519,155 +738,155 @@
           }
         },
         {
-          "name" : "Number Theory",
-          "results" : {
-            "1" : [
+          "name": "Number Theory",
+          "results": {
+            "1": [
               "Andrew Gu (Allderdice)"
             ],
-            "2" : [
+            "2": [
               "Thomas Luo (Smoke Threes)"
             ],
-            "3" : [
+            "3": [
               "Daniel Zhu (MoCoSwaggaSquad)"
             ],
-            "4" : [
+            "4": [
               "Vincent Bian (PHS Alpha)"
             ],
-            "5" : [
+            "5": [
               "Ben Kang (TJ Emerald)"
             ],
-            "6" : [
+            "6": [
               "Steven Qu (MoCoSwaggaSquad)"
             ],
-            "7" : [
+            "7": [
               "Ben Epstein (Lexington Alpha)"
             ],
-            "8" : [
+            "8": [
               "Neeyanth Kopparapu (TJ Emerald)"
             ],
-            "9" : [
+            "9": [
               "Srinivasan Sathiamurthy (Lexington Beta)"
             ],
-            "10" : [
+            "10": [
               "Kyle Gatesman (TJ Emerald)"
             ],
-            "HM" : [
+            "HM": [
               "Jason Lee"
             ]
           }
         }
       ],
-      "teams" : [
+      "teams": [
         {
-          "name" : "Overall",
-          "results" : {
-            "1" : [
+          "name": "Overall",
+          "results": {
+            "1": [
               "TJ Ruby"
             ],
-            "2" : [
+            "2": [
               "MoCoSwaggaSquad"
             ],
-            "3" : [
+            "3": [
               "Florida A"
             ],
-            "4" : [
+            "4": [
               "PRISMS Falcons"
             ],
-            "5" : [
+            "5": [
               "PHS Alpha"
             ],
-            "6" : [
+            "6": [
               "Florida B"
             ],
-            "7" : [
+            "7": [
               "TJ Emerald"
             ],
-            "8" : [
+            "8": [
               "Harker Omega"
             ],
-            "9" : [
+            "9": [
               "Lexington Alpha"
             ],
-            "10" : [
+            "10": [
               "BCA 1"
             ]
           }
         },
         {
-          "name" : "Power",
-          "results" : {
-            "1" : [
+          "name": "Power",
+          "results": {
+            "1": [
               "PRISMS Falcons"
             ],
-            "2" : [
+            "2": [
               "MoCoSwaggaSquad"
             ],
-            "3" : [
+            "3": [
               "Florida A"
             ],
-            "4" : [
+            "4": [
               "BCA 1",
               "China A7"
             ]
           }
         },
         {
-          "name" : "Team",
-          "results" : {
-            "1" : [
-                "TJ Ruby"
+          "name": "Team",
+          "results": {
+            "1": [
+              "TJ Ruby"
             ],
-            "2" : [
-                "Florida B"
+            "2": [
+              "Florida B"
             ],
-            "3" : [
-                "Lexington Alpha"
+            "3": [
+              "Lexington Alpha"
             ],
-            "4" : [
-                "TJ Amethyst",
-                "Harker Omega"
+            "4": [
+              "TJ Amethyst",
+              "Harker Omega"
             ]
           }
         }
       ]
     },
     {
-      "year" : "2017",
-      "individuals" : [
+      "year": "2017",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "results" : {
-            "1" : [
+          "name": "Algebra",
+          "results": {
+            "1": [
               "Swapnil Garg (PEARL)"
             ],
-            "2" : [
+            "2": [
               "Daniel Zhu (MoCoSwaggaSquad)"
             ],
-            "3" : [
+            "3": [
               "Alex Chung (TJ Emerald)"
             ],
-            "4" : [
+            "4": [
               "Saaketh Vendantam (Florida A2)"
             ],
-            "5" : [
+            "5": [
               "Adam Ardeishar (TJ Ruby)"
             ],
-            "6" : [
+            "6": [
               "Frank Lu (Minnesota Math)"
             ],
-            "7" : [
+            "7": [
               "Jason Chen (Florida A2)"
             ],
-            "8" : [
+            "8": [
               "Samuel Li (Florida A3)"
             ],
-            "9" : [
+            "9": [
               "Andrew Gu (Allderdice)"
             ],
-            "10" : [
+            "10": [
               "Jackson Blitz (Florida A1)"
             ],
-            "HM" : [
+            "HM": [
               "Alex Pan",
               "Dilhan Salgado",
               "Gunmay Handa",
@@ -687,39 +906,39 @@
           }
         },
         {
-          "name" : "Combinatorics",
-          "results" : {
-            "1" : [
+          "name": "Combinatorics",
+          "results": {
+            "1": [
               "Brian Reinhart (Florida A1)"
             ],
-            "2" : [
+            "2": [
               "Swapnil Garg (PEARL)"
             ],
-            "3" : [
+            "3": [
               "Guangqi Cui (MoCoSwaggaSquad)"
             ],
-            "4" : [
+            "4": [
               "Joshua Kennedy (Florida A2)"
             ],
-            "5" : [
+            "5": [
               "George Bentley (Florida A1)"
             ],
-            "6" : [
+            "6": [
               "Graham O'Donnell (Florida A1)"
             ],
-            "7" : [
+            "7": [
               "Jason Lee (PHS Alpha)"
             ],
-            "8" : [
+            "8": [
               "Jason Chen (Florida A2)"
             ],
-            "9" : [
+            "9": [
               "Joshua Lee (TJ Ruby)"
             ],
-            "10" : [
+            "10": [
               "Alex Pan (Minnesota Math)"
             ],
-            "HM" : [
+            "HM": [
               "Akshaj Kadaveru",
               "Dilhan Salgado",
               "Jacob Stavrianos",
@@ -730,39 +949,39 @@
           }
         },
         {
-          "name" : "Computer Science",
-          "results" : {
-            "1" : [
+          "name": "Computer Science",
+          "results": {
+            "1": [
               "Guangqi Cui (MoCoSwaggaSquad)"
             ],
-            "2" : [
+            "2": [
               "Brian Reinhart (Florida A1)"
             ],
-            "3" : [
+            "3": [
               "Justin Park (PHS Alpha)"
             ],
-            "4" : [
+            "4": [
               "Richard Liu (Florida A1)"
             ],
-            "5" : [
+            "5": [
               "Steven Qu (sorry_TJ)"
             ],
-            "6" : [
+            "6": [
               "Jason Lee (PHS Alpha)"
             ],
-            "7" : [
+            "7": [
               "Vincent Bian (PHS Alpha)"
             ],
-            "8" : [
+            "8": [
               "Zan Xu (Shadyside)"
             ],
-            "9" : [
+            "9": [
               "Alex Wang (TJ Amethyst)"
             ],
-            "10" : [
+            "10": [
               "Anson Berns (sorry_TJ)"
             ],
-            "HM" : [
+            "HM": [
               "Aaditya Singh",
               "Aaron Li",
               "Andrew Komo",
@@ -776,39 +995,39 @@
           }
         },
         {
-          "name" : "Geometry",
-          "results" : {
-            "1" : [
+          "name": "Geometry",
+          "results": {
+            "1": [
               "Joshua Lee (TJ Ruby)"
             ],
-            "2" : [
+            "2": [
               "Vlad Oleksenko (Florida A2)"
             ],
-            "3" : [
+            "3": [
               "Aaditya Singh (TJ Ruby)"
             ],
-            "4" : [
+            "4": [
               "Ben Kang (TJ Emerald)"
             ],
-            "5" : [
+            "5": [
               "Siang Tseng (Chesapeake A1)"
             ],
-            "6" : [
+            "6": [
               "Nathan Weckwerth (Minnesota Math)"
             ],
-            "7" : [
+            "7": [
               "Christopher Lee (NA Team 1)"
             ],
-            "8" : [
+            "8": [
               "Graham O'Donnell (Florida A1)"
             ],
-            "9" : [
+            "9": [
               "Michael Tang (Minnesota Math)"
             ],
-            "10" : [
+            "10": [
               "Kevin Qian (sorry_TJ)"
             ],
-            "HM" : [
+            "HM": [
               "Ajit Kadaveru",
               "Alan Yan",
               "Alex Chung",
@@ -822,210 +1041,210 @@
           }
         },
         {
-          "name" : "Number Theory",
-          "results" : {
-            "1" : [
+          "name": "Number Theory",
+          "results": {
+            "1": [
               "Andrew Gu (Allderdice)"
             ],
-            "2" : [
+            "2": [
               "Vincent Bian (PHS Alpha)"
             ],
-            "3" : [
+            "3": [
               "Saaketh Vendantam (Florida A2)"
             ],
-            "4" : [
+            "4": [
               "Nathan Weckwerth (Minnesota Math)"
             ],
-            "5" : [
+            "5": [
               "Sean Elliott (PEARL)"
             ],
-            "6" : [
+            "6": [
               "Ben Kang (TJ Emerald)"
             ],
-            "7" : [
+            "7": [
               "Daniel Zhu (MoCoSwaggaSquad)"
             ],
-            "8" : [
+            "8": [
               "Alan Yan (William is Mom)"
             ],
-            "9" : [
+            "9": [
               "Michael Tang (Minnesota Math)"
             ],
-            "10" : [
+            "10": [
               "Pratik Rathore (MoCoSwaggaSquad)"
             ],
-            "HM" : [
+            "HM": [
               "Cole Bright",
               "Cory Hixson"
             ]
           }
         }
       ],
-      "teams" : [
+      "teams": [
         {
-          "name" : "Overall",
-          "results" : {
-            "1" : [
+          "name": "Overall",
+          "results": {
+            "1": [
               "PEARL"
             ],
-            "2" : [
+            "2": [
               "TJ Ruby"
             ],
-            "3" : [
+            "3": [
               "Florida A1"
             ],
-            "4" : [
+            "4": [
               "MoCoSwaggaSquad"
             ],
-            "5" : [
+            "5": [
               "PHS Alpha"
             ]
           }
         },
         {
-          "name" : "Power",
-          "results" : {
-            "1" : [
+          "name": "Power",
+          "results": {
+            "1": [
               "PEARL"
             ],
-            "2" : [
+            "2": [
               "MoCoSwaggaSquad"
             ],
-            "3" : [
+            "3": [
               "TJ Ruby"
             ],
-            "4" : [
+            "4": [
               "sorry_TJ"
             ],
-            "5" : [
+            "5": [
               "Minnesota Math"
             ]
           }
         },
         {
-          "name" : "Team",
-          "results" : {
-            "1" : [
-                "Florida A1",
-                "MoCoSwaggaSquad",
-                "TJ Ruby",
-                "PHS Alpha",
-                "PEARL"
+          "name": "Team",
+          "results": {
+            "1": [
+              "Florida A1",
+              "MoCoSwaggaSquad",
+              "TJ Ruby",
+              "PHS Alpha",
+              "PEARL"
             ]
           }
         }
       ]
     },
     {
-      "year" : "2016",
-      "individuals" : [
+      "year": "2016",
+      "individuals": [
         {
-          "name" : "Algebra",
-          "results" : {
-            "1" : [
+          "name": "Algebra",
+          "results": {
+            "1": [
               "Saaketh Vendantam (Florida A)"
             ],
-            "2" : [
+            "2": [
               "Steven Qu (Montgomery Blair Team 1)"
             ],
-            "3" : [
+            "3": [
               "Jacob Stavrianos (Montgomery Blair Team 2)"
             ],
-            "4" : [
+            "4": [
               "Alex Chung (Fairfax Math Wizards)"
             ],
-            "5" : [
+            "5": [
               "Jackson Blitz (Florida A)"
             ]
           }
         },
         {
-          "name" : "Combinatorics",
-          "results" : {
-            "1" : [
+          "name": "Combinatorics",
+          "results": {
+            "1": [
               "Erik Metz (Nicolas Bourbaki)"
             ],
-            "2" : [
+            "2": [
               "Joshua Lee (pangzi)"
             ],
-            "3" : [
+            "3": [
               "Eric Lu (Montgomery Blair Team 1)"
             ],
-            "4" : [
+            "4": [
               "Guang Cui (Montgomery Blair Team 2)"
             ],
-            "5" : [
+            "5": [
               "Brian Reinhart (Florida A)"
             ]
           }
         },
         {
-          "name" : "Computer Science",
-          "results" : {
-            "1" : [
+          "name": "Computer Science",
+          "results": {
+            "1": [
               "Eric Lu (Montgomery Blair Team 1)"
             ],
-            "2" : [
+            "2": [
               "Erik Metz (Nicolas Bourbaki)"
             ],
-            "3" : [
+            "3": [
               "Samuel Hsiang (pangzi)"
             ],
-            "4" : [
+            "4": [
               "Brian Reinhart (Florida A)"
             ],
-            "5" : [
+            "5": [
               "Guang Cui (Montgomery Blair Team 2)"
             ],
-            "HM" : [
+            "HM": [
               "James McGaa",
               "Richard Liu"
             ]
           }
         },
         {
-          "name" : "Geometry",
-          "results" : {
-            "1" : [
+          "name": "Geometry",
+          "results": {
+            "1": [
               "Joshua Lee (pangzi)"
             ],
-            "2" : [
+            "2": [
               "Aaditya Singh (The First Order)"
             ],
-            "3" : [
+            "3": [
               "Robin Park (pangzi)"
             ],
-            "4" : [
+            "4": [
               "Graham O'Donnell"
             ],
-            "5" : [
+            "5": [
               "David Chen (Fairfax Math Wizards)"
             ],
-            "HM" : [
+            "HM": [
               "Steven Qu",
               "Rithvik Pasumarty"
             ]
           }
         },
         {
-          "name" : "Number Theory",
-          "results" : {
-            "1" : [
+          "name": "Number Theory",
+          "results": {
+            "1": [
               "Franklyn Wang (pangzi)"
             ],
-            "2" : [
+            "2": [
               "Jeffery Yu (The First Order)"
             ],
-            "3" : [
+            "3": [
               "Andrew Gu (Team Talonflame)"
             ],
-            "4" : [
+            "4": [
               "Akshaj Kadaveru (pangzi)"
             ],
-            "5" : [
+            "5": [
               "Ryan Broder (Florida A)"
             ],
-            "HM" : [
+            "HM": [
               "Thomas Luo",
               "William Xu",
               "David Wu",
@@ -1034,86 +1253,86 @@
           }
         }
       ],
-      "teams" : [
+      "teams": [
         {
-          "name" : "Overall",
-          "results" : {
-            "1" : [
+          "name": "Overall",
+          "results": {
+            "1": [
               "Florida A"
             ],
-            "2" : [
+            "2": [
               "Montgomery Blair Team 2"
             ],
-            "3" : [
+            "3": [
               "pangzi"
             ],
-            "4" : [
+            "4": [
               "Montgomery Blair Team 1"
             ],
-            "5" : [
+            "5": [
               "Nicolas Bourbaki"
             ],
-            "6" : [
+            "6": [
               "The First Order"
             ],
-            "7" : [
+            "7": [
               "Fairfax Math Wizards"
             ],
-            "8" : [
+            "8": [
               "Florida B"
             ],
-            "9" : [
+            "9": [
               "Tom & Jerry Store Leak C- Water"
             ],
-            "10" : [
+            "10": [
               "The Sexy Primes"
             ]
           }
         },
         {
-          "name" : "Power",
-          "results" : {
-            "1" : [
+          "name": "Power",
+          "results": {
+            "1": [
               "Montgomery Blair Team 2"
             ],
-            "2" : [
+            "2": [
               "Nicolas Bourbaki"
             ],
-            "3" : [
+            "3": [
               "Florida A"
             ],
-            "4" : [
+            "4": [
               "pangzi"
             ],
-            "5" : [
+            "5": [
               "Florida B"
             ],
-            "6" : [
+            "6": [
               "Montgomery Blair Team 1",
               "The Sexy Primes"
             ],
-            "8" : [
+            "8": [
               "The First Order"
             ],
-            "9" : [
+            "9": [
               "Team Talonflame"
             ],
-            "10" : [
+            "10": [
               "The Schuyler Sisters (and Brothers)"
             ]
           }
         },
         {
-          "name" : "Team",
-          "results" : {
-            "1" : [
+          "name": "Team",
+          "results": {
+            "1": [
               "Florida A"
             ],
-            "2" : [
+            "2": [
               "Montgomery Blair Team 1",
               "Tom & Jerry Store Leak C- Water"
             ],
-            "4" : [
+            "4": [
               "Fairfax Math Wizards",
               "The First Order",
               "pangzi",
@@ -1121,7 +1340,7 @@
               "Nicolas Bourbaki",
               "Florida C"
             ],
-            "10" : [
+            "10": [
               "Wootton",
               "The Schuyler Sisters (and Brothers)",
               "Sinosaurus",
