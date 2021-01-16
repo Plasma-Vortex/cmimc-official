@@ -2,7 +2,7 @@
   "news" : [
     {
       "date": "November 20, 2020",
-      "message": "Test link <a href='https://cmimconline.org'>cmimconline.org</a>"
+      "message": "Test link &lt;a href=&quot;https://cmimconline.org&quot;&gt;cmimconline.org&lt;/a&gt;"
     },
     {
       "date": "October 12, 2018",
