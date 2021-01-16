@@ -2,11 +2,11 @@
   "news" : [
     {
       "date": "January 15, 2021",
-      "message": "Registration for the (online) CMIMC 2021 Math Contest is now open! Create an account at <a href='https://cmimconline.org' className='red-text text-darken-2'>cmimconline.org</a> to register."
+      "message": "Registration for the (online) CMIMC 2021 Math Contest is now open! Create an account at <a href='https://cmimconline.org' class='red-text text-darken-2'>cmimconline.org</a> to register."
     },
     {
       "date": "November 20, 2020",
-      "message": "CMIMC is starting a new programming contest! The first-ever CMIMC Programming Competition will be held online at <a href='https://cmimconline.org' className='red-text text-darken-2'>cmimconline.org</a> on January 30th, 2021"
+      "message": "CMIMC is starting a new programming contest! The first-ever CMIMC Programming Competition will be held online at <a href='https://cmimconline.org' class='red-text text-darken-2'>cmimconline.org</a> on January 30th, 2021"
     },
     {
       "date": "October 12, 2018",

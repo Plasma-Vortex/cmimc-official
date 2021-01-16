@@ -31,10 +31,10 @@ const Info = ({ infoData: { requestStatus, message, content: info } }) => {
             <td>{ info.dates.registration_close }</td>
             <td>Registration closes</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>{ info.dates.payment_deadline }</td>
             <td>Payment deadline</td>
-          </tr>
+          </tr> */}
           <tr>
             <td>{ info.dates.contest_date }</td>
             <td>The contest</td>
