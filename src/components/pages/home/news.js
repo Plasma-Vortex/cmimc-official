@@ -40,7 +40,7 @@ class News extends React.Component {
                     <i className="fa fa-rss" aria-hidden="true" />
                   </Col>
                   <Col s={11}>
-                    <b>{ post.date }</b><p dangerouslySetInnerHTML={{ __html: 'message' }} />
+                    <b>{ post.date }</b><p dangerouslySetInnerHTML={{ __html: post.message }} />
                   </Col>
                 </Row>
               </li>
