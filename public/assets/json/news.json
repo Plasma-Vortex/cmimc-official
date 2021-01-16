@@ -1,8 +1,12 @@
 {
   "news" : [
     {
+      "date": "November 20, 2020",
+      "message": "Test link <a href='https://cmimconline.org'>cmimconline.org</a>"
+    },
+    {
       "date": "October 12, 2018",
-      "message": "The wait is over, registration is open"
+      "message": "The wait is over, registration is open!"
     }
   ]
 }
