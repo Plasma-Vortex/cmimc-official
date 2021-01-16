@@ -11,7 +11,7 @@ import News from "./news";
 /* blurb about cmimc */
 const Blurb = ({ year, date }) => (
   <p style={{ marginBottom: "36px" }}>
-    The Carnegie Mellon Informatics and Mathematics Competition (CMIMC) is an annual math and computer science competition held at <a href="http://www.cmu.edu/" target="_blank" className="red-text text-darken-2">Carnegie Mellon University</a> by CMU students. CMIMC { year } will be held <em>online</em> at <a href="https://cmimconline.org">cmimconline.org</a> on { date }.
+    The Carnegie Mellon Informatics and Mathematics Competition (CMIMC) is an annual math and computer science competition held at <a href="http://www.cmu.edu/" target="_blank" className="red-text text-darken-2">Carnegie Mellon University</a> by CMU students. CMIMC { year } will be held <b>online</b> at <a href="https://cmimconline.org" className="red-text text-darken-2">cmimconline.org</a> on { date }.
   </p>
 );
 
