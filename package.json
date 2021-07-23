@@ -4,7 +4,7 @@
   "description": "Website for the Carnegie Mellon Informatics and Mathematics Competition.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack --mode production",
     "watch": "webpack -d --watch",
     "dev": "nodemon index.js",
     "start": "node index.js"
@@ -38,8 +38,7 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.10.9",
     "randomatic": "^3.1.0",
-    "sshpk": "^1.15.1",
-    "webpack-cli": "^4.7.2"
+    "sshpk": "^1.15.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -64,6 +63,7 @@
     "redux-form": "^7.0.3",
     "redux-thunk": "^2.2.0",
     "webpack": "^5.46.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-cli": "^4.7.2"
   }
 }
