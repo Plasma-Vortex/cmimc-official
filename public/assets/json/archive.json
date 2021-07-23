@@ -1,6 +1,38 @@
 {
   "problems": [
     {
+      "year": "2021",
+      "individuals": [
+        {
+          "name": "Algebra & Number Theory",
+          "problems": "2021_ANT.pdf",
+          "solutions": "2021_ANT_S.pdf"
+        },
+        {
+          "name": "Combo & Computer Science",
+          "problems": "2021_CCS.pdf",
+          "solutions": "2021_CCS_S.pdf"
+        },
+        {
+          "name": "Geometry",
+          "problems": "2021_GEO.pdf",
+          "solutions": "2021_GEO_S.pdf"
+        }
+      ],
+      "others": [
+        {
+          "name": "Team Round",
+          "problems": "2021_Team.pdf",
+          "solutions": "2021_Team_S.pdf"
+        },
+        {
+          "name": "TCS Round",
+          "problems": "2021_TCS.pdf",
+          "solutions": "2021_TCS_S.pdf"
+        }
+      ]
+    },
+	{
       "year": "2020",
       "individuals": [
         {
