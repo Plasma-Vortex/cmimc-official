@@ -40,11 +40,11 @@
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
-    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "babel-plugin-wildcard": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
     "immutable": "^3.8.2",
     "isomorphic-fetch": "^3.0.0",
     "jquery": "^3.6.0",
