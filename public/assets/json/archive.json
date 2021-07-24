@@ -4,19 +4,34 @@
       "year": "2021",
       "individuals": [
         {
-          "name": "Algebra & Number Theory",
-          "problems": "2021_ANT.pdf",
-          "solutions": "2021_ANT_S.pdf"
+          "name": "Algebra & Number Theory - Div 1",
+          "problems": "2021_AlgNT_D1.pdf",
+          "solutions": "2021_AlgNT_D1_S.pdf"
         },
         {
-          "name": "Combo & Computer Science",
-          "problems": "2021_CCS.pdf",
-          "solutions": "2021_CCS_S.pdf"
+          "name": "Algebra & Number Theory - Div 2",
+          "problems": "2021_AlgNT_D2.pdf",
+          "solutions": "2021_AlgNT_D2_S.pdf"
         },
         {
-          "name": "Geometry",
-          "problems": "2021_GEO.pdf",
-          "solutions": "2021_GEO_S.pdf"
+          "name": "Combo & Computer Science - Div 1",
+          "problems": "2021_ComboCS_D1.pdf",
+          "solutions": "2021_ComboCS_D1_S.pdf"
+        },
+        {
+          "name": "Combo & Computer Science - Div 2",
+          "problems": "2021_ComboCS_D2.pdf",
+          "solutions": "2021_ComboCS_D2_S.pdf"
+        },
+        {
+          "name": "Geometry - Div 1",
+          "problems": "2021_Geo_D1.pdf",
+          "solutions": "2021_Geo_D1_S.pdf"
+        },
+        {
+          "name": "Geometry - Div 2",
+          "problems": "2021_Geo_D2.pdf",
+          "solutions": "2021_Geo_D2_S.pdf"
         }
       ],
       "others": [
