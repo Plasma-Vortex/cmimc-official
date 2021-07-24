@@ -4,32 +4,32 @@
       "year": "2021",
       "individuals": [
         {
-          "name": "Algebra & Number Theory - Div 1",
+          "name": "Algebra & Number Theory - Div. 1",
           "problems": "2021_AlgNT_D1.pdf",
           "solutions": "2021_AlgNT_D1_S.pdf"
         },
         {
-          "name": "Algebra & Number Theory - Div 2",
+          "name": "Algebra & Number Theory - Div. 2",
           "problems": "2021_AlgNT_D2.pdf",
           "solutions": "2021_AlgNT_D2_S.pdf"
         },
         {
-          "name": "Combo & Computer Science - Div 1",
+          "name": "Combo & Computer Science - Div. 1",
           "problems": "2021_ComboCS_D1.pdf",
           "solutions": "2021_ComboCS_D1_S.pdf"
         },
         {
-          "name": "Combo & Computer Science - Div 2",
+          "name": "Combo & Computer Science - Div. 2",
           "problems": "2021_ComboCS_D2.pdf",
           "solutions": "2021_ComboCS_D2_S.pdf"
         },
         {
-          "name": "Geometry - Div 1",
+          "name": "Geometry - Div. 1",
           "problems": "2021_Geo_D1.pdf",
           "solutions": "2021_Geo_D1_S.pdf"
         },
         {
-          "name": "Geometry - Div 2",
+          "name": "Geometry - Div. 2",
           "problems": "2021_Geo_D2.pdf",
           "solutions": "2021_Geo_D2_S.pdf"
         }
@@ -254,6 +254,222 @@
     }
   ],
   "results": [
+	{
+      "year": "2020",
+      "individuals": [
+        {
+          "name": "Algebra & Number Theory",
+          "results": {
+            "1": [
+              "[59.42] Luke Robitaille (Texas Momentum A)"
+            ],
+            "2": [
+              "[59.36] Ram Goel (Orange County Math Circle GammaStars)"
+            ],
+			"3": [
+			  "[56.70] Jaedon Whyte (Florida Alligators)"
+			],
+			"4": [
+			  "[53.22] Powell Zhang (Lexington Beta)"
+			],
+			"5": [
+			  "[50.56] Amol Rama (Random Math)"
+			],
+			"6": [
+			  "[48.22] Christopher Qiu (Bridgewater Star)"
+			],
+			"7": [
+			  "[47.55] Raymond Feng (YEA Spice)"
+			],
+			"7": [
+			  "[47.55] Samuel Kim (scrubs)"
+			],
+			"7": [
+			  "[47.55] Sean Li (YEA Spice)"
+			],
+			"10": [
+			  "[47.11] Samuel Goodman (Las Vegas Math Circle)"
+			]
+		  }
+		},
+		{
+          "name": "Combinatorics & Computer Science",
+          "results": {
+            "1": [
+              "[90.75] Luke Robitaille (Texas Momentum A)"
+            ],
+            "2": [
+              "[65.15] Yichen Xiao (PRISMS Falcons)"
+            ],
+            "3": [
+              "[64.50] Xinyang Chen (Texas Momentum A)"
+            ],
+            "4": [
+              "[63.55] Ram Goel (Orange County Math Circle GammaStars)"
+            ],
+            "5": [
+              "[52.97] Andrew Gu (Orange County Math Circle BrawlphaStars)"
+            ],
+            "6": [
+              "[50.81] Utkarsh Priyam (Harker)"
+            ],
+            "7": [
+              "[48.47] Daniel Tian (Motown All Stars A)"
+            ],
+            "8": [
+              "[41.56] Powell Zhang (Lexington Beta)"
+            ],
+            "9": [
+              "[40.70] Dennis Chen (YEA Ada)"
+            ],
+            "10": [
+              "[39.40] Alan Bu (CCC Math)"
+            ]
+		},
+        {
+          "name": "Geometry",
+          "results": {
+            "1": [
+              "[64.37] Luke Robitaille (Texas Momentum A)"
+            ],
+            "2": [
+              "[57.97] Christopher Qiu (Bridgewater Star)"
+            ],
+            "2": [
+              "[57.97] Karthik Vedula (Florida Alligators)"
+            ],
+            "2": [
+              "[57.97] Rishabh Das (Tin Man)"
+            ],
+            "2": [
+              "[57.97] William Wang (Knights A)"
+            ],
+            "6": [
+              "[52.69] Eric Shen (University of Toronto Schools A)"
+            ],
+            "7": [
+              "[48.68] Andrew Wen (Irrational Root Theorem)"
+            ],
+            "7": [
+              "[48.68] Derek Liu (Tour Epines 1)"
+            ],
+            "7": [
+              "[48.68] Yichen Xiao (PRISMS Falcons)"
+            ],
+            "10": [
+              "[48.32] Alex Gu (Gunn Alpha)"
+            ]
+		  }
+		}
+	  ],
+	  "teams": [
+        {
+          "name": "Overall",
+          "results": {
+            "1": [
+              "[930.2] Texas Momentum A"
+            ],
+            "2": [
+              "[886.0] Motown All Stars A"
+            ],
+            "3": [
+              "[708.6] Orange County Math Circle BrawlphaStars"
+            ],
+            "4": [
+              "[667.0] PRISMS Falcons"
+            ],
+            "5": [
+              "[651.9] Tin Man"
+            ],
+            "6": [
+              "[646.5] YEA Spice"
+            ],
+            "7": [
+              "[620.7] Florida Alligators"
+            ],
+            "8": [
+              "[569.3] The Jigglypuff Attacked"
+            ],
+            "9": [
+              "[540.1] Random Math"
+            ],
+            "10": [
+              "[531.9] BISV Bobcats A"
+            ]
+		  }
+		},
+        {
+          "name": "Team Round",
+          "results": {
+            "1": [
+              "[235.1] Motown All Stars A"
+            ],
+            "2": [
+              "[192.2] Texas Momentum A"
+            ],
+            "3": [
+              "[174.7] The Jigglypuff Attacked"
+            ],
+            "4": [
+              "[174.1] YEA Spice"
+            ],
+            "5": [
+              "[165.3] Florida Alligators"
+            ],
+            "6": [
+              "[163.6] Tour Epines 1"
+            ],
+            "7": [
+              "[155.2] PRISMS Falcons"
+            ],
+            "8": [
+              "[136.6] Random Math"
+            ],
+            "9": [
+              "[131.0] Marvel"
+            ],
+            "10": [
+              "[130.7] Orange County Math Circle BrawlphaStars"
+            ]
+		  }
+		},
+        {
+          "name": "TCS Round",
+          "results": {
+            "1": [
+              "[210] Motown All Stars A"
+            ],
+            "2": [
+              "[175] Texas Momentum A"
+            ],
+            "3": [
+              "[155] Tin Man"
+            ],
+            "4": [
+              "[150] BISV Bobcats A"
+            ],
+            "5": [
+              "[145] Gunn Alpha"
+            ],
+            "6": [
+              "[135] Florida Beaches"
+            ],
+            "6": [
+              "[135] scrubs"
+            ],
+            "8": [
+              "[130] PRISMS Falcons"
+            ],
+            "9": [
+              "[125] Orange County Math Circle BrawlphaStars"
+            ],
+            "10": [
+              "[122.5] Tour Epines 1"
+            ]
+		  }
+		}
+	  ]
+	},
     {
       "year": "2020",
       "individuals": [
