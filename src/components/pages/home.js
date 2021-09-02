@@ -8,9 +8,9 @@ import Sponsors from "./home/sponsors";
 const Home = () => (
   <div>
     <Introduction />
-    <Parallax imageSrc="assets/img/cmimc-2016-wide.jpg" />
+    <Parallax imageSrc="assets/img/cmimc-2016-wide.jpg" style={{ display: "block" }}/>
     <Instructions />
-    <Parallax imageSrc="assets/img/team-wide.jpg" />
+    <Parallax imageSrc="assets/img/team-wide.jpg" style={{ display: "block" }}/>
     <Sponsors />
   </div>
 );

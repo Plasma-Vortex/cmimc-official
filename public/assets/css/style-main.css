@@ -69,10 +69,6 @@ footer .footer-copyright ul li  {
   margin-bottom: 0;
 }
 
-.section  {
-  padding: 40px 0;
-}
-
 .sponsor  {
   display: block;
   height: 180px;
@@ -202,4 +198,24 @@ footer .footer-copyright ul li  {
   width: 100%;
   margin-top: 24px;
   text-align: center;
+}
+
+.hamburger-menu {
+  padding: 14px 16px 10px 108px;
+  margin: 0px 0px 0px -100px;
+  font-size: 32px;
+}
+
+@media only screen and (min-width: 601px) {
+  .hamburger-menu {
+  	padding: 18px 20px 14px 112px;
+  }
+}
+
+.side-nav li > a {
+  font-size: 16px;
+}
+
+.parallax-container .parallax img {
+  display: block;
 }
