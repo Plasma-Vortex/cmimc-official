@@ -88,44 +88,37 @@ footer .footer-copyright ul li  {
   background-color: #f5f5f5;
 }
 
-.sponsor-cm {
-  background-image: url('../img/CMU-SCS.png');
-  background-size: 59%;
-}
-
 .sponsor-ci {
-  background-image: url('../img/Citadel.png');
-  background-size: 86%;
-}
-
-.sponsor-cs {
-  background-image: url('../img/Citadel-Securities.png');
-  background-size: 86%;
+  background-image: url('../img/citadel2.png');
+  background-size: 80%;
+  background-position: 50% 48%; 
 }
 
 .sponsor-de {
-  background-image: url('../img/de-shaw-logo.png');
-  background-size: 86%;
-}
-
-.sponsor-2s {
-  background-image: url('../img/2s-tran.png');
-  background-size: 86%;
-}
-
-.sponsor-js {
-  background-image: url('../img/Jane_Street_Logo.png');
+  background-image: url('../img/de-shaw.png');
   background-size: 80%;
 }
 
-.sponsor-xp {
-  background-image: url('../img/expii-logo-black-trans.png');
-  background-size: 72%;
+.sponsor-2s {
+  background-image: url('../img/2sigma.png');
+  background-size: 70%;
+  background-position: 50% 45%; 
 }
 
-.sponsor-wa {
-  background-image: url('../img/wolfram.png');
-  background-size: 82%;
+.sponsor-js {
+  background-image: url('../img/jane-street.png');
+  background-size: 75%;
+  background-position: 55% 50%; 
+}
+
+.sponsor-sig {
+  background-image: url('../img/sig.png');
+  background-size: 75%;
+}
+
+.sponsor-imc {
+  background-image: url('../img/imc.png');
+  background-size: 80%;
 }
 
 .contest-pdf {
