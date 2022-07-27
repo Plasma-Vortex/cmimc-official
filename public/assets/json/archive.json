@@ -1,6 +1,53 @@
 {
   "problems": [
     {
+      "year": "2022",
+      "individuals": [
+        {
+          "name": "Algebra & Number Theory - Div. 1",
+          "problems": "2022_AlgNT_D1.pdf",
+          "solutions": "2022_AlgNT_D1_S.pdf"
+        },
+        {
+          "name": "Algebra & Number Theory - Div. 2",
+          "problems": "2022_AlgNT_D2.pdf",
+          "solutions": "2022_AlgNT_D2_S.pdf"
+        },
+        {
+          "name": "Combo & Computer Science - Div. 1",
+          "problems": "2022_ComboCS_D1.pdf",
+          "solutions": "2022_ComboCS_D1_S.pdf"
+        },
+        {
+          "name": "Combo & Computer Science - Div. 2",
+          "problems": "2022_ComboCS_D2.pdf",
+          "solutions": "2022_ComboCS_D2_S.pdf"
+        },
+        {
+          "name": "Geometry - Div. 1",
+          "problems": "2022_Geo_D1.pdf",
+          "solutions": "2022_Geo_D1_S.pdf"
+        },
+        {
+          "name": "Geometry - Div. 2",
+          "problems": "2022_Geo_D2.pdf",
+          "solutions": "2022_Geo_D2_S.pdf"
+        }
+      ],
+      "others": [
+        {
+          "name": "Team Round",
+          "problems": "2022_Team.pdf",
+          "solutions": "2022_Team_S.pdf"
+        },
+        {
+          "name": "TCS Round",
+          "problems": "2022_TCS.pdf",
+          "solutions": "2022_TCS_S.pdf"
+        }
+      ]
+    },
+    {
       "year": "2021",
       "individuals": [
         {
